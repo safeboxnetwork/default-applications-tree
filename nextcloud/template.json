@@ -1,0 +1,23 @@
+{
+        "name": "nextcloud",
+        "fields": [
+                {
+                        "description": "Please add Nextcloud domain:",
+                        "key": "NEXTCLOUD_DOMAIN",
+                        "value": "",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add Nextcloud username:",
+                        "key": "NEXTCLOUD_USERNAME",
+                        "value": "",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add Nextcloud password:",
+                        "key": "NEXTCLOUD_PASSWORD",
+                        "value": "",
+                        "required": "true"
+                }
+        ]
+}
