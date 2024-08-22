@@ -1,8 +1,12 @@
 {
-    "name": "nextcloud",
-    "version": "16.0"
-},
-{
-    "name": "guacamole",
-    "version": "15.0" 
+    "apps": [
+        {
+            "name": "nextcloud",
+            "version": "16.0"
+        },
+        {
+            "name": "guacamole",
+            "version": "15.0" 
+        }
+    ]
 }
