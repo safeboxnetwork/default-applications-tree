@@ -80,7 +80,7 @@
                         "POST_START": "null"
                 },
  		{
-                        "IMAGE": "registry.galaxis.xyz/redis:latest",
+                        "IMAGE": "redis:latest",
 			"UPDATE": "true",
                         "NAME": "nextcloud-redis",
                         "MEMORY": "128M",
