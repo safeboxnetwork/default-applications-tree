@@ -12,8 +12,8 @@
                         "MEMORY": "64M",
                         "VOLUMES": [
                                 {   
-                                "SOURCE": "/etc/user/data/nextcloud",
-                                "DEST": "/etc/user/data/nextcloud",
+                                "SOURCE": "/etc/user/data",
+                                "DEST": "/etc/user/data",
                                 "TYPE": "rw"
                                 }
                                 ],
