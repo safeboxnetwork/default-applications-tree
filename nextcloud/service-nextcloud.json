@@ -4,6 +4,26 @@
 		"DOMAIN": "DOMAIN" 
 	},
 	"containers": [
+                {   
+                        "IMAGE": "alpine:latest",
+			"UPDATE": "true",
+                        "NAME": "nextcloud",
+                        "NETWORK": "host",
+                        "MEMORY": "64M",
+                        "VOLUMES": [
+                                {   
+                                "SOURCE": "/etc/user/data/nextcloud",
+                                "DEST": "/etc/user/data/nextcloud",
+                                "TYPE": "rw"
+                                }
+                                ],
+                        "EXTRA": "null",
+                        "DEPEND": "null",
+                        "START_ON_BOOT": "false",
+                        "CMD": "mkdir -p /etc/user/data/nextcloud && chmod 777 -R /etc/user/data/nextcloud",
+                        "PRE_START": "null",
+                        "POST_START": "null"
+                },
 		{   
                         "IMAGE": "registry.format.hu/alpine/mariadb",
 			"UPDATE": "true",
