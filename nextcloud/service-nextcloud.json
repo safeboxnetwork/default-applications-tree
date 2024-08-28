@@ -35,7 +35,8 @@
                         "EXTRA": "null",
                         "DEPEND": "null",
                         "START_ON_BOOT": "false",
-                        "CMD": "'mkdir -p /etc/user/data/nextcloud/db && mkdir -p /etc/system/log/nextcloud/db && mkdir -p /etc/user/data/nextcloud/apps && mkdir -p /etc/user/data/nextcloud/config && mkdir -p /etc/user/data/nextcloud/data && mkdir -p /etc/user/secret/nextcloud && chmod 777 -R /etc/user/data/nextcloud'",
+                        "ENTRYPOINT": "sh -c",
+                        "CMD": "mkdir -p /etc/user/data/nextcloud/db && mkdir -p /etc/system/log/nextcloud/db && mkdir -p /etc/user/data/nextcloud/apps && mkdir -p /etc/user/data/nextcloud/config && mkdir -p /etc/user/data/nextcloud/data && mkdir -p /etc/user/secret/nextcloud && chmod 777 -R /etc/user/data/nextcloud",
                         "PRE_START": "null",
                         "POST_START": "null"
                 },
