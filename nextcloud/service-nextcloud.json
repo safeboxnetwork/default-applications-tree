@@ -12,7 +12,7 @@
                         "MEMORY": "64M",
                         "VOLUMES": [
                                 {   
-                                "SOURCE": "/etc/user/data",
+                                "SOURCE": "USER_DATA",
                                 "DEST": "/etc/user/data",
                                 "TYPE": "rw"
                                 }
