@@ -18,6 +18,34 @@
                         "key": "NEXTCLOUD_PASSWORD",
                         "value": "",
                         "required": "true"
+                },
+                {
+                        "description": "MYSQL database name",
+                        "key": "DB_MYSQL",
+                        "value": "",
+                        "required": "true",
+                        "generated": "random|md5sum|8"
+                },
+                {
+                        "description": "MYSQL username",
+                        "key": "DB_USER",
+                        "value": "",
+                        "required": "true",
+                        "generated": "random|md5sum|8"
+                },
+                {
+                        "description": "MYSQL password for user",
+                        "key": "DB_PASSWORD",
+                        "value": "",
+                        "required": "true",
+                        "generated": "random|md5sum|10"
+                },
+                {
+                        "description": "MYSQL root user password",
+                        "key": "DB_ROOT_PASSWORD",
+                        "value": "",
+                        "required": "true",
+                        "generated": "random|md5sum|10"
                 }
         ]
 }
