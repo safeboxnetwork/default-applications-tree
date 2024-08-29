@@ -153,10 +153,7 @@
                         "START_ON_BOOT": "false",
                         "CMD": "null",
                         "PRE_START": [ "firewall-nextcloud-server-dns" ],
-                        "POST_START": [
-				"firewall-nextcloud-collabora",
-				"firewall-nextcloud-server-smtp"
-					]
+                        "POST_START": ["firewall-nextcloud-server-smtp"]
                 },  
 		{ 
 			"IMAGE": "registry.format.hu/nextcloud-nginx:1.23.1",
