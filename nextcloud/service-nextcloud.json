@@ -25,11 +25,6 @@
                                 "SOURCE": "SYSTEM_LOG",
                                 "DEST": "/etc/system/log",
                                 "TYPE": "rw"
-                                },
-                                {   
-                                "SOURCE": "USER_SECRET",
-                                "DEST": "/etc/user/secret",
-                                "TYPE": "rw"
                                 }
                                 ],
                         "EXTRA": "null",
