@@ -41,7 +41,7 @@
                         "POST_START": "null"
                 },
 		{   
-                        "IMAGE": "registry.format.hu/alpine/mariadb",
+                        "IMAGE": "mysql:latest",
 			"UPDATE": "true",
                         "NAME": "nextcloudmysql-db",
                         "MEMORY": "256M",
