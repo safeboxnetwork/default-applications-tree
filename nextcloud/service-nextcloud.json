@@ -37,7 +37,7 @@
                         "POST_START": "null"
                 },
 		{   
-                        "IMAGE": "mysql:latest",
+                        "IMAGE": "mariadb:latest",
 			"UPDATE": "true",
                         "NAME": "nextcloudmysql-db",
                         "MEMORY": "256M",
