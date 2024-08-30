@@ -24,28 +24,28 @@
                         "key": "DB_MYSQL",
                         "value": "",
                         "required": "true",
-                        "generated": "random|md5sum|8"
+                        "generated": ""
                 },
                 {
                         "description": "MYSQL username",
                         "key": "DB_USER",
                         "value": "",
                         "required": "true",
-                        "generated": "random|md5sum|8"
+                        "generated": "time|md5|8"
                 },
                 {
                         "description": "MYSQL password for user",
                         "key": "DB_PASSWORD",
                         "value": "",
                         "required": "true",
-                        "generated": "random|md5sum|10"
+                        "generated": "random|md5|12"
                 },
                 {
                         "description": "MYSQL root user password",
                         "key": "DB_ROOT_PASSWORD",
                         "value": "",
                         "required": "true",
-                        "generated": "random|md5sum|10"
+                        "generated": "random|sha256|20"
                 }
         ]
 }
