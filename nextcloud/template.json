@@ -17,7 +17,8 @@
                         "description": "Please add Nextcloud password:",
                         "key": "NEXTCLOUD_PASSWORD",
                         "value": "",
-                        "required": "true"
+                        "required": "true",
+                        "type": "password"
                 },
                 {
                         "description": "MYSQL database name",
