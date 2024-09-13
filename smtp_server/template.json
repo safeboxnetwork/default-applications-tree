@@ -1,0 +1,10 @@
+{
+        "name": "smtp_server",
+        "fields": [
+                {
+                        "description": "Install SMTP server",
+                        "key": "SMTP_SERVER",
+                        "value": ""
+                }
+        ]
+}

@@ -1,0 +1,37 @@
+{
+        "name": "guacamole",
+        "fields": [
+                {
+                        "description": "Please add Guacamole domain:",
+                        "key": "GUACAMOLE_DOMAIN",
+                        "value": "",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add Guacamole admin username:",
+                        "key": "GUACAMOLE_USERNAME",
+                        "value": "",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add Guacamole admin password:",
+                        "key": "GUACAMOLE_PASSWORD",
+                        "value": "",
+                        "required": "true",
+                        "type": "password"
+                },
+                {
+                        "description": "Do you want TOTP via login?",
+                        "key": "GUACAMOLE_TOTP",
+                        "value": "yes,no",
+                        "required": "true",
+                        "type": "select"
+                },
+                {
+                        "description": "Do you want limitation in case invalid login or password? Please add a number how many minutes for deny retry. If you add 0 means it will disabled.",
+                        "key": "GUACAMOLE_BAN_DURATION",
+                        "value": "5",
+                        "required": "true"
+                }
+        ]
+}

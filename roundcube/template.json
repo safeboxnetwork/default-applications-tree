@@ -1,0 +1,41 @@
+{
+        "name": "roundcube",
+        "fields": [
+                {
+                        "description": "Please add IMAP HOST:",
+                        "key": "ROUNDCUBE_IMAP_HOST",
+                        "value": "",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add IMAP PORT:",
+                        "key": "ROUNDCUBE_IMAP_PORT",
+                        "value": "143",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add SMTP HOST:",
+                        "key": "ROUNDCUBE_SMTP_HOST",
+                        "value": "",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add SMTP PORT (587, 465, 25, etc.):",
+                        "key": "ROUNDCUBE_SMTP_PORT",
+                        "value": "25",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add UPLOAD_MAX_FILESIZE (default: 50M):",
+                        "key": "ROUNDCUBE_UPLOAD",
+                        "value": "50M",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add Roundcube DOMAIN:",
+                        "key": "ROUNDCUBE_DOMAIN",
+                        "value": "",
+                        "required": "true"
+                }
+        ]
+}

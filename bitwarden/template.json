@@ -1,0 +1,61 @@
+{
+        "name": "bitwarden",
+        "fields": [
+                {
+                        "description": "Please add Bitwarden domain:",
+                        "key": "BITWARDEN_DOMAIN",
+                        "value": "",
+                        "required": "true"
+                },
+                {
+                        "description": "Please choose an SMTP server:",
+                        "key": "BITWARDEN_SMTP",
+                        "value": "1:gmail,2:microsoft outlook/hotmail,3:other",
+                        "required": "true",
+                        "type": "select"
+                },
+                {
+                        "description": "Please add SMTP HOST:",
+                        "key": "BITWARDEN_SMTP_HOST",
+                        "value": "",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add SMTP PORT (587, 465, 25, etc.):",
+                        "key": "BITWARDEN_SMTP_PORT",
+                        "value": "25",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add SMTP SECURITY (starttls, force_tls, off, etc.):",
+                        "key": "BITWARDEN_SMTP_SECURITY",
+                        "value": "starttls",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add SMTP FROM (mail address from):",
+                        "key": "BITWARDEN_SMTP_FROM",
+                        "value": "",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add SMTP USERNAME:",
+                        "key": "BITWARDEN_SMTP_USERNAME",
+                        "value": "",
+                        "required": "true"
+                },
+                {
+                        "description": "Please add SMTP PASSWORD:",
+                        "key": "BITWARDEN_SMTP_PASSWORD",
+                        "value": "",
+                        "required": "true",
+			"type": "password"
+                },
+                {
+                        "description": "Please add Domains Whitelist (list of domains):",
+                        "key": "BITWARDEN_DOMAINS_WHITELIST",
+                        "value": "",
+                        "required": "true"
+                }
+        ]
+}
