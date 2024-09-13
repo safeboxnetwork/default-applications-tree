@@ -7,6 +7,14 @@
         {
             "name": "guacamole",
             "version": "15.0" 
+        },
+        {
+            "name": "bitwarden",
+            "version": "x.?" 
+        },
+        {
+            "name": "roundcube",
+            "version": "x.?" 
         }
     ]
 }
