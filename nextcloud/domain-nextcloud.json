@@ -23,16 +23,10 @@
           { "TARGET": "nextcloudnginx" },
           { "PORT": "80" },
           { "DOMAIN": "#DOMAIN_NAME" },
-          { "PUBLIC_PROXY_PATH": "/domains" },
           { "SMARTHOST_PROXY_PATH": "/smarthost-domains" },
 	        { "OPERATION": "CREATE" }
         ],
         "VOLUMES": [
-          {
-          "SOURCE": "/etc/user/config/domains",
-          "DEST": "/domains",
-          "TYPE": "rw"
-          },
           {
        	"SOURCE": "/etc/user/config/smarthost-domains",
         "DEST": "/smarthost-domains",
