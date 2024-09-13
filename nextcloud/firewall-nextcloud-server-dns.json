@@ -28,15 +28,10 @@
 				"TYPE": "ro"
 				},
 				{
-                                 "SOURCE": "/var/run/docker.sock",
-                                 "DEST": "/var/run/docker.sock",
-                                 "TYPE": "rw"
-                                 },
-                                 {
-                                 "SOURCE": "/usr/bin/docker",
-                                 "DEST": "/usr/bin/docker",
-                                 "TYPE": "ro"
-                                 }
+                "SOURCE": "/var/run/docker.sock",
+                "DEST": "/var/run/docker.sock",
+                "TYPE": "rw"
+                }
 				],
 			"PORTS": [ ],
 			"READYNESS": [
