@@ -1,6 +1,6 @@
  {
     "main": { 
-      "SERVICE_NAME": "nextcloud-server",
+      "SERVICE_NAME": "nextcloud",
       "DOMAIN": "#NEXTCLOUD_DOMAIN"
     },
     "containers": [
