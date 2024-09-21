@@ -2,7 +2,7 @@
     "apps": [
         {
             "name": "nextcloud",
-            "version": "16.0"
+            "version": "26.0"
         },
         {
             "name": "guacamole",
