@@ -8,7 +8,7 @@
                         "required": "true"
                 },
                 {
-                        "description": "Do you use any additional location path:",
+                        "description": "Do you use any additional location path? (do not miss '/' character!)",
                         "key": "NEXTCLOUD_LOCATION_PATH",
                         "value": ""
                 },
