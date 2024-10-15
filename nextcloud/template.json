@@ -8,6 +8,11 @@
                         "required": "true"
                 },
                 {
+                        "description": "Do you use any additional location path:",
+                        "key": "NEXTCLOUD_LOCATION_PATH",
+                        "value": ""
+                },
+                {
                         "description": "Please add Nextcloud username:",
                         "key": "NEXTCLOUD_USERNAME",
                         "value": "",
