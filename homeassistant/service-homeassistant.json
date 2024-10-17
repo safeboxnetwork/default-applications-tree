@@ -32,7 +32,7 @@
             "NETWORK": "host",
             "VOLUMES": [
                 {
-                    "SOURCE": "/etc/user/config/homeassistant/config",
+                    "SOURCE": "/etc/user/data/homeassistant/config",
                     "DEST": "/config",
                     "TYPE": "rw"
                 }
