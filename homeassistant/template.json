@@ -1,0 +1,11 @@
+{
+    "name": "homeassistant",
+    "fields": [
+        {
+            "description": "Please add your homeassistant domain:",
+            "key": "HOMEASSISTANT_DOMAIN",
+            "value": "",
+            "required": "true"
+        }
+    ]
+}

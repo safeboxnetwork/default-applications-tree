@@ -5,16 +5,20 @@
             "version": "26.0"
         },
         {
+            "name": "homeassistant",
+            "version": "latest"
+        },
+        {
             "name": "guacamole",
-            "version": "15.0" 
+            "version": "15.0"
         },
         {
             "name": "bitwarden",
-            "version": "x.?" 
+            "version": "x.?"
         },
         {
             "name": "roundcube",
-            "version": "x.?" 
+            "version": "x.?"
         },
         {
             "name": "smtp_server",

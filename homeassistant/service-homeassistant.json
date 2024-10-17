@@ -1,0 +1,43 @@
+{
+    "main": {
+        "SERVICE_NAME": "homeassistant",
+        "DOMAIN": "DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "ghcr.io/home-assistant/home-assistant:stable",
+            "UPDATE": "true",
+            "NAME": "homeassistant",
+            "NETWORK": "host",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/config/homeassistant/config",
+                    "DEST": "/config",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/localtime",
+                    "DEST": "/etc/localtime",
+                    "TYPE": "ro"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "8123",
+                    "DEST": "8123",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENVS": [],
+            "EXTRA": "null",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": [
+                "firewall-homeassistant",
+                "domain-homeassistant"
+            ]
+        }
+    ]
+}
