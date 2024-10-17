@@ -47,7 +47,7 @@
             "ENVS": [
                 {
                     "NAME": "TZ",
-                    "VALUE": "#HOMEASSISTANT_TZ"
+                    "VALUE": "HOMEASSISTANT_TZ"
                 }
             ],
             "EXTRA": "--restart unless-stopped",
