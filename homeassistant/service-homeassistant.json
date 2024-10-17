@@ -5,6 +5,27 @@
     },
     "containers": [
         {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "homeassistant-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/homeassistant/config",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
             "IMAGE": "ghcr.io/home-assistant/home-assistant:stable",
             "UPDATE": "true",
             "NAME": "homeassistant",
@@ -23,8 +44,13 @@
                     "TYPE": "tcp"
                 }
             ],
-            "ENVS": [],
-            "EXTRA": "--restart always",
+            "ENVS": [
+                {
+                    "NAME": "TZ",
+                    "VALUE": "#HOMEASSISTANT_TZ"
+                }
+            ],
+            "EXTRA": "--restart unless-stopped",
             "DEPEND": [],
             "START_ON_BOOT": "false",
             "CMD": "null",
