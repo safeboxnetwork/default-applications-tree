@@ -14,11 +14,6 @@
                     "SOURCE": "/etc/user/config/homeassistant/config",
                     "DEST": "/config",
                     "TYPE": "rw"
-                },
-                {
-                    "SOURCE": "/etc/localtime",
-                    "DEST": "/etc/localtime",
-                    "TYPE": "ro"
                 }
             ],
             "PORTS": [
