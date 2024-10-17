@@ -29,7 +29,7 @@
                 }
             ],
             "ENVS": [],
-            "EXTRA": "null",
+            "EXTRA": "--restart always",
             "DEPEND": [],
             "START_ON_BOOT": "false",
             "CMD": "null",
