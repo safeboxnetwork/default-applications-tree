@@ -1,5 +1,5 @@
 {
-    "name": "bitwarden",
+    "name": "vaultwarden",
     "fields": [
         {
             "description": "MYSQL database name",
