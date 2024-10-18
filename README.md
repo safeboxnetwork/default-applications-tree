@@ -16,5 +16,20 @@ The mandatory template.json file's structure is the following.
  - "name" - the name of the application, must be the same as the directory name
  - "fields" - array of used variables by service
 
+An element of fields can contain the following keys.
+ - description
+ - key
+ - value 
+ - required
+ - type
+ - generated
 
+For example:
+                {
+                        "description": "Please add Nextcloud password:",
+                        "key": "NEXTCLOUD_PASSWORD",
+                        "value": "",
+                        "required": "true",
+                        "type": "password"
+                },
 
