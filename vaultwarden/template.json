@@ -1,0 +1,85 @@
+{
+    "name": "bitwarden",
+    "fields": [
+        {
+            "description": "MYSQL database name",
+            "key": "DB_MYSQL",
+            "value": "",
+            "required": "true",
+            "generated": ""
+        },
+        {
+            "description": "MYSQL username",
+            "key": "DB_USER",
+            "value": "",
+            "required": "true",
+            "generated": "time|md5|8"
+        },
+        {
+            "description": "MYSQL password for user",
+            "key": "DB_PASSWORD",
+            "value": "",
+            "required": "true",
+            "generated": "random|md5|12"
+        },
+        {
+            "description": "MYSQL root user password",
+            "key": "DB_ROOT_PASSWORD",
+            "value": "",
+            "required": "true",
+            "generated": "random|sha256|20"
+        }
+        {
+            "description": "Please add VaultWarden domain:",
+            "key": "VAULTWARDEN_DOMAIN",
+            "value": "",
+            "required": "true"
+        },
+        {
+            "description": "Please choose an SMTP server:",
+            "key": "VAULTWARDEN_SMTP",
+            "value": "1:gmail,2:microsoft outlook/hotmail,3:other",
+            "required": "true",
+            "type": "select"
+        },
+        {
+            "description": "Please add SMTP HOST:",
+            "key": "VAULTWARDEN_SMTP_HOST",
+            "value": "",
+            "required": "true"
+        },
+        {
+            "description": "Please add SMTP PORT (587, 465, 25, etc.):",
+            "key": "VAULTWARDEN_SMTP_PORT",
+            "value": "25",
+            "required": "true"
+        },
+        {
+            "description": "Please add SMTP SECURITY (starttls, force_tls, off, etc. you can leave it empty also):",
+            "key": "VAULTWARDEN_SMTP_SECURITY",
+            "value": ""
+        },
+        {
+            "description": "Please add SMTP FROM (mail address from):",
+            "key": "VAULTWARDEN_SMTP_FROM",
+            "value": "",
+            "required": "true"
+        },
+        {
+            "description": "Please add SMTP USERNAME:",
+            "key": "VAULTWARDEN_SMTP_USERNAME",
+            "value": ""
+        },
+        {
+            "description": "Please add SMTP PASSWORD (you can leave it empty also):",
+            "key": "VAULTWARDEN_SMTP_PASSWORD",
+            "value": ""
+        },
+        {
+            "description": "Please add Domains Whitelist (list of domains separated with spaces):",
+            "key": "VAULTWARDEN_WHITELIST",
+            "value": "",
+            "required": "true"
+        }
+    ]
+}

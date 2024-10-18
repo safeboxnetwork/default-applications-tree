@@ -1,0 +1,132 @@
+{
+    "main": {
+        "SERVICE_NAME": "homeassistant",
+        "DOMAIN": "DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "homeassistant-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/vaultwarden/data && mkdir -p /etc/user/data/vaultwarden/db && mkdir -p /etc/system/log/vaultwarden/db",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "mariadb:latest",
+            "UPDATE": "true",
+            "NAME": "vaultwardenmysql-db",
+            "MEMORY": "256M",
+            "NETWORK": "vaultwarden-net",
+            "SELECTOR": "nextcloudmysql-db",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/vaultwarden/db",
+                    "DEST": "/var/lib/mysql",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/system/log/vaultwarden/db",
+                    "DEST": "/var/lib/mysql/mysql-bin",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "3306",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/nextcloud/nextcloud.json"
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "vaultwarden/server",
+            "UPDATE": "true",
+            "NAME": "vaultwardenapp",
+            "NETWORK": "vaultwarden-net",
+            "SELECTOR": "vaultwardenapp",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/vaultwarden/data",
+                    "DEST": "/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "80",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENVS": [
+                {
+                    "ENABLE_DB_WAL": "false"
+                },
+                {
+                    "SIGNUPS_ALLOWED": "false"
+                },
+                {
+                    "RUST_BACKTRACE": "1"
+                },
+                {
+                    "SIGNUPS_DOMAINS_WHITELIST": "#VAULTWARDEN_WHITELIST"
+                },
+                {
+                    "SIGNUPS_VERIFY": "true"
+                },
+                {
+                    "VAULTWARDEN_SMTP": "#VAULTWARDEN_SMTP"
+                },
+                {
+                    "VAULTWARDEN_SMTP_HOST": "#VAULTWARDEN_SMTP_HOST"
+                },
+                {
+                    "VAULTWARDEN_SMTP_PORT": "#VAULTWARDEN_SMTP_PORT"
+                },
+                {
+                    "VAULTWARDEN_SMTP_SECURITY": "#VAULTWARDEN_SMTP_SECURITY"
+                },
+                {
+                    "VAULTWARDEN_SMTP_FROM": "#VAULTWARDEN_SMTP_FROM"
+                },
+                {
+                    "VAULTWARDEN_SMTP_USERNAME": "#VAULTWARDEN_SMTP_USERNAME"
+                }
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": [
+                "firewall-vaultwarden",
+                "domain-vaultwarden",
+                "dns-vaultwarden",
+                "smtp-vaultwarden"
+            ]
+        }
+    ]
+}

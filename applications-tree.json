@@ -10,19 +10,11 @@
         },
         {
             "name": "guacamole",
-            "version": "15.0"
+            "version": "latest"
         },
         {
-            "name": "bitwarden",
-            "version": "x.?"
-        },
-        {
-            "name": "roundcube",
-            "version": "x.?"
-        },
-        {
-            "name": "smtp_server",
-            "version": "x.?"
+            "name": "waultwarden",
+            "version": "latest"
         }
     ]
 }
