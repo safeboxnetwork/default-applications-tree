@@ -28,7 +28,7 @@
             "value": "",
             "required": "true",
             "generated": "random|sha256|20"
-        }
+        },
         {
             "description": "Please add VaultWarden domain:",
             "key": "VAULTWARDEN_DOMAIN",
