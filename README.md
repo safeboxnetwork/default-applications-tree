@@ -16,6 +16,13 @@ The mandatory template.json file's structure is the following.
  - "name" - the name of the application, must be the same as the directory name
  - "fields" - array of used variables by service
 
+        {
+                "name": "vaultwarden",
+                "fields": [
+                        ...
+                ]
+        }
+
 An element of fields can contain the following keys.
  - description - label of the field, this text will appear before element 
  - key - name of variable
