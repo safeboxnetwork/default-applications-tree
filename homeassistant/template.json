@@ -10,7 +10,7 @@
         {
             "description": "Please add your homeassistant timezone:",
             "key": "HOMEASSISTANT_TZ",
-            "value": "",
+            "value": "Europe/Budapest",
             "required": "true"
         }
     ]

@@ -1,11 +1,11 @@
 {
     "main": {
         "SERVICE_NAME": "homeassistant",
-        "DOMAIN": "DOMAIN"
+        "DOMAIN": "HOMEASSISTANT_DOMAIN"
     },
     "containers": [
         {
-            "IMAGE": "alpine:latest",
+            "IMAGE": "registry.format.hu/homeassistant-init-container",
             "UPDATE": "true",
             "NAME": "homeassistant-init",
             "NETWORK": "host",
@@ -15,13 +15,25 @@
                     "SOURCE": "USER_DATA",
                     "DEST": "/etc/user/data",
                     "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "SYSTEM_DATA",
+                    "DEST": "/etc/system/data/dns/host.local",
+                    "TYPE": "rw"
+                }
+            ],
+            "ENVS": [
+                {
+                    "DOMAIN": "HOMEASSISTANT_DOMAIN"
+                },
+                {
+                    "HOMEASSISTANT": "homeassistant"
                 }
             ],
             "EXTRA": "--rm",
             "DEPEND": "null",
             "START_ON_BOOT": "false",
-            "ENTRYPOINT": "sh -c",
-            "CMD": "mkdir -p /etc/user/data/homeassistant/config",
+            "CMD": "null",
             "PRE_START": "null",
             "POST_START": "null"
         },
@@ -57,7 +69,6 @@
             "CMD": "null",
             "PRE_START": "null",
             "POST_START": [
-                "firewall-homeassistant",
                 "domain-homeassistant"
             ]
         }
