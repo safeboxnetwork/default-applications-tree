@@ -42,7 +42,6 @@
             "UPDATE": "true",
             "NAME": "homeassistant",
             "NETWORK": "host",
-            "SELECTOR": "homeassistant",
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/homeassistant/config",
