@@ -17,8 +17,8 @@
                     "TYPE": "rw"
                 },
                 {
-                    "SOURCE": "SYSTEM_DATA",
-                    "DEST": "/etc/system/data/dns/host.local",
+                    "SOURCE": "/etc/system/data/dns",
+                    "DEST": "/etc/system/data/dns",
                     "TYPE": "rw"
                 }
             ],
