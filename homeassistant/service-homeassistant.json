@@ -30,7 +30,7 @@
                     "HOMEASSISTANT": "homeassistant"
                 }
             ],
-            "EXTRA": "--rm",
+            "EXTRA": "",
             "DEPEND": "null",
             "START_ON_BOOT": "false",
             "CMD": "null",
@@ -59,8 +59,7 @@
             ],
             "ENVS": [
                 {
-                    "NAME": "TZ",
-                    "VALUE": "#HOMEASSISTANT_TZ"
+                    "TZ": "#HOMEASSISTANT_TZ"
                 }
             ],
             "EXTRA": "--restart unless-stopped",
