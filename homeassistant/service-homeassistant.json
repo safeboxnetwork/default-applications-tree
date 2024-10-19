@@ -30,7 +30,7 @@
                     "HOMEASSISTANT": "homeassistant"
                 }
             ],
-            "EXTRA": "",
+            "EXTRA": "--rm",
             "DEPEND": "null",
             "START_ON_BOOT": "false",
             "CMD": "null",
