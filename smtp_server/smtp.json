@@ -1,0 +1,13 @@
+{
+                "mail": {
+                "DOMAIN": "#SMTP_DOMAIN",
+                "HOSTNAME": "#SMTP_DOMAIN",
+                "SMTP_PORT": "#SMTP_PORT",
+                "RELAYNETS": "172.19.0.0/16",
+                "SMTPUTF8_ENABLE": "yes",
+                "ROOT_MAIL": "#SMTP_ROOT_EMAIL",
+                "TZ": "#SMTP_TIMEZONE",
+                "MESSAGE_SIZE_LIMIT": "52428800",
+                "POSTMASTER_MAIL": "#SMTP_POSTMASTER_EMAIL"
+                }
+}
