@@ -1,0 +1,36 @@
+{
+	"main": {
+		"SERVICE_NAME": "smtp",
+		"DOMAIN": "#SMTP_DOMAIN" 
+	},
+	"containers": [
+		{ 
+			"IMAGE": "registry.format.hu/alpine/postfix:latest",
+			"UPDATE": "true",
+			"NAME": "mail-smtp",
+			"MEMORY": "128M",
+			"SELECTOR": "smtp",
+			"VOLUMES": [
+				],
+			"PORTS": [ 
+    				{
+				 "SOURCE": "null",
+				 "DEST": "25",
+				 "TYPE": "tcp"
+				}
+			],
+			"READYNESS": [
+			        {"tcp": ""},
+			        {"HTTP": ""},
+				{"EXEC": "/ready.sh"}
+				],
+			"ENV_FILES": [ "/etc/user/config/smtp.json" ],
+			"EXTRA": "null",
+			"DEPEND": "null",
+			"START_ON_BOOT": "true",
+			"CMD": "null",
+			"PRE_START": "null",
+			"POST_START": "null"
+		}
+	]
+}
