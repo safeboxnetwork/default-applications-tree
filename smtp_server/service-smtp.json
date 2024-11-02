@@ -24,6 +24,17 @@
 			        {"HTTP": ""},
 				{"EXEC": "/ready.sh"}
 				],
+			"ENVS": [
+				{ "TZ": "#SMTP_TIMEZONE" },
+				{ "RELAY_HOST": "#SMTP_RELAY_HOST" },
+				{ "RELAY_PORT": "#SMTP_RELAY_PORT" },
+				{ "RELAY_USER": "#SMTP_REALY_USER" },
+				{ "TEST_EMAIL": "#SMTP_TEST_EMAIL" },
+				{ "FROMADDRESS": "#SMTP_FROMADDRESS" },
+				{ "MYNETWORKS": "#SMTP_MYNETWORKS" },
+				{ "MSG_SIZE": "#SMTP_MSG_SIZE" },
+				{ "LOG_DISABLE": "#SMTP_LOG_DISABLE" }
+			],
 			"ENV_FILES": [ "/etc/user/config/smtp.json" ],
 			"EXTRA": "null",
 			"DEPEND": "null",
