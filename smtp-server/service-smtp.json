@@ -59,7 +59,7 @@
                 }
             ],
             "ENV_FILES": [
-                "/etc/user/secret/secret-smtp.json"
+                "/etc/user/secret/smtp-server/secret-smtp.json"
             ],
             "EXTRA": "null",
             "DEPEND": "null",
