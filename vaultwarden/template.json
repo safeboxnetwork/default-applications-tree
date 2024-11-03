@@ -43,9 +43,9 @@
             "type": "select"
         },
         {
-            "description": "Please add SMTP HOST:",
+            "description": "Please add SMTP hostname (not needed if use global smtp server. In this case keep default and do not fill any other smtp questions):",
             "key": "VAULTWARDEN_SMTP_HOST",
-            "value": "",
+            "value": "smtp",
             "required": "true"
         },
         {

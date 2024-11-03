@@ -1,13 +1,13 @@
 {
     "main": {
-        "SERVICE_NAME": "homeassistant",
-        "DOMAIN": "DOMAIN"
+        "SERVICE_NAME": "vaultwarden",
+        "DOMAIN": "#VAULTWARDEN_DOMAIN"
     },
     "containers": [
         {
             "IMAGE": "alpine:latest",
             "UPDATE": "true",
-            "NAME": "homeassistant-init",
+            "NAME": "vaultwarden-init",
             "NETWORK": "host",
             "MEMORY": "64M",
             "VOLUMES": [
@@ -31,7 +31,7 @@
             "NAME": "vaultwardenmysql-db",
             "MEMORY": "256M",
             "NETWORK": "vaultwarden-net",
-            "SELECTOR": "nextcloudmysql-db",
+            "SELECTOR": "vaultwardenmysql-db",
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/vaultwarden/db",
@@ -124,8 +124,8 @@
             "POST_START": [
                 "firewall-vaultwarden",
                 "domain-vaultwarden",
-                "dns-vaultwarden",
-                "smtp-vaultwarden"
+                "firewall-vaultwarden-dns",
+                "firewall-vaultwarden-smtp"
             ]
         }
     ]
