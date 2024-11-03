@@ -116,6 +116,9 @@
                     "VAULTWARDEN_SMTP_USERNAME": "#VAULTWARDEN_SMTP_USERNAME"
                 }
             ],
+            "ENV_FILES": [
+                "/etc/user/config/services/vaultwarden-secret.json"
+            ],
             "EXTRA": "--restart unless-stopped",
             "DEPEND": [],
             "START_ON_BOOT": "false",
