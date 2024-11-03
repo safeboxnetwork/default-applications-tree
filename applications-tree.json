@@ -15,6 +15,10 @@
         {
             "name": "vaultwarden",
             "version": "latest"
+        },
+                {
+            "name": "smtp server",
+            "version": "latest"
         }
     ]
 }
