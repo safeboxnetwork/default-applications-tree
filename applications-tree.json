@@ -17,7 +17,7 @@
             "version": "latest"
         },
         {
-            "name": "smtp-server",
+            "name": "smtp",
             "version": "latest"
         }
     ]
