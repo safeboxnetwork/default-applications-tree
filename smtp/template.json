@@ -3,7 +3,7 @@
     "fields": [
         {
             "description": "Set timezone for smtp server",
-            "key": "SMTP_TIME_ZONE",
+            "key": "SMTP_TIMEZONE",
             "value": "Europe/Budapest",
             "required": "true"
         },
@@ -15,7 +15,7 @@
         },
         {
             "description": "Set relay port for smtp server",
-            "key": "SMTP_RELAY_HOST",
+            "key": "SMTP_RELAY_PORT",
             "value": "587",
             "required": "true"
         },
