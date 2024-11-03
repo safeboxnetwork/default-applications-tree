@@ -5,7 +5,7 @@
 	},
 	"containers": [
 		{ 
-			"IMAGE": "registry.format.hu/alpine/postfix:latest",
+			"IMAGE": "registry.format.hu/smtp:latest",
 			"UPDATE": "true",
 			"NAME": "mail-smtp",
 			"MEMORY": "128M",
