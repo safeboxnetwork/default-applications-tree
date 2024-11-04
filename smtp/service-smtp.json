@@ -1,6 +1,6 @@
 {
     "main": {
-        "SERVICE_NAME": "smtp-server",
+        "SERVICE_NAME": "smtp",
         "DOMAIN": ""
     },
     "containers": [
