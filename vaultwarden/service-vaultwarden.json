@@ -15,6 +15,11 @@
                     "SOURCE": "USER_DATA",
                     "DEST": "/etc/user/data",
                     "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "SYSTEM_LOG",
+                    "DEST": "/etc/system/log",
+                    "TYPE": "rw"
                 }
             ],
             "EXTRA": "--rm",
