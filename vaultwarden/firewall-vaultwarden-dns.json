@@ -52,7 +52,7 @@
                     "SOURCE": "coredns"
                 },
                 {
-                    "TARGET": "vaultwarden"
+                    "TARGET": "vaultwardenapp"
                 },
                 {
                     "TYPE": "udp"

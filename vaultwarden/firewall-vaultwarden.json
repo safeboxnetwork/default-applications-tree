@@ -52,7 +52,7 @@
                     "SOURCE": "smarthostbackend"
                 },
                 {
-                    "TARGET": "vaultwarden"
+                    "TARGET": "vaultwardenapp"
                 },
                 {
                     "TYPE": "tcp"

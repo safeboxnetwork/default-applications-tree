@@ -49,7 +49,7 @@
                     "CHAIN": "DOCKER-USER"
                 },
                 {
-                    "SOURCE": "vaultwarden"
+                    "SOURCE": "vaultwardenapp"
                 },
                 {
                     "TARGET": "smtp"

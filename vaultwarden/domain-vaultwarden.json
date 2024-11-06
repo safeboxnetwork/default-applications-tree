@@ -23,7 +23,7 @@
                     "PROXY": "smarthostloadbalancer"
                 },
                 {
-                    "TARGET": "vaultwarden"
+                    "TARGET": "vaultwardenapp"
                 },
                 {
                     "PORT": "80"

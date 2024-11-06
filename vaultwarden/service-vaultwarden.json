@@ -71,7 +71,7 @@
             "UPDATE": "true",
             "NAME": "vaultwardenapp",
             "NETWORK": "vaultwarden-net",
-            "SELECTOR": "vaultwarden",
+            "SELECTOR": "vaultwardenapp",
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/vaultwarden/data",
