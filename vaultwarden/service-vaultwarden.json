@@ -117,7 +117,7 @@
                 }
             ],
             "ENV_FILES": [
-                "/etc/user/config/services/vaultwarden-secret.json"
+                "/etc/user/secret/vaultwarden/vaultwarden.json"
             ],
             "EXTRA": "--restart unless-stopped",
             "DEPEND": [],
