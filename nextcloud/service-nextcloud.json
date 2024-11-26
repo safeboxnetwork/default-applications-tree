@@ -28,7 +28,7 @@
                                 }
                                 ],
                         "ENV_FILES": [ "/etc/user/secret/nextcloud/nextcloud.json" ],
-                        "EXTRA": "null",
+                        "EXTRA": "--rm",
                         "DEPEND": "null",
                         "START_ON_BOOT": "false",
                         "ENTRYPOINT": "sh -c",
