@@ -131,6 +131,12 @@
             "NAME": "memcache-app",
             "NETWORK": "openproject-net",
             "SELECTOR": "memcache-app",
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": []
         }
     ]
 }
