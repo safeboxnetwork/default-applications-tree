@@ -1,0 +1,136 @@
+{
+    "main": {
+        "SERVICE_NAME": "openproject",
+        "DOMAIN": "#OPENPROJECT_DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "openproject-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "SYSTEM_LOG",
+                    "DEST": "/etc/system/log",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/openproject/assets && mkdir -p /etc/user/data/openproject/db",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "postgres:13-alpine",
+            "UPDATE": "true",
+            "NAME": "openprojectpostgres-db",
+            "MEMORY": "256M",
+            "NETWORK": "openproject-net",
+            "SELECTOR": "openprojectpostgres-db",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/openproject/db",
+                    "DEST": "/var/lib/postgres",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "5432",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/openproject/openproject.json"
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "openproject/openproject:15-slim",
+            "UPDATE": "true",
+            "NAME": "openprojectapp",
+            "NETWORK": "openproject-net",
+            "SELECTOR": "openprojectapp",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/openproject/assets",
+                    "DEST": "/var/openproject/assets",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "8080",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENVS": [
+                {
+                    "OPENPROJECT_HTTPS": "true"
+                },
+                {
+                    "OPENPROJECT_HOST__NAME": "#OPENPROJECT_DOMAIN"
+                },
+                {
+                    "OPENPROJECT_HSTS": "true"
+                },
+                {
+                    "RAILS_CACHE_STORE": "memcache"
+                },
+                {
+                    "OPENPROJECT_CACHE__MEMCACHE__SERVER": "memcache-app:11211"
+                },
+                {
+                    "OPENPROJECT_RAILS__RELATIVE__URL__ROOT": "/"
+                },
+                {
+                    "RAILS_MIN_THREADS": "-4"
+                },
+                {
+                    "RAILS_MAX_THREADS": "-16"
+                },
+                {
+                    "IMAP_ENABLED": "true"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/openproject/openproject.json"
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": [
+                "firewall-openproject",
+                "domain-openproject",
+                "firewall-openproject-dns",
+                "firewall-openproject-smtp"
+            ]
+        },
+        {
+            "IMAGE": "memcached:alpine",
+            "UPDATE": "true",
+            "NAME": "memcache-app",
+            "NETWORK": "openproject-net",
+            "SELECTOR": "memcache-app",
+        }
+    ]
+}

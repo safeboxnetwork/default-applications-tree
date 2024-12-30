@@ -1,0 +1,39 @@
+{
+    "name": "openproject",
+    "fields": [
+        {
+            "description": "Postgres database name",
+            "key": "DB_POSTGRES",
+            "value": "",
+            "required": "true",
+            "generated": "time|md5|8"
+        },
+        {
+            "description": "Postgres username",
+            "key": "DB_USER",
+            "value": "",
+            "required": "true",
+            "generated": "time|md5|8"
+        },
+        {
+            "description": "Postgres password for user",
+            "key": "DB_PASSWORD",
+            "value": "",
+            "required": "true",
+            "generated": "random|md5|12"
+        },
+        {
+            "description": "Postgres root user password",
+            "key": "DB_ROOT_PASSWORD",
+            "value": "",
+            "required": "true",
+            "generated": "random|sha256|20"
+        },
+        {
+            "description": "Please add OpenProject domain:",
+            "key": "OPENPROJECT_DOMAIN",
+            "value": "",
+            "required": "true"
+        }
+    ]
+}

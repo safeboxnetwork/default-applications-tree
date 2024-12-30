@@ -19,6 +19,10 @@
         {
             "name": "smtp",
             "version": "latest"
+        },
+        {
+            "name": "openproject",
+            "version": "15"
         }
     ]
 }
