@@ -3,7 +3,7 @@
     "fields": [
         {
             "description": "Postgres database name",
-            "key": "DB_POSTGRES",
+            "key": "DB_NAME",
             "value": "",
             "required": "true",
             "generated": "time|md5|8"
