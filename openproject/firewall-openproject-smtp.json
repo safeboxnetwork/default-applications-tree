@@ -49,7 +49,7 @@
                     "CHAIN": "DOCKER-USER"
                 },
                 {
-                    "SOURCE": "openprojectapp"
+                    "SOURCE": "openprojectapp-web"
                 },
                 {
                     "TARGET": "smtp"

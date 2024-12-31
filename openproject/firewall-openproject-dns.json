@@ -52,7 +52,7 @@
                     "SOURCE": "coredns"
                 },
                 {
-                    "TARGET": "openprojectapp"
+                    "TARGET": "openprojectapp-web"
                 },
                 {
                     "TYPE": "udp"

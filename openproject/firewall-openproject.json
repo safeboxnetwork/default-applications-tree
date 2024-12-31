@@ -52,7 +52,7 @@
                     "SOURCE": "smarthostbackend"
                 },
                 {
-                    "TARGET": "openprojectapp"
+                    "TARGET": "openprojectapp-web"
                 },
                 {
                     "TYPE": "tcp"

@@ -23,10 +23,10 @@
                     "PROXY": "smarthostloadbalancer"
                 },
                 {
-                    "TARGET": "openprojectapp"
+                    "TARGET": "openprojectapp-web"
                 },
                 {
-                    "PORT": "80"
+                    "PORT": "8080"
                 },
                 {
                     "DOMAIN": "#OPENPROJECT_DOMAIN"
