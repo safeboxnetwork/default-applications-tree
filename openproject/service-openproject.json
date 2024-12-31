@@ -26,7 +26,7 @@
             "DEPEND": "null",
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh -c",
-            "CMD": "mkdir -p /etc/user/data/openproject/assets && mkdir -p /etc/user/data/openproject/db",
+            "CMD": "mkdir -p /etc/user/data/openproject/assets && chown -R 1000:1000 /etc/user/data/openproject/assets && mkdir -p /etc/user/data/openproject/db",
             "PRE_START": "null",
             "POST_START": "null"
         },
@@ -40,7 +40,7 @@
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/openproject/db",
-                    "DEST": "/var/lib/postgres",
+                    "DEST": "/var/lib/postgresql/data",
                     "TYPE": "rw"
                 }
             ],
@@ -64,9 +64,9 @@
         {
             "IMAGE": "openproject/openproject:15-slim",
             "UPDATE": "true",
-            "NAME": "openprojectapp",
+            "NAME": "openprojectapp-web",
             "NETWORK": "openproject-net",
-            "SELECTOR": "openprojectapp",
+            "SELECTOR": "openprojectapp-web",
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/openproject/assets",
@@ -76,20 +76,20 @@
             ],
             "PORTS": [
                 {
-                    "SOURCE": "null",
+                    "SOURCE": "8090",
                     "DEST": "8080",
                     "TYPE": "tcp"
                 }
             ],
             "ENVS": [
                 {
-                    "OPENPROJECT_HTTPS": "true"
+                    "OPENPROJECT_HTTPS": "false"
                 },
                 {
                     "OPENPROJECT_HOST__NAME": "#OPENPROJECT_DOMAIN"
                 },
                 {
-                    "OPENPROJECT_HSTS": "true"
+                    "OPENPROJECT_HSTS": "false"
                 },
                 {
                     "RAILS_CACHE_STORE": "memcache"
@@ -101,10 +101,10 @@
                     "OPENPROJECT_RAILS__RELATIVE__URL__ROOT": "/"
                 },
                 {
-                    "RAILS_MIN_THREADS": "-4"
+                    "RAILS_MIN_THREADS": "4"
                 },
                 {
-                    "RAILS_MAX_THREADS": "-16"
+                    "RAILS_MAX_THREADS": "16"
                 },
                 {
                     "IMAP_ENABLED": "true"
@@ -116,7 +116,7 @@
             "EXTRA": "--restart unless-stopped",
             "DEPEND": [],
             "START_ON_BOOT": "false",
-            "CMD": "null",
+            "CMD": "./docker/prod/web",
             "PRE_START": "null",
             "POST_START": [
                 "firewall-openproject",
@@ -130,11 +130,166 @@
             "UPDATE": "true",
             "NAME": "memcache-app",
             "NETWORK": "openproject-net",
-            "SELECTOR": "memcache-app",
             "EXTRA": "--restart unless-stopped",
             "DEPEND": [],
             "START_ON_BOOT": "false",
             "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": []
+        },
+        {
+            "IMAGE": "openproject/openproject:15-slim",
+            "UPDATE": "true",
+            "NAME": "openprojectapp-seeder",
+            "NETWORK": "openproject-net",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/openproject/assets",
+                    "DEST": "/var/openproject/assets",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [],
+            "ENVS": [
+                {
+                    "OPENPROJECT_HTTPS": "false"
+                },
+                {
+                    "OPENPROJECT_HOST__NAME": "#OPENPROJECT_DOMAIN"
+                },
+                {
+                    "OPENPROJECT_HSTS": "false"
+                },
+                {
+                    "RAILS_CACHE_STORE": "memcache"
+                },
+                {
+                    "OPENPROJECT_CACHE__MEMCACHE__SERVER": "memcache-app:11211"
+                },
+                {
+                    "OPENPROJECT_RAILS__RELATIVE__URL__ROOT": "/"
+                },
+                {
+                    "RAILS_MIN_THREADS": "4"
+                },
+                {
+                    "RAILS_MAX_THREADS": "16"
+                },
+                {
+                    "IMAP_ENABLED": "true"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/openproject/openproject.json"
+            ],
+            "EXTRA": "--restart on-failure",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "./docker/prod/seeder",
+            "PRE_START": "null",
+            "POST_START": []
+        },
+        {
+            "IMAGE": "openproject/openproject:15-slim",
+            "UPDATE": "true",
+            "NAME": "openprojectapp-worker",
+            "NETWORK": "openproject-net",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/openproject/assets",
+                    "DEST": "/var/openproject/assets",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [],
+            "ENVS": [
+                {
+                    "OPENPROJECT_HTTPS": "false"
+                },
+                {
+                    "OPENPROJECT_HOST__NAME": "#OPENPROJECT_DOMAIN"
+                },
+                {
+                    "OPENPROJECT_HSTS": "false"
+                },
+                {
+                    "RAILS_CACHE_STORE": "memcache"
+                },
+                {
+                    "OPENPROJECT_CACHE__MEMCACHE__SERVER": "memcache-app:11211"
+                },
+                {
+                    "OPENPROJECT_RAILS__RELATIVE__URL__ROOT": "/"
+                },
+                {
+                    "RAILS_MIN_THREADS": "4"
+                },
+                {
+                    "RAILS_MAX_THREADS": "16"
+                },
+                {
+                    "IMAP_ENABLED": "true"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/openproject/openproject.json"
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "./docker/prod/worker",
+            "PRE_START": "null",
+            "POST_START": []
+        },
+        {
+            "IMAGE": "openproject/openproject:15-slim",
+            "UPDATE": "true",
+            "NAME": "openprojectapp-worker",
+            "NETWORK": "openproject-net",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/openproject/assets",
+                    "DEST": "/var/openproject/assets",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [],
+            "ENVS": [
+                {
+                    "OPENPROJECT_HTTPS": "false"
+                },
+                {
+                    "OPENPROJECT_HOST__NAME": "#OPENPROJECT_DOMAIN"
+                },
+                {
+                    "OPENPROJECT_HSTS": "false"
+                },
+                {
+                    "RAILS_CACHE_STORE": "memcache"
+                },
+                {
+                    "OPENPROJECT_CACHE__MEMCACHE__SERVER": "memcache-app:11211"
+                },
+                {
+                    "OPENPROJECT_RAILS__RELATIVE__URL__ROOT": "/"
+                },
+                {
+                    "RAILS_MIN_THREADS": "4"
+                },
+                {
+                    "RAILS_MAX_THREADS": "16"
+                },
+                {
+                    "IMAP_ENABLED": "true"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/openproject/openproject.json"
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "./docker/prod/cron",
             "PRE_START": "null",
             "POST_START": []
         }
