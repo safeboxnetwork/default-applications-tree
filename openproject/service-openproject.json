@@ -244,7 +244,7 @@
         {
             "IMAGE": "openproject/openproject:15-slim",
             "UPDATE": "true",
-            "NAME": "openprojectapp-worker",
+            "NAME": "openprojectapp-cron",
             "NETWORK": "openproject-net",
             "VOLUMES": [
                 {
