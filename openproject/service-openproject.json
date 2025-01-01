@@ -182,7 +182,7 @@
             "ENV_FILES": [
                 "/etc/user/secret/openproject/openproject.json"
             ],
-            "EXTRA": "--restart on-failure",
+            "EXTRA": "--rm",
             "DEPEND": [],
             "START_ON_BOOT": "false",
             "CMD": "./docker/prod/seeder",
