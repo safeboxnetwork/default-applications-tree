@@ -82,7 +82,7 @@
             "UPDATE": "true",
             "NAME": "outlineapp",
             "NETWORK": "outline-net",
-            "SELECTOR": "outline",
+            "SELECTOR": "outline-app",
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/outline/data",

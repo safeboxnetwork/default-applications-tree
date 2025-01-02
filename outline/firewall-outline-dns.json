@@ -52,7 +52,7 @@
                     "SOURCE": "coredns"
                 },
                 {
-                    "TARGET": "outline"
+                    "TARGET": "outline-app"
                 },
                 {
                     "TYPE": "udp"

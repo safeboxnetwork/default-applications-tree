@@ -52,7 +52,7 @@
                     "SOURCE": "smarthostbackend"
                 },
                 {
-                    "TARGET": "outline"
+                    "TARGET": "outline-app"
                 },
                 {
                     "TYPE": "tcp"

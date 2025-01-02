@@ -49,7 +49,7 @@
                     "CHAIN": "DOCKER-USER"
                 },
                 {
-                    "SOURCE": "outline"
+                    "SOURCE": "outline-app"
                 },
                 {
                     "TARGET": "smtp"
