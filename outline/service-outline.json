@@ -111,7 +111,7 @@
                     "REDIS_URL": "redis://outlineredis-app:6379"
                 },
                 {
-                    "URL": "$OUTLINE_DOMAIN"
+                    "URL": "https://#OUTLINE_DOMAIN"
                 },
                 {
                     "PORT": 3000
@@ -133,6 +133,9 @@
                 },
                 {
                     "FILE_STORAGE_WORKSPACE_IMPORT_MAX_SIZE": ""
+                },
+                {
+                    "PGSSLMODE": "disable"
                 }
             ],
             "ENV_FILES": [

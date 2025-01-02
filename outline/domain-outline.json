@@ -29,7 +29,7 @@
                     "PORT": "3000"
                 },
                 {
-                    "DOMAIN": "#OPENPROJECT_DOMAIN"
+                    "DOMAIN": "#OUTLINE_DOMAIN"
                 },
                 {
                     "SMARTHOST_PROXY_PATH": "/smarthost-domains"
