@@ -15,11 +15,6 @@
                     "SOURCE": "USER_DATA",
                     "DEST": "/etc/user/data",
                     "TYPE": "rw"
-                },
-                {
-                    "SOURCE": "SYSTEM_LOG",
-                    "DEST": "/etc/system/log",
-                    "TYPE": "rw"
                 }
             ],
             "EXTRA": "--rm",
@@ -64,7 +59,7 @@
         {
             "IMAGE": "redis:latest",
             "UPDATE": "true",
-            "NAME": "outlineredis-app",
+            "NAME": "outlineredis-server",
             "MEMORY": "128M",
             "NETWORK": "outline-net",
             "SELECTOR": "outlineredis",
