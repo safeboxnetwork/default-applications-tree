@@ -31,7 +31,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "postgres:13-alpine",
+            "IMAGE": "postgres:16-alpine",
             "UPDATE": "true",
             "NAME": "outlinepostgres-db",
             "MEMORY": "256M",
