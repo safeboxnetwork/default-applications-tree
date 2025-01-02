@@ -2,6 +2,13 @@
     "name": "outline",
     "fields": [
         {
+            "description": "Secret key",
+            "key": "SECRET_KEY",
+            "value": "",
+            "required": "true",
+            "generated": "random|md5|12"
+        },
+        {
             "description": "Postgres database name",
             "key": "DB_NAME",
             "value": "",
