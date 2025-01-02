@@ -111,7 +111,7 @@
                     "REDIS_URL": "redis://outlineredis-app:6379"
                 },
                 {
-                    "URL": ""
+                    "URL": "$OUTLINE_DOMAIN"
                 },
                 {
                     "PORT": 3000
