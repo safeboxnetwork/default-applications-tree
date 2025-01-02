@@ -1,7 +1,7 @@
 {
     "main": {
-        "SERVICE_NAME": "openproject",
-        "DOMAIN": "#OPENPROJECT_DOMAIN"
+        "SERVICE_NAME": "outline",
+        "DOMAIN": "#OUTLINE_DOMAIN"
     },
     "containers": [
         {
@@ -23,7 +23,7 @@
                     "PROXY": "smarthostloadbalancer"
                 },
                 {
-                    "TARGET": "outline"
+                    "TARGET": "outline-app"
                 },
                 {
                     "PORT": "3000"
