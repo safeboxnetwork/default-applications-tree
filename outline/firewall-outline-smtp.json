@@ -49,19 +49,19 @@
                     "CHAIN": "DOCKER-USER"
                 },
                 {
-                    "SOURCE": "smarthostbackend"
+                    "SOURCE": "outline"
                 },
                 {
-                    "TARGET": "openprojectapp-web"
+                    "TARGET": "smtp"
                 },
                 {
                     "TYPE": "tcp"
                 },
                 {
-                    "TARGET_PORT": "8080"
+                    "TARGET_PORT": "25"
                 },
                 {
-                    "COMMENT": "proxy for openproject"
+                    "COMMENT": "smtp for openproject"
                 }
             ],
             "EXTRA": "--privileged --rm",

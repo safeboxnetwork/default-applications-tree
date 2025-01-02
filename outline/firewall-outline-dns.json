@@ -52,7 +52,7 @@
                     "SOURCE": "coredns"
                 },
                 {
-                    "TARGET": "openprojectapp-web"
+                    "TARGET": "outline"
                 },
                 {
                     "TYPE": "udp"
@@ -61,7 +61,7 @@
                     "TARGET_PORT": "53"
                 },
                 {
-                    "COMMENT": "dns for openproject"
+                    "COMMENT": "dns for outline"
                 }
             ],
             "EXTRA": "--privileged --rm",

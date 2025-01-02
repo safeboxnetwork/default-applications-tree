@@ -1,5 +1,5 @@
 {
-    "name": "openproject",
+    "name": "outline",
     "fields": [
         {
             "description": "Postgres database name",
@@ -30,8 +30,8 @@
             "generated": "random|sha256|20"
         },
         {
-            "description": "Please add OpenProject domain:",
-            "key": "OPENPROJECT_DOMAIN",
+            "description": "Please add Outline domain:",
+            "key": "OUTLINE_DOMAIN",
             "value": "",
             "required": "true"
         }

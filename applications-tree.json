@@ -21,8 +21,8 @@
             "version": "latest"
         },
         {
-            "name": "openproject",
-            "version": "15"
+            "name": "outline",
+            "version": "latest"
         }
     ]
 }

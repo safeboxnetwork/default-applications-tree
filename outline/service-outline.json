@@ -1,0 +1,159 @@
+{
+    "main": {
+        "SERVICE_NAME": "outline",
+        "DOMAIN": "#OUTLINE_DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "outline-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "SYSTEM_LOG",
+                    "DEST": "/etc/system/log",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/outline/data && mkdir -p /etc/user/data/outline/db",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "postgres:13-alpine",
+            "UPDATE": "true",
+            "NAME": "outlinepostgres-db",
+            "MEMORY": "256M",
+            "NETWORK": "outline-net",
+            "SELECTOR": "outlinepostgres-db",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/outline/db",
+                    "DEST": "/var/lib/postgresql/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "5432",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/outline/outline.json"
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "redis:latest",
+            "UPDATE": "true",
+            "NAME": "outlineredis-app",
+            "MEMORY": "128M",
+            "NETWORK": "outline-net",
+            "SELECTOR": "outlineredis",
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "6379",
+                    "TYPE": "tcp"
+                }
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "outlinewiki/outline:latest",
+            "UPDATE": "true",
+            "NAME": "outlineapp",
+            "NETWORK": "outline-net",
+            "SELECTOR": "outline",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/outline/data",
+                    "DEST": "/var/lib/outline/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "3000",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENVS": [
+                {
+                    "NODE_ENV": "production"
+                },
+                {
+                    "DATABASE_CONNECTION_POOL_MIN": ""
+                },
+                {
+                    "DATABASE_CONNECTION_POOL_MAX": ""
+                },
+                {
+                    "REDIS_URL": "redis://outlineredis-app:6379"
+                },
+                {
+                    "URL": ""
+                },
+                {
+                    "PORT": 3000
+                },
+                {
+                    "COLLABORATION_URL": ""
+                },
+                {
+                    "FILE_STORAGE": "local"
+                },
+                {
+                    "FILE_STORAGE_LOCAL_ROOT_DIR": "/var/lib/outline/data"
+                },
+                {
+                    "FILE_STORAGE_UPLOAD_MAX_SIZE": 262144000
+                },
+                {
+                    "FILE_STORAGE_IMPORT_MAX_SIZE": ""
+                },
+                {
+                    "FILE_STORAGE_WORKSPACE_IMPORT_MAX_SIZE": ""
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/outline/outline.json"
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": [
+                "firewall-outline",
+                "domain-outline",
+                "firewall-outline-dns",
+                "firewall-outline-smtp"
+            ]
+        }
+    ]
+}
