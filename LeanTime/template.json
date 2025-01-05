@@ -63,9 +63,7 @@
         {
             "description": "Do you want to set up OIDC provider? (default is false)",
             "key": "OIDC_ENABLE",
-            "value": "false",
-            "required": "",
-            "generated": ""
+            "value": "false"
         },
         {
             "description": "Please add OIDC user key:",
