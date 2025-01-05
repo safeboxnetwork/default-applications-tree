@@ -118,7 +118,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "",
+            "IMAGE": "leantime/leantime:latest",
             "UPDATE": "true",
             "NAME": "leantimeapp",
             "MEMORY": "1024M",
