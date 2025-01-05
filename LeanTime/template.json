@@ -37,7 +37,7 @@
             "key": "DB_MYSQL",
             "value": "",
             "required": "true",
-            "generated": ""
+            "generated": "time|md5|10"
         },
         {
             "description": "MYSQL username",
