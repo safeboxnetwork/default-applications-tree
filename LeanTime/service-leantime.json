@@ -139,7 +139,7 @@
                     "TYPE": "rw"
                 },
                 {
-                    "SOURCE": "/etc/user/data/leantime/plugins",
+                    "SOURCE": "/etc/user/data/leantime/data/plugins",
                     "DEST": "/var/www/html/app/Plugins",
                     "TYPE": "rw"
                 }
