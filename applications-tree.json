@@ -1,27 +1,31 @@
 {
     "apps": [
         {
-            "name": "nextcloud",
+            "name": "NextCloud",
             "version": "26.0"
         },
         {
-            "name": "homeassistant",
+            "name": "HomeAssistant",
             "version": "latest"
         },
         {
-            "name": "guacamole",
+            "name": "Guacamole",
             "version": "latest"
         },
         {
-            "name": "vaultwarden",
+            "name": "VaultWarden",
             "version": "latest"
         },
         {
-            "name": "smtp",
+            "name": "Smtp",
             "version": "latest"
         },
         {
-            "name": "outline",
+            "name": "Outline",
+            "version": "latest"
+        },
+        {
+            "name": "LeanTime",
             "version": "latest"
         }
     ]
