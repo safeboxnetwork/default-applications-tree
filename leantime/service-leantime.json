@@ -86,38 +86,6 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "redis:latest",
-            "UPDATE": "true",
-            "NAME": "leantimeredis-app",
-            "MEMORY": "128M",
-            "NETWORK": "leantime-net",
-            "SELECTOR": "leantimeredis-app",
-            "PORTS": [
-                {
-                    "SOURCE": "null",
-                    "DEST": "6379",
-                    "TYPE": "tcp"
-                }
-            ],
-            "READYNESS": [
-                {
-                    "tcp": ""
-                },
-                {
-                    "HTTP": ""
-                },
-                {
-                    "EXEC": "/ready.sh"
-                }
-            ],
-            "EXTRA": "--restart always",
-            "DEPEND": "null",
-            "START_ON_BOOT": "false",
-            "CMD": "null",
-            "PRE_START": "null",
-            "POST_START": "null"
-        },
-        {
             "IMAGE": "leantime/leantime:latest",
             "UPDATE": "true",
             "NAME": "leantimeapp",
