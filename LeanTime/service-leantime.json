@@ -164,24 +164,6 @@
             ],
             "ENVS": [
                 {
-                    "LEAN_USE_REDIS": true
-                },
-                {
-                    "LEAN_REDIS_URL": "tcp://leantimeredis-app:6379"
-                },
-                {
-                    "LEAN_REDIS_HOST": "leantimeredis-app"
-                },
-                {
-                    "LEAN_REDIS_PORT": 6379
-                },
-                {
-                    "LEAN_REDIS_PASSWORD": ""
-                },
-                {
-                    "LEAN_REDIS_SCHEME": ""
-                },
-                {
                     "LEAN_RATELIMIT_GENERAL": "1000"
                 },
                 {
@@ -335,7 +317,7 @@
             "ENV_FILES": [
                 "/etc/user/secret/leantime/leantime.json"
             ],
-            "EXTRA": "--user www-data --restart always",
+            "EXTRA": "",
             "DEPEND": "null",
             "START_ON_BOOT": "false",
             "CMD": "null",
