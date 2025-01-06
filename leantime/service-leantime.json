@@ -171,7 +171,7 @@
                     "LEAN_LOG_PATH": "log/"
                 },
                 {
-                    "LEAN_DISABLE_LOGIN_FORM": "#DISABLE_LOGIN"
+                    "LEAN_DISABLE_LOGIN_FORM": "false"
                 },
                 {
                     "LEAN_SESSION_EXPIRATION": "#SESSION_EXPIRATION"
