@@ -88,6 +88,11 @@
             "generated": "random|sha256|20"
         },
         {
+            "description": "Please add session expiration time in seconds (defaults is 28800)",
+            "key": "SESSION_EXPIRATION",
+            "value": "28800"
+        },
+        {
             "description": "Please add a strong password for sessions",
             "key": "SESSION_PASSWORD",
             "value": "",
