@@ -1,58 +1,76 @@
 {
-	"main": {
-		"SERVICE_NAME": "firewalls",
-		"DOMAIN": "null" 
-	},
-	"containers": [
-		{ 
-			"IMAGE": "registry.format.hu/firewall",
-			"UDAPE": "true",
-			"NAME": "firewall",
-			"MEMORY": "64M",
-			"NETWORK": "host",
-			"SCALE": "0",
-			"VOLUMES": [
-				{
-				"SOURCE": "/run/",
-				"DEST": "/run/",
-				"TYPE": "rw"
-				},
-				{
-				"SOURCE": "/etc/user/config/services",
-				"DEST": "/services",
-				"TYPE": "ro"
-				},
-				{
-				"SOURCE": "/etc/system/data/dns/hosts.local",
-				"DEST": "/etc/dns/hosts.local",
-				"TYPE": "ro"
-				},
-				{
-                "SOURCE": "/var/run/docker.sock",
-                "DEST": "/var/run/docker.sock",
-                "TYPE": "rw"
+    "main": {
+        "SERVICE_NAME": "firewalls",
+        "DOMAIN": "null"
+    },
+    "containers": [
+        {
+            "IMAGE": "registry.format.hu/firewall",
+            "UPDATE": "true",
+            "NAME": "firewall",
+            "MEMORY": "64M",
+            "NETWORK": "host",
+            "SCALE": "0",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/run/",
+                    "DEST": "/run/",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/user/config/services",
+                    "DEST": "/services",
+                    "TYPE": "ro"
+                },
+                {
+                    "SOURCE": "/etc/system/data/dns/hosts.local",
+                    "DEST": "/etc/dns/hosts.local",
+                    "TYPE": "ro"
+                },
+                {
+                    "SOURCE": "/var/run/docker.sock",
+                    "DEST": "/var/run/docker.sock",
+                    "TYPE": "rw"
                 }
-				],
-			"PORTS": [ ],
-			"READYNESS": [
-			        {"tcp": ""},
-			        {"HTTP": ""},
-				{"EXEC": "/ready.sh"}
-				],
-                        "ENVS": [
-               			{ "CHAIN": "DOCKER-USER" },
-                                { "SOURCE": "nextcloudnginx" },
-                                { "TARGET": "coredns" },
-                                { "TYPE": "udp" },
-                                { "TARGET_PORT": "53" },
-                                { "COMMENT": "nextcloud nginx access for local dns" }
-                                ], 
-			"EXTRA": "--privileged --rm",
-			"DEPEND": "null",
-			"START_ON_BOOT": "false",
-			"CMD": "",
-			"PRE_START": [],
-			"POST_START": []
-		}
-	]
+            ],
+            "PORTS": [],
+            "READYNESS": [
+                {
+                    "tcp": ""
+                },
+                {
+                    "HTTP": ""
+                },
+                {
+                    "EXEC": "/ready.sh"
+                }
+            ],
+            "ENVS": [
+                {
+                    "CHAIN": "DOCKER-USER"
+                },
+                {
+                    "SOURCE": "nextcloudnginx"
+                },
+                {
+                    "TARGET": "coredns"
+                },
+                {
+                    "TYPE": "udp"
+                },
+                {
+                    "TARGET_PORT": "53"
+                },
+                {
+                    "COMMENT": "nextcloud nginx access for local dns"
+                }
+            ],
+            "EXTRA": "--privileged --rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "",
+            "PRE_START": [],
+            "POST_START": []
+        }
+    ]
 }

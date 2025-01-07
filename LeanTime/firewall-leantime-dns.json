@@ -6,7 +6,7 @@
     "containers": [
         {
             "IMAGE": "registry.format.hu/firewall",
-            "UDAPE": "true",
+            "UPDATE": "true",
             "NAME": "firewall",
             "MEMORY": "64M",
             "NETWORK": "host",
@@ -50,7 +50,7 @@
                     "CHAIN": "DOCKER-USER"
                 },
                 {
-                    "SOURCE": "leantime-app"
+                    "SOURCE": "leantimeapp"
                 },
                 {
                     "TARGET": "coredns"
