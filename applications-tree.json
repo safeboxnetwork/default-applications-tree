@@ -4,6 +4,10 @@
             "name": "NextCloud",
             "version": "26.0"
         },
+                {
+            "name": "Feri",
+            "version": "26.0"
+        },
         {
             "name": "HomeAssistant",
             "version": "latest"
