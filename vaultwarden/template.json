@@ -2,7 +2,7 @@
     "name": "vaultwarden",
     "fields": [
         {
-            "description": "Please add your very secret VaultWarden admin key (please use any token generator or add minimum 12 character long random string):",
+            "description": "Please add your very secret VaultWarden admin key (please use any token generator or add minimum 12 character long random string): (reuired)",
             "key": "VAULTWARDEN_ADMIN_TOKEN",
             "value": "",
             "required": "true"
@@ -55,7 +55,7 @@
             "required": "true"
         },
         {
-            "description": "Please add SMTP PORT (587, 465, 25, etc.):",
+            "description": "Please add SMTP PORT (587, 465, 25, etc.) (optional, used 25 if keep empty):",
             "key": "VAULTWARDEN_SMTP_PORT",
             "value": "25",
             "required": "true"
