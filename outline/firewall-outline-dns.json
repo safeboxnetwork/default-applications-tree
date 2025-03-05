@@ -5,7 +5,7 @@
     },
     "containers": [
         {
-            "IMAGE": "registry.format.hu/firewall",
+            "IMAGE": "safebox/firewall",
             "NAME": "firewall",
             "MEMORY": "64M",
             "NETWORK": "host",

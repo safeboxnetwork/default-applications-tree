@@ -5,7 +5,7 @@
     },
     "containers": [
         {
-            "IMAGE": "registry.format.hu/homeassistant-init-container",
+            "IMAGE": "safebox/homeassistant-init-container",
             "UPDATE": "true",
             "NAME": "homeassistant-init",
             "NETWORK": "host",

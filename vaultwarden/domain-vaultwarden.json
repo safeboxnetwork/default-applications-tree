@@ -5,7 +5,7 @@
     },
     "containers": [
         {
-            "IMAGE": "registry.format.hu/domain-check",
+            "IMAGE": "safebox/domain-check",
             "UPDATE": "true",
             "MEMORY": "64M",
             "NAME": "domain_checker",
