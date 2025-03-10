@@ -3,13 +3,13 @@
     "fields": [
         {
             "description": "Please add your homeassistant domain: (required)",
-            "key": "HOMEASSISTANT_DOMAIN",
+            "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
             "description": "Please add your homeassistant timezone: (required)",
-            "key": "HOMEASSISTANT_TZ",
+            "key": "TZ",
             "value": "Europe/Budapest",
             "required": "true"
         }
