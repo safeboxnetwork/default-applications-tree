@@ -3,34 +3,34 @@
     "fields": [
         {
             "description": "Please add your very secret VaultWarden admin key (please use any token generator or add minimum 12 character long random string): (required)",
-            "key": "VAULTWARDEN_ADMIN_TOKEN",
+            "key": "ADMIN_TOKEN",
             "value": "",
             "required": "true"
         },
         {
             "description": "MYSQL database name",
-            "key": "DB_MYSQL",
+            "key": "MARIADB_DATABASE",
             "value": "",
             "required": "true",
             "generated": ""
         },
         {
             "description": "MYSQL username",
-            "key": "DB_USER",
+            "key": "MARIADB_USER",
             "value": "",
             "required": "true",
             "generated": "time|md5|8"
         },
         {
             "description": "MYSQL password for user",
-            "key": "DB_PASSWORD",
+            "key": "MARIADB_PASSWORD",
             "value": "",
             "required": "true",
             "generated": "random|md5|12"
         },
         {
             "description": "MYSQL root user password",
-            "key": "DB_ROOT_PASSWORD",
+            "key": "MARIADB_ROOT_PASSWORD",
             "value": "",
             "required": "true",
             "generated": "random|sha256|20"
@@ -83,7 +83,7 @@
         },
         {
             "description": "Please add Domains Whitelist (list of domains separated with spaces):",
-            "key": "VAULTWARDEN_WHITELIST",
+            "key": "SIGNUPS_DOMAINS_WHITELIST",
             "value": "",
             "required": "true"
         }
