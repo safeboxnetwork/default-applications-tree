@@ -3,64 +3,64 @@
     "fields": [
         {
             "description": "Set timezone for smtp server",
-            "key": "SMTP_TIMEZONE",
+            "key": "TZ",
             "value": "Europe/Budapest",
             "required": "true"
         },
         {
             "description": "Set relay hostname for smtp server",
-            "key": "SMTP_RELAY_HOST",
+            "key": "RELAY_HOST",
             "value": "",
             "required": "true"
         },
         {
             "description": "Set relay port for smtp server",
-            "key": "SMTP_RELAY_PORT",
+            "key": "RELAY_PORT",
             "value": "587",
             "required": "true"
         },
         {
             "description": "Set username for smtp server",
-            "key": "SMTP_RELAY_USER",
+            "key": "RELAY_USER",
             "value": "",
             "required": "true"
         },
         {
             "description": "Set password for smtp server",
-            "key": "SMTP_RELAY_PASS",
+            "key": "RELAY_PASS",
             "value": "",
             "required": "true"
         },
         {
             "description": "Set test email address smtp server",
-            "key": "SMTP_TEST_EMAIL",
+            "key": "TEST_EMAIL",
             "value": ""
         },
         {
             "description": "Set subnet using smtp server (you can set multiple networks with comma separated values)",
-            "key": "SMTP_MYNETWORKS",
+            "key": "MYNETWORKS",
             "value": "0.0.0.0/0",
             "required": "true"
         },
         {
             "description": "Set default domain name using smtp server",
-            "key": "SMTP_MYORIGIN",
+            "key": "MYORIGIN",
             "value": ""
         },
         {
             "description": "Set from email address for smtp server",
-            "key": "SMTP_FROMADDRESS",
+            "key": "FROMADDRESS",
             "value": "",
             "required": "true"
         },
         {
             "description": "Set maximum size in bytes of sending message",
-            "key": "SMTP_MSG_SIZE",
+            "key": "MSG_SIZE",
             "value": "30720000"
         },
         {
             "description": "Set log enable or not for smtp server",
-            "key": "SMTP_LOG_DISABLE",
+            "key": "LOG_DISABLE",
             "value": "false"
         }
     ]
