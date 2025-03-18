@@ -8,6 +8,12 @@
                         "required": "true"
                 },
                 {
+                        "description": "Domain for letsencrypt log",
+                        "key": "DOMAIN",
+                        "value": "",
+                        "type": "hidden"
+                },
+                {
                         "description": "Do you use any additional location path? (optional)\n(do not miss '/' character!)",
                         "key": "NEXTCLOUD_LOCATION_PATH",
                         "value": ""
