@@ -21,7 +21,7 @@
             "DEPEND": "null",
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh -c",
-            "CMD": "mkdir -p /etc/user/data/transmission/config",
+            "CMD": "mkdir -p /etc/user/data/transmission/config && mkdir -p /etc/user/data/transmission/downloads && mkdir -p /etc/user/data/transmission/watch && chmod -R 755 /etc/user/data/transmission && chown -R 1000:1000 /etc/user/data/transmission",
             "PRE_START": "null",
             "POST_START": "null"
         },
@@ -34,6 +34,16 @@
                 {
                     "SOURCE": "/etc/user/data/transmission/config",
                     "DEST": "/config",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/user/data/transmission/downloads",
+                    "DEST": "/downloads",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/user/data/transmission/watch",
+                    "DEST": "/watch",
                     "TYPE": "rw"
                 }
             ],
