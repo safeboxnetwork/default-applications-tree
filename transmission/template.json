@@ -18,9 +18,24 @@
             "type": "password"
         },
         {
-            "description": "Please add your transmission timezone: (optional",
+            "description": "Please add your transmission timezone: (optional)",
             "key": "TRANSMISSION_TZ",
             "value": "Europe/Budapest"
+        },
+        {
+            "description": "You can add whitelist ip addresses: (optional)",
+            "key": "TRANSMISSION_WHITELIST",
+            "value": ""
+        },
+        {
+            "description": "You can add additional peer port: (optional)",
+            "key": "TRANSMISSION_PEERPORT",
+            "value": ""
+        },
+        {
+            "description": "You can add host whitelist: (optional)",
+            "key": "TRANSMISSION_HOST_WHITELIST",
+            "value": ""
         }
     ]
 }
