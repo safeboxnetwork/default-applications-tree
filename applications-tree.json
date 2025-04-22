@@ -17,6 +17,10 @@
             "version": "latest"
         },
         {
+            "name": "TransMission",
+            "version": "latest"
+        },
+        {
             "name": "Smtp",
             "version": "latest"
         },

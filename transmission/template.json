@@ -1,0 +1,25 @@
+{
+    "name": "transmission",
+    "fields": [
+        {
+            "description": "Please add a username: (not required but recommended)",
+            "key": "TRANSMISSION_USER",
+            "value": ""
+        },
+        {
+            "description": "Please add a password for user: (not required but recommended)",
+            "key": "TRANSMISSION_PASS",
+            "value": ""
+        },
+        {
+            "description": "Please add your transmission domain: (not required but recommended)",
+            "key": "TRANSMISSION_DOMAIN",
+            "value": ""
+        },
+        {
+            "description": "Please add your transmission timezone: (optional",
+            "key": "TRANSMISSION_TZ",
+            "value": "Europe/Budapest"
+        }
+    ]
+}

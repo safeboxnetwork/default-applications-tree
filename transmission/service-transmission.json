@@ -1,0 +1,91 @@
+{
+    "main": {
+        "SERVICE_NAME": "transmission",
+        "DOMAIN": "#TRANSMISSION_DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "nextcloud",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/transmission/config && mkdir -p /etc/user/data/transmission/downloads && mkdir -p /etc/user/data/transmission/watch",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "lscr.io/linuxserver/transmission:latest",
+            "UPDATE": "true",
+            "NAME": "transmission",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/transmission/config",
+                    "DEST": "/config",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/user/data/transmission/downloads",
+                    "DEST": "/downloads",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/user/data/transmission/watch",
+                    "DEST": "/watch",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "9091",
+                    "TYPE": "tcp"
+                },
+                {
+                    "SOURCE": "51413",
+                    "DEST": "51413",
+                    "TYPE": "tcp"
+                },
+                {
+                    "SOURCE": "51413",
+                    "DEST": "51413",
+                    "TYPE": "udp"
+                }
+            ],
+            "ENVS": [
+                {
+                    "TZ": "#TRANSMISSION_TZ"
+                },
+                {
+                    "PUID": "1000"
+                },
+                {
+                    "PGID": "1000"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/transmission/transmission.json"
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": [
+                "firewall-transmission",
+                "domain-transmission"
+            ]
+        }
+    ]
+}
