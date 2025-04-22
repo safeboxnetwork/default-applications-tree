@@ -1,7 +1,7 @@
 {
     "main": {
         "SERVICE_NAME": "homeassistant",
-        "DOMAIN": "#HOMEASSISTANT_DOMAIN"
+        "DOMAIN": "#DOMAIN"
     },
     "containers": [
         {
@@ -24,7 +24,7 @@
             ],
             "ENVS": [
                 {
-                    "DOMAIN": "#HOMEASSISTANT_DOMAIN"
+                    "DOMAIN": "#DOMAIN"
                 },
                 {
                     "HOMEASSISTANT": "homeassistant"
@@ -58,7 +58,7 @@
             ],
             "ENVS": [
                 {
-                    "TZ": "#HOMEASSISTANT_TZ"
+                    "TZ": "#TZ"
                 }
             ],
             "EXTRA": "--restart unless-stopped",

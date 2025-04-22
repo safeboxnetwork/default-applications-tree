@@ -97,7 +97,7 @@
                     "RUST_BACKTRACE": "1"
                 },
                 {
-                    "SIGNUPS_DOMAINS_WHITELIST": "#VAULTWARDEN_WHITELIST"
+                    "SIGNUPS_DOMAINS_WHITELIST": "#SIGNUPS_DOMAINS_WHITELIST"
                 },
                 {
                     "SIGNUPS_VERIFY": "true"

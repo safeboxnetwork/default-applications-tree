@@ -31,31 +31,31 @@
             ],
             "ENVS": [
                 {
-                    "TZ": "#SMTP_TIMEZONE"
+                    "TZ": "#TZ"
                 },
                 {
-                    "RELAY_HOST": "#SMTP_RELAY_HOST"
+                    "RELAY_HOST": "#RELAY_HOST"
                 },
                 {
-                    "RELAY_PORT": "#SMTP_RELAY_PORT"
+                    "RELAY_PORT": "#RELAY_PORT"
                 },
                 {
-                    "RELAY_USER": "#SMTP_RELAY_USER"
+                    "RELAY_USER": "#RELAY_USER"
                 },
                 {
-                    "TEST_EMAIL": "#SMTP_TEST_EMAIL"
+                    "TEST_EMAIL": "#TEST_EMAIL"
                 },
                 {
-                    "FROMADDRESS": "#SMTP_FROMADDRESS"
+                    "FROMADDRESS": "#FROMADDRESS"
                 },
                 {
-                    "MYNETWORKS": "#SMTP_MYNETWORKS"
+                    "MYNETWORKS": "#MYNETWORKS"
                 },
                 {
-                    "MSG_SIZE": "#SMTP_MSG_SIZE"
+                    "MSG_SIZE": "#MSG_SIZE"
                 },
                 {
-                    "LOG_DISABLE": "#SMTP_LOG_DISABLE"
+                    "LOG_DISABLE": "#LOG_DISABLE"
                 }
             ],
             "ENV_FILES": [

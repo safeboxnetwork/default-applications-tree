@@ -1,7 +1,7 @@
  {
     "main": { 
       "SERVICE_NAME": "nextcloud",
-      "DOMAIN": "#NEXTCLOUD_DOMAIN"
+      "DOMAIN": "#NEXTCLOUD_TRUSTED_DOMAINS"
     },
     "containers": [
       { 
@@ -23,7 +23,7 @@
           { "TARGET": "nextcloudnginx" },
           { "PORT": "80" },
           { "LOCATION": "#NEXTCLOUD_LOCATION_PATH" },
-          { "DOMAIN": "#NEXTCLOUD_DOMAIN" },
+          { "DOMAIN": "#NEXTCLOUD_TRUSTED_DOMAINS" },
           { "SMARTHOST_PROXY_PATH": "/smarthost-domains" },
 	        { "OPERATION": "CREATE" }
         ],
