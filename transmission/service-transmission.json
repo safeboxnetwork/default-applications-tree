@@ -29,6 +29,7 @@
             "IMAGE": "lscr.io/linuxserver/transmission:latest",
             "UPDATE": "true",
             "NAME": "transmission",
+            "SELECTOR": "transmission",
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/transmission/config",
