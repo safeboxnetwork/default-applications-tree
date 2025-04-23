@@ -35,7 +35,8 @@
         {
             "description": "You can add host whitelist: (optional)",
             "key": "TRANSMISSION_HOST_WHITELIST",
-            "value": ""
+            "value": "",
+            "advance": "true"
         }
     ]
 }
