@@ -2,9 +2,10 @@
     "name": "transmission",
     "fields": [
         {
-            "description": "Please add your transmission domain: (not required but recommended)",
+            "description": "Please add your transmission domain:",
             "key": "TRANSMISSION_DOMAIN",
-            "value": ""
+            "value": "",
+            "required": "true"
         },
         {
             "description": "Please add a username: (not required but recommended)",
