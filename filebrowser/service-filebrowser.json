@@ -1,0 +1,75 @@
+{
+    "main": {
+        "SERVICE_NAME": "filebrowser",
+        "DOMAIN": "#TRANSMISSION_DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "filebrowser-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/filebrowser && mkdir -p /etc/user/data/transmission/downloads/complete",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "filebrowser/filebrowser:latest",
+            "UPDATE": "true",
+            "NAME": "filebrowser",
+            "SELECTOR": "filebrowser",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/filebrowser",
+                    "DEST": "/srv",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/user/data/transmission/downloads",
+                    "DEST": "/srv/transmission",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "80",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENVS": [
+                {
+                    "PUID": "1000"
+                },
+                {
+                    "PGID": "1000"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/filebrowser/filebrowser.json"
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh",
+            "CMD": "-c '/filebrowser config init && /filebrowser users add \"$FILEBROWSER_USER\" \"$FILEBROWSER_PASS\" --perm.admin && /filebrowser'",
+            "PRE_START": "null",
+            "POST_START": [
+                "firewall-filebrowser",
+                "domain-filebrowser"
+            ]
+        }
+    ]
+}

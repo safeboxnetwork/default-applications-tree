@@ -52,16 +52,16 @@
                     "SOURCE": "smarthostbackend"
                 },
                 {
-                    "TARGET": "homeassistant"
+                    "TARGET": "guacamole"
                 },
                 {
                     "TYPE": "tcp"
                 },
                 {
-                    "TARGET_PORT": "8123"
+                    "TARGET_PORT": "80"
                 },
                 {
-                    "COMMENT": "proxy for homeassistant"
+                    "COMMENT": "proxy for guacamole"
                 }
             ],
             "EXTRA": "--privileged --rm",

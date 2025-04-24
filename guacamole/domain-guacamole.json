@@ -1,7 +1,7 @@
 {
     "main": {
-        "SERVICE_NAME": "homeassistant",
-        "DOMAIN": "#HOMEASSISTANT_DOMAIN"
+        "SERVICE_NAME": "guacamole",
+        "DOMAIN": "#GUACAMOLE_DOMAIN"
     },
     "containers": [
         {
@@ -26,10 +26,10 @@
                     "TARGET": "homeassistant"
                 },
                 {
-                    "PORT": "8123"
+                    "PORT": "80"
                 },
                 {
-                    "DOMAIN": "#HOMEASSISTANT_DOMAIN"
+                    "DOMAIN": "#GUACAMOLE_DOMAIN"
                 },
                 {
                     "SMARTHOST_PROXY_PATH": "/smarthost-domains"

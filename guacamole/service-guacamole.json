@@ -1,63 +1,125 @@
 {
     "main": {
-        "SERVICE_NAME": "homeassistant",
+        "SERVICE_NAME": "guacamole",
         "DOMAIN": "DOMAIN"
     },
     "containers": [
         {
-            "IMAGE": "alpine:latest",
+            "IMAGE": "mariadb:latest",
             "UPDATE": "true",
-            "NAME": "homeassistant-init",
-            "NETWORK": "host",
-            "MEMORY": "64M",
+            "NAME": "guacamolemysql-db",
+            "MEMORY": "256M",
+            "NETWORK": "guacamole-net",
+            "SELECTOR": "guacamolemysql",
             "VOLUMES": [
                 {
-                    "SOURCE": "USER_DATA",
-                    "DEST": "/etc/user/data",
+                    "SOURCE": "/etc/user/data/guacamole/db",
+                    "DEST": "/var/lib/mysql",
                     "TYPE": "rw"
-                }
-            ],
-            "EXTRA": "--rm",
-            "DEPEND": "null",
-            "START_ON_BOOT": "false",
-            "ENTRYPOINT": "sh -c",
-            "CMD": "mkdir -p /etc/user/data/homeassistant/config",
-            "PRE_START": "null",
-            "POST_START": "null"
-        },
-        {
-            "IMAGE": "ghcr.io/home-assistant/home-assistant:stable",
-            "UPDATE": "true",
-            "NAME": "homeassistant",
-            "NETWORK": "host",
-            "VOLUMES": [
+                },
                 {
-                    "SOURCE": "/etc/user/data/homeassistant/config",
-                    "DEST": "/config",
+                    "SOURCE": "/etc/system/log/guacamole/db",
+                    "DEST": "/var/lib/mysql/mysql-bin",
                     "TYPE": "rw"
                 }
             ],
             "PORTS": [
                 {
-                    "SOURCE": "8123",
-                    "DEST": "8123",
+                    "SOURCE": "null",
+                    "DEST": "3306",
                     "TYPE": "tcp"
                 }
             ],
-            "ENVS": [
+            "READYNESS": [
                 {
-                    "NAME": "TZ",
-                    "VALUE": "HOMEASSISTANT_TZ"
+                    "tcp": "3306"
+                },
+                {
+                    "HTTP": ""
+                },
+                {
+                    "EXEC": "/ready.sh"
                 }
             ],
-            "EXTRA": "--restart unless-stopped",
-            "DEPEND": [],
+            "ENV_FILES": [
+                "/etc/user/secret/guacamole/guacamole.json"
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": "null",
             "START_ON_BOOT": "false",
             "CMD": "null",
             "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "registry.format.hu/guacamole-guacd",
+            "UPDATE": "true",
+            "NAME": "guacd-app",
+            "MEMORY": "256M",
+            "NETWORK": "guacamole-net",
+            "SELECTOR": "guacdapp",
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "4822",
+                    "TYPE": "tcp"
+                }
+            ],
+            "READYNESS": [
+                {
+                    "tcp": ""
+                },
+                {
+                    "HTTP": ""
+                },
+                {
+                    "EXEC": "/ready.sh"
+                }
+            ],
+            "EXTRA": "",
+            "DEPEND": "null",
+            "START_ON_BOOT": "true",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "safebox/guacamole-tomcat",
+            "UPDATE": "true",
+            "NAME": "guacamoletomcat",
+            "ROLES": "backend-www",
+            "MEMORY": "256M",
+            "NETWORK": "guacamole-net",
+            "SELECTOR": "guacamoletomcat",
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "8080",
+                    "TYPE": "tcp"
+                }
+            ],
+            "READYNESS": [
+                {
+                    "tcp": ""
+                },
+                {
+                    "HTTP": ""
+                },
+                {
+                    "EXEC": "/ready.sh"
+                }
+            ],
+            "EXTRA": "null",
+            "ENV_FILES": [
+                "/etc/user/secret/guacamole/guacamole.json"
+            ],
+            "DEPEND": "null",
+            "START_ON_BOOT": "true",
+            "CMD": "null",
+            "PRE_START": "null",
             "POST_START": [
-                "firewall-homeassistant",
-                "domain-homeassistant"
+                "firewall-guacamole",
+                "domain-guacamole"
             ]
         }
     ]

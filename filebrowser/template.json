@@ -1,0 +1,22 @@
+{
+    "name": "filebrowser",
+    "fields": [
+        {
+            "description": "Please add your filebrowser domain:",
+            "key": "FILEBROWSER_DOMAIN",
+            "value": "",
+            "required": "true"
+        },
+        {
+            "description": "Please add a username:",
+            "key": "FILEBROWSER_USER",
+            "value": ""
+        },
+        {
+            "description": "Please add a password for user:",
+            "key": "FILEBROWSER_PASS",
+            "value": "",
+            "type": "password"
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "main": {
+        "SERVICE_NAME": "filebrowser",
+        "DOMAIN": "#FILEBROWSER_DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "safebox/domain-check",
+            "UPDATE": "true",
+            "MEMORY": "64M",
+            "NAME": "domain_checker",
+            "ROLES": "domain_checker",
+            "NETWORK": "host",
+            "SELECTOR": "",
+            "SCALE": "0",
+            "EXTRA": "--rm --privileged",
+            "PRE_START": [],
+            "DEPEND": [],
+            "POST_START": [],
+            "CMD": "",
+            "ENVS": [
+                {
+                    "PROXY": "smarthostloadbalancer"
+                },
+                {
+                    "TARGET": "filebrowser"
+                },
+                {
+                    "PORT": "9091"
+                },
+                {
+                    "DOMAIN": "#FILEBROWSER_DOMAIN"
+                },
+                {
+                    "SMARTHOST_PROXY_PATH": "/smarthost-domains"
+                },
+                {
+                    "OPERATION": "CREATE"
+                }
+            ],
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/config/smarthost-domains",
+                    "DEST": "/smarthost-domains",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/system/data/dns/hosts.local",
+                    "DEST": "/etc/dns/hosts.local",
+                    "TYPE": "ro"
+                },
+                {
+                    "SOURCE": "/var/run/docker.sock",
+                    "DEST": "/var/run/docker.sock",
+                    "TYPE": "rw"
+                }
+            ]
+        }
+    ]
+}
