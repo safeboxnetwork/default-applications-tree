@@ -5,6 +5,40 @@
     },
     "containers": [
         {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "guacamole-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "SYSTEM_DATA",
+                    "DEST": "/etc/system/data",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "SYSTEM_LOG",
+                    "DEST": "/etc/system/log",
+                    "TYPE": "rw"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/guacamole/guacamole.json"
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/guacamole/db && mkdir -p /etc/system/log/guacamole/db",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
             "IMAGE": "mariadb:latest",
             "UPDATE": "true",
             "NAME": "guacamolemysql-db",
