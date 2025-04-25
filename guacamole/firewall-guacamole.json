@@ -52,13 +52,13 @@
                     "SOURCE": "smarthostbackend"
                 },
                 {
-                    "TARGET": "guacamole"
+                    "TARGET": "guacamoletomcat"
                 },
                 {
                     "TYPE": "tcp"
                 },
                 {
-                    "TARGET_PORT": "80"
+                    "TARGET_PORT": "8080"
                 },
                 {
                     "COMMENT": "proxy for guacamole"

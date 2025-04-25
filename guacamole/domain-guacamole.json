@@ -23,10 +23,10 @@
                     "PROXY": "smarthostloadbalancer"
                 },
                 {
-                    "TARGET": "homeassistant"
+                    "TARGET": "guacamoletomcat"
                 },
                 {
-                    "PORT": "80"
+                    "PORT": "8080"
                 },
                 {
                     "DOMAIN": "#GUACAMOLE_DOMAIN"
