@@ -1,0 +1,10 @@
+{
+    "name": "jellyfin",
+    "fields": [
+        {
+            "description": "Please add your filebrowser domain:",
+            "key": "JELLYFIN_DOMAIN",
+            "value": ""
+        }
+    ]
+}

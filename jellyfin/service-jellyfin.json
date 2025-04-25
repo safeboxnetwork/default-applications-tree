@@ -1,0 +1,64 @@
+{
+    "main": {
+        "SERVICE_NAME": "filebrowser",
+        "DOMAIN": "#JELLYFIN_DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "safebox/jellyfin-init-container:latest",
+            "UPDATE": "true",
+            "NAME": "jellyfin-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "jellyfin/jellyfin:latest",
+            "UPDATE": "true",
+            "NAME": "jellyfin",
+            "NETWORK": "host",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/jellyfin/media",
+                    "DEST": "/media",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/user/data/jellyfin/config",
+                    "DEST": "/config",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/system/data/jellyfin/cache",
+                    "DEST": "/cache",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "8096",
+                    "DEST": "8096",
+                    "TYPE": "tcp"
+                }
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "PRE_START": "null",
+            "POST_START": [
+                "domain-jellyfin"
+            ]
+        }
+    ]
+}

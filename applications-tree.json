@@ -29,6 +29,14 @@
             "version": "latest"
         },
         {
+            "name": "FileBrowser",
+            "version": "latest"
+        },
+        {
+            "name": "Jellyfin",
+            "version": "latest"
+        },
+        {
             "name": "LeanTime",
             "version": "latest"
         }
