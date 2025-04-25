@@ -1,7 +1,7 @@
 {
     "main": {
         "SERVICE_NAME": "guacamole",
-        "DOMAIN": "DOMAIN"
+        "DOMAIN": "#GUACAMOLE_DOMAIN"
     },
     "containers": [
         {
