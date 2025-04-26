@@ -40,6 +40,11 @@
                     "TYPE": "rw"
                 },
                 {
+                    "SOURCE": "/etc/user/data/transmission/downloads/complete",
+                    "DEST": "/media/torrent",
+                    "TYPE": "rw"
+                },
+                {
                     "SOURCE": "/etc/user/data/jellyfin/config",
                     "DEST": "/config",
                     "TYPE": "rw"
