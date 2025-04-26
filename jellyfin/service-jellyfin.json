@@ -15,6 +15,11 @@
                     "SOURCE": "USER_DATA",
                     "DEST": "/etc/user/data",
                     "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "SYSTEM_DATA",
+                    "DEST": "/etc/system/data",
+                    "TYPE": "rw"
                 }
             ],
             "EXTRA": "--rm",
