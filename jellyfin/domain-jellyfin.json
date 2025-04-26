@@ -23,7 +23,7 @@
                     "PROXY": "smarthostloadbalancer"
                 },
                 {
-                    "TARGET": "filebrowser"
+                    "TARGET": "jellyfin"
                 },
                 {
                     "PORT": "8096"
