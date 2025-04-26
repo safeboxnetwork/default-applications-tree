@@ -26,7 +26,7 @@
                     "TARGET": "filebrowser"
                 },
                 {
-                    "PORT": "9091"
+                    "PORT": "80"
                 },
                 {
                     "DOMAIN": "#FILEBROWSER_DOMAIN"
