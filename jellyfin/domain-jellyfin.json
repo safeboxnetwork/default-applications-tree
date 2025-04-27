@@ -1,6 +1,6 @@
 {
     "main": {
-        "SERVICE_NAME": "filebrowser",
+        "SERVICE_NAME": "jellyfin",
         "DOMAIN": "#JELLYFIN_DOMAIN"
     },
     "containers": [
