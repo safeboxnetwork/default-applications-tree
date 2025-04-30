@@ -86,7 +86,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "safebox/guacamole-guacd",
+            "IMAGE": "guacamole/guacd",
             "UPDATE": "true",
             "NAME": "guacd-app",
             "MEMORY": "256M",
