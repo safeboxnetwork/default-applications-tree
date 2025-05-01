@@ -35,7 +35,7 @@
                     "SMARTHOST_PROXY_PATH": "/smarthost-domains"
                 },
                 {
-                    "PROXY_PATH": "/guacamole/"
+                    "LOCATION": "/guacamole/"
                 },
                 {
                     "OPERATION": "CREATE"
