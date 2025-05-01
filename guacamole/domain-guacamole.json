@@ -26,16 +26,13 @@
                     "TARGET": "guacamoletomcat"
                 },
                 {
-                    "PORT": "8080"
+                    "PORT": "8080/guacamole/"
                 },
                 {
                     "DOMAIN": "#GUACAMOLE_DOMAIN"
                 },
                 {
                     "SMARTHOST_PROXY_PATH": "/smarthost-domains"
-                },
-                {
-                    "LOCATION": "/guacamole"
                 },
                 {
                     "OPERATION": "CREATE"
