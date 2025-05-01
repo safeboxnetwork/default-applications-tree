@@ -86,7 +86,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "guacamole/guacd",
+            "IMAGE": "safebox/guacamole-server:1.6",
             "UPDATE": "true",
             "NAME": "guacd-app",
             "MEMORY": "256M",
@@ -118,7 +118,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "safebox/guacamole-tomcat",
+            "IMAGE": "safebox/guacamole-tomcat:1.6",
             "UPDATE": "true",
             "NAME": "guacamoletomcat",
             "ROLES": "backend-www",

@@ -21,9 +21,9 @@
             "type": "password"
         },
         {
-            "description": "Do you want TOTP via login?",
+            "description": "Do you want TOTP via login? Please select ture or false ",
             "key": "GUACAMOLE_TOTP",
-            "value": "yes,no",
+            "value": "false,true",
             "required": "true",
             "type": "select"
         },
