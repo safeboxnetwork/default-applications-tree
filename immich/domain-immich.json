@@ -23,7 +23,7 @@
                     "PROXY": "smarthostloadbalancer"
                 },
                 {
-                    "TARGET": "immich"
+                    "TARGET": "immichapp"
                 },
                 {
                     "PORT": "2283"
