@@ -78,7 +78,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "immich-app/immich-server:#IMMICH_VERSION",
+            "IMAGE": "ghcr.io/immich-app/immich-server:#IMMICH_VERSION",
             "UPDATE": "true",
             "NAME": "immichapp-app",
             "MEMORY": "1024M",
@@ -129,7 +129,7 @@
             ]
         },
         {
-            "IMAGE": "immich-app/immich-machine-learning:#IMMICH_VERSION",
+            "IMAGE": "ghcr.io/immich-app/immich-machine-learning:#IMMICH_VERSION",
             "UPDATE": "true",
             "NAME": "immichmachine-learning",
             "ROLES": "backend-www",
