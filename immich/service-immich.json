@@ -118,6 +118,9 @@
                     "IMMICH_VERSION": "#IMMICH_VERSION"
                 }
             ],
+            "ENV_FILES": [
+                "/etc/user/secret/immich/immich.json"
+            ],
             "EXTRA": "",
             "DEPEND": "null",
             "START_ON_BOOT": "true",
@@ -136,6 +139,17 @@
             "MEMORY": "1024M",
             "NETWORK": "immich-net",
             "SELECTOR": "immichmachine-learning",
+            "ENVS": [
+                {
+                    "REDIS_HOSTNAME": "immichredis-app"
+                },
+                {
+                    "TZ": "#IMMICH_TZ"
+                },
+                {
+                    "IMMICH_VERSION": "#IMMICH_VERSION"
+                }
+            ],
             "DEPEND": "null",
             "START_ON_BOOT": "true",
             "CMD": "null",
