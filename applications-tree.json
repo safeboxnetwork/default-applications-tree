@@ -39,6 +39,10 @@
         {
             "name": "LeanTime",
             "version": "latest"
+        },
+        {
+            "name": "Immich",
+            "version": "latest"
         }
     ]
 }
