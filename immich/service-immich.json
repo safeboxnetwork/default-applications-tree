@@ -21,7 +21,7 @@
             "DEPEND": "null",
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh -c",
-            "CMD": "mkdir -p /etc/user/data/immich/db && /etc/user/data/immich/upload",
+            "CMD": "mkdir -p /etc/user/data/immich/db && mkdir -p /etc/user/data/immich/upload",
             "PRE_START": "null",
             "POST_START": "null"
         },
