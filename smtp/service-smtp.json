@@ -61,7 +61,7 @@
             "ENV_FILES": [
                 "/etc/user/secret/smtp/smtp.json"
             ],
-            "EXTRA": "null",
+            "EXTRA": "--restart always",
             "DEPEND": "null",
             "START_ON_BOOT": "true",
             "CMD": "null",

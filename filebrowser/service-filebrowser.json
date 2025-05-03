@@ -57,7 +57,7 @@
             "ENV_FILES": [
                 "/etc/user/secret/filebrowser/filebrowser.json"
             ],
-            "EXTRA": "--restart unless-stopped",
+            "EXTRA": "--restart always",
             "DEPEND": [],
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh",

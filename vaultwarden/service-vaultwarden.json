@@ -59,7 +59,7 @@
             "ENV_FILES": [
                 "/etc/user/secret/vaultwarden/vaultwarden.json"
             ],
-            "EXTRA": "--restart unless-stopped",
+            "EXTRA": "--restart always",
             "DEPEND": "null",
             "START_ON_BOOT": "false",
             "CMD": "null",
@@ -124,7 +124,7 @@
             "ENV_FILES": [
                 "/etc/user/secret/vaultwarden/vaultwarden.json"
             ],
-            "EXTRA": "--restart unless-stopped",
+            "EXTRA": "--restart always",
             "DEPEND": [],
             "START_ON_BOOT": "false",
             "CMD": "null",

@@ -61,7 +61,7 @@
                     "TZ": "#TZ"
                 }
             ],
-            "EXTRA": "--restart unless-stopped",
+            "EXTRA": "--restart always",
             "DEPEND": [],
             "START_ON_BOOT": "false",
             "CMD": "null",

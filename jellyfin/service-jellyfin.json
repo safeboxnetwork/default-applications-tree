@@ -62,7 +62,7 @@
                     "TYPE": "tcp"
                 }
             ],
-            "EXTRA": "--restart unless-stopped",
+            "EXTRA": "--restart always",
             "DEPEND": [],
             "START_ON_BOOT": "false",
             "PRE_START": "null",

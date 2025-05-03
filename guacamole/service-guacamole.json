@@ -110,7 +110,7 @@
                     "EXEC": "/ready.sh"
                 }
             ],
-            "EXTRA": "",
+            "EXTRA": "--restart always",
             "DEPEND": "null",
             "START_ON_BOOT": "true",
             "CMD": "null",
@@ -143,7 +143,7 @@
                     "EXEC": "/ready.sh"
                 }
             ],
-            "EXTRA": "null",
+            "EXTRA": "--restart always",
             "ENV_FILES": [
                 "/etc/user/secret/guacamole/guacamole.json"
             ],
