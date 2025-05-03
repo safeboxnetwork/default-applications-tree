@@ -1,0 +1,146 @@
+{
+    "main": {
+        "SERVICE_NAME": "immich",
+        "DOMAIN": "#IMMICH_DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "immich-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/immich/db && /etc/user/data/immich/upload",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "tensorchord/pgvecto-rs:pg14-v0.2.0",
+            "UPDATE": "true",
+            "NAME": "immichpostgres-db",
+            "MEMORY": "256M",
+            "NETWORK": "immich-net",
+            "SELECTOR": "immichpostgres",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/immich/db",
+                    "DEST": "/var/lib/postgres",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "5432",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/immich/immich.json"
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "valkey/valkey:8-bookworm",
+            "UPDATE": "true",
+            "NAME": "immichredis-app",
+            "MEMORY": "256M",
+            "NETWORK": "immich-net",
+            "SELECTOR": "immichredis",
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "6379",
+                    "TYPE": "tcp"
+                }
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "immich-app/immich-server:#IMMICH_VERSION",
+            "UPDATE": "true",
+            "NAME": "immichapp-app",
+            "MEMORY": "1024M",
+            "NETWORK": "immich-net",
+            "SELECTOR": "immichapp",
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "2283",
+                    "TYPE": "tcp"
+                }
+            ],
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/immich/upload",
+                    "DEST": "/usr/src/app/upload",
+                    "TYPE": "rw"
+                }
+            ],
+            "ENVS": [
+                {
+                    "DB_HOSTNAME": "immichpostgres-db"
+                },
+                {
+                    "REDIS_HOSTNAME": "immichredis-app"
+                },
+                {
+                    "UPLOAD_LOCATION": "/etc/user/data/immich/uploads"
+                },
+                {
+                    "IMMICH_MACHINE_LEARNING_URL": "immichmachine-learning"
+                },
+                {
+                    "TZ": "#IMMICH_TZ"
+                },
+                {
+                    "IMMICH_VERSION": "#IMMICH_VERSION"
+                }
+            ],
+            "EXTRA": "",
+            "DEPEND": "null",
+            "START_ON_BOOT": "true",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": [
+                "firewall-immich",
+                "domain-immich"
+            ]
+        },
+        {
+            "IMAGE": "immich-app/immich-machine-learning:#IMMICH_VERSION",
+            "UPDATE": "true",
+            "NAME": "immichmachine-learning",
+            "ROLES": "backend-www",
+            "MEMORY": "1024M",
+            "NETWORK": "immich-net",
+            "SELECTOR": "immichmachine-learning",
+            "DEPEND": "null",
+            "START_ON_BOOT": "true",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": []
+        }
+    ]
+}
