@@ -121,7 +121,7 @@
             "ENV_FILES": [
                 "/etc/user/secret/immich/immich.json"
             ],
-            "EXTRA": "",
+            "EXTRA": "--restart always",
             "DEPEND": "null",
             "START_ON_BOOT": "true",
             "CMD": "null",
@@ -150,6 +150,7 @@
                     "IMMICH_VERSION": "#IMMICH_VERSION"
                 }
             ],
+            "EXTRA": "--restart always",
             "DEPEND": "null",
             "START_ON_BOOT": "true",
             "CMD": "null",
