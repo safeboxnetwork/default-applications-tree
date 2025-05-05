@@ -39,7 +39,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "mariadb:latest",
+            "IMAGE": "mariadb:11.4",
             "UPDATE": "true",
             "NAME": "guacamolemysql-db",
             "MEMORY": "256M",
