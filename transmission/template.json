@@ -3,7 +3,7 @@
     "fields": [
         {
             "description": "Please add your transmission domain:",
-            "key": "TRANSMISSION_DOMAIN",
+            "key": "DOMAIN",
             "value": "",
             "required": "true"
         },

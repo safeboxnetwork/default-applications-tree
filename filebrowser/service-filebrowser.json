@@ -1,7 +1,7 @@
 {
     "main": {
         "SERVICE_NAME": "filebrowser",
-        "DOMAIN": "#FILEBROWSER_DOMAIN"
+        "DOMAIN": "#DOMAIN"
     },
     "containers": [
         {

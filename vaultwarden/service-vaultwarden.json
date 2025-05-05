@@ -1,7 +1,7 @@
 {
     "main": {
         "SERVICE_NAME": "vaultwarden",
-        "DOMAIN": "#VAULTWARDEN_DOMAIN"
+        "DOMAIN": "#DOMAIN"
     },
     "containers": [
         {

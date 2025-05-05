@@ -45,7 +45,7 @@
         },
         {
             "description": "Please add Outline domain:",
-            "key": "OUTLINE_DOMAIN",
+            "key": "DOMAIN",
             "value": "",
             "required": "true"
         }

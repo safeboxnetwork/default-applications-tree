@@ -1,7 +1,7 @@
 {
     "main": {
         "SERVICE_NAME": "leantime",
-        "DOMAIN": "#LEANTIME_DOMAIN"
+        "DOMAIN": "#DOMAIN"
     },
     "containers": [
         {
@@ -32,7 +32,7 @@
                     "LOCATION": "#LEANTIME_LOCATION_PATH"
                 },
                 {
-                    "DOMAIN": "#LEANTIME_DOMAIN"
+                    "DOMAIN": "#DOMAIN"
                 },
                 {
                     "SMARTHOST_PROXY_PATH": "/smarthost-domains"

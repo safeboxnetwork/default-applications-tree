@@ -1,7 +1,7 @@
 {
     "main": {
         "SERVICE_NAME": "jellyfin",
-        "DOMAIN": "#JELLYFIN_DOMAIN"
+        "DOMAIN": "#DOMAIN"
     },
     "containers": [
         {

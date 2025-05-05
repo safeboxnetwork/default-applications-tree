@@ -37,7 +37,7 @@
         },
         {
             "description": "Please add VaultWarden domain:",
-            "key": "VAULTWARDEN_DOMAIN",
+            "key": "DOMAIN",
             "value": "",
             "required": "true"
         },

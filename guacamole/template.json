@@ -3,7 +3,7 @@
     "fields": [
         {
             "description": "Please add Guacamole domain:",
-            "key": "GUACAMOLE_DOMAIN",
+            "key": "DOMAIN",
             "value": "",
             "required": "true"
         },

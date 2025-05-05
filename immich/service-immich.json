@@ -1,7 +1,7 @@
 {
     "main": {
         "SERVICE_NAME": "immich",
-        "DOMAIN": "#IMMICH_DOMAIN"
+        "DOMAIN": "#DOMAIN"
     },
     "containers": [
         {
