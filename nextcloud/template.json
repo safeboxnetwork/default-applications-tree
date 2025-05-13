@@ -14,11 +14,6 @@
                         "type": "hidden"
                 },
                 {
-                        "description": "Do you use any additional location path? (optional)\n(do not miss '/' character!)",
-                        "key": "NEXTCLOUD_LOCATION_PATH",
-                        "value": ""
-                },
-                {
                         "description": "Please add Nextcloud username:",
                         "key": "NEXTCLOUD_ADMIN_USER",
                         "value": "",
