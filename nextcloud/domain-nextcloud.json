@@ -22,7 +22,6 @@
           { "PROXY": "smarthostloadbalancer" },
           { "TARGET": "nextcloudnginx" },
           { "PORT": "80" },
-          { "LOCATION": "#NEXTCLOUD_LOCATION_PATH" },
           { "DOMAIN": "#NEXTCLOUD_TRUSTED_DOMAINS" },
           { "SMARTHOST_PROXY_PATH": "/smarthost-domains" },
 	        { "OPERATION": "CREATE" }
