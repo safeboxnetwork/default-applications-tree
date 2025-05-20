@@ -20,20 +20,6 @@
             "required": "true"
         },
         {
-            "description": "Please add Immich redis password:",
-            "key": "IMMICH_REDIS_PASSWORD",
-            "value": "",
-            "required": "true",
-            "generated": ""
-        },
-        {
-            "description": "Please add Immich postgres password:",
-            "key": "IMMICH_POSTGRES_PASSWORD",
-            "value": "",
-            "required": "true",
-            "generated": ""
-        },
-        {
             "description": "POSTGRES database name",
             "key": "POSTGRES_DATABASE_NAME",
             "value": "",
