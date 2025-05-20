@@ -2,6 +2,9 @@
         "name": "nextcloud",
         "fields": [
                 {
+                        "title": "Nextcloud title",
+                        "details": "Nextcloud domain details",
+                        "info": "Nextcloud info",
                         "description": "Please add Nextcloud domain:",
                         "key": "NEXTCLOUD_TRUSTED_DOMAINS",
                         "value": "",
