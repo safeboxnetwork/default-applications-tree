@@ -20,21 +20,24 @@
                         "description": "Please add Nextcloud username:",
                         "key": "NEXTCLOUD_ADMIN_USER",
                         "value": "",
-                        "required": "true"
+                        "required": "true",
+                        "advanced": "true"
                 },
                 {
                         "description": "Please add Nextcloud password:",
                         "key": "NEXTCLOUD_ADMIN_PASSWORD",
                         "value": "",
                         "required": "true",
-                        "type": "password"
+                        "type": "password",
+                        "advanced": "true"                
                 },
                 {
                         "description": "MYSQL database name",
                         "key": "MARIADB_DATABASE",
                         "value": "",
                         "required": "true",
-                        "generated": ""
+                        "generated": "",
+                        "advanced": "true"
                 },
                 {
                         "description": "MYSQL username",
