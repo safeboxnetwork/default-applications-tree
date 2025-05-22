@@ -5,7 +5,7 @@
         "fields": [
                 {
                         "title": "Nextcloud domain title",
-                        "details": "Nextcloud domain details",
+                        "details": "Nextcloud domain details test",
                         "info": "Nextcloud domain info",
                         "description": "Please add Nextcloud domain:",
                         "key": "NEXTCLOUD_TRUSTED_DOMAINS",
