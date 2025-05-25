@@ -1,203 +1,243 @@
 {
-	"main": {
-		"SERVICE_NAME": "nextcloud",
-		"DOMAIN": "DOMAIN" 
-	},
-	"containers": [
-                {   
-                        "IMAGE": "alpine:latest",
-			"UPDATE": "true",
-                        "NAME": "nextcloud",
-                        "NETWORK": "host",
-                        "MEMORY": "64M",
-                        "VOLUMES": [
-                                {   
-                                "SOURCE": "USER_DATA",
-                                "DEST": "/etc/user/data",
-                                "TYPE": "rw"
-                                },
-                                {   
-                                "SOURCE": "SYSTEM_DATA",
-                                "DEST": "/etc/system/data",
-                                "TYPE": "rw"
-                                },
-                                {   
-                                "SOURCE": "SYSTEM_LOG",
-                                "DEST": "/etc/system/log",
-                                "TYPE": "rw"
-                                }
-                                ],
-                        "ENV_FILES": [ "/etc/user/secret/nextcloud/nextcloud.json" ],
-                        "EXTRA": "--rm",
-                        "DEPEND": "null",
-                        "START_ON_BOOT": "false",
-                        "ENTRYPOINT": "sh -c",
-                        "CMD": "mkdir -p /etc/user/data/nextcloud/db && mkdir -p /etc/system/log/nextcloud/db && mkdir -p /etc/user/data/nextcloud/apps && mkdir -p /etc/user/data/nextcloud/config && mkdir -p /etc/user/data/nextcloud/data && chmod 777 -R /etc/user/data/nextcloud && chmod 0770 -R /etc/user/data/nextcloud/data && chown -R 82:82 /etc/user/data/nextcloud/data",
-                        "PRE_START": "null",
-                        "POST_START": "null"
+    "main": {
+        "SERVICE_NAME": "nextcloud",
+        "DOMAIN": "DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "nextcloud",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
                 },
-		{   
-                        "IMAGE": "mariadb:latest",
-			"UPDATE": "true",
-                        "NAME": "nextcloudmysql-db",
-                        "MEMORY": "256M",
-                        "NETWORK": "nextcloud-net",
-			"SELECTOR": "nextcloudmysql",
-                        "VOLUMES": [
-                                {   
-                                "SOURCE": "/etc/user/data/nextcloud/db",
-                                "DEST": "/var/lib/mysql",
-                                "TYPE": "rw"
-                                },  
-                                {   
-                                "SOURCE": "/etc/system/log/nextcloud/db",
-                                "DEST": "/var/lib/mysql/mysql-bin",
-                                "TYPE": "rw"
-                                }   
-                                ],  
-                        "PORTS": [
-                                {   
-                                 "SOURCE": "null",
-                                 "DEST": "3306",
-                                 "TYPE": "tcp"
-                                }   
-                                 ],  
-                        "READYNESS": [
-                                {"tcp": "3306"},
-                                {"HTTP": ""},
-                                {"EXEC": "/ready.sh"}
-                                ],  
-			"ENV_FILES": [ "/etc/user/secret/nextcloud/nextcloud.json" ],
-                        "EXTRA": "--restart always",
-                        "DEPEND": "null",
-                        "START_ON_BOOT": "false",
-                        "CMD": "null",
-                        "PRE_START": "null",
-                        "POST_START": "null"
+                {
+                    "SOURCE": "SYSTEM_DATA",
+                    "DEST": "/etc/system/data",
+                    "TYPE": "rw"
                 },
- 		{
-                        "IMAGE": "redis:latest",
-			"UPDATE": "true",
-                        "NAME": "nextcloud-redis",
-                        "MEMORY": "128M",
-                        "NETWORK": "nextcloud-net",
-			"SELECTOR": "nextcloudredis",
-                        "PORTS": [
-           			{
-                                 "SOURCE": "null",
-                                 "DEST": "6379",
-                                 "TYPE": "tcp"
-                                }
-                                 ],
-                        "READYNESS": [
-                                {"tcp": ""},
-                                {"HTTP": ""},
-                                {"EXEC": "/ready.sh"}
-                                ],
-                        "EXTRA": "--restart always",
-                        "DEPEND": "null",
-                        "START_ON_BOOT": "false",
-                        "CMD": "null",
-                        "PRE_START": "null",
-                        "POST_START": "null"
-                },  
- 		{
-                        "IMAGE": "registry.format.hu/nextcloud-php-fpm:26",
-			"UPDATE": "true",
-                        "NAME": "nextcloudphp-fpm",
-                        "MEMORY": "1024M",
-                        "NETWORK": "nextcloud-net",
-			"SELECTOR": "nextcloudphp-fpm",
-			"DNS": [ "coredns" ],
-                        "VOLUMES": [
-                                {
-                                "SOURCE": "nextcloud",
-                                "DEST": "/var/www/html",
-                                "TYPE": "rw"
-                                },
-                                {
-                                "SOURCE": "/etc/user/data/nextcloud/config",
-                                "DEST": "/var/www/html/config",
-                                "TYPE": "rw"
-                                },
-                                {
-                                "SOURCE": "/etc/user/data/nextcloud/apps",
-                                "DEST": "/var/www/html/custom_apps",
-                                "TYPE": "rw"
-                                },
-                                {
-                                "SOURCE": "/etc/user/data/nextcloud/data",
-                                "DEST": "/var/data",
-                                "TYPE": "rw"
-                                }
-                                ],
-                        "PORTS": [
-           			{
-                                 "SOURCE": "null",
-                                 "DEST": "9000",
-                                 "TYPE": "tcp"
-                                }
-                                 ],
-                        "READYNESS": [
-                                {"tcp": ""},
-                                {"HTTP": ""},
-                                {"EXEC": "/ready.sh"}
-                                ],
-			"ENV_FILES": [ "/etc/user/secret/nextcloud/nextcloud.json" ],
-                        "EXTRA": "--user www-data --restart always",
-                        "DEPEND": "null",
-                        "START_ON_BOOT": "false",
-                        "CMD": "null",
-                        "PRE_START": [ "firewall-nextcloud-server-dns" ],
-                        "POST_START": ["firewall-nextcloud-server-smtp"]
-                },  
-		{ 
-			"IMAGE": "registry.format.hu/nextcloud-nginx:1.23.1",
-			"UPDATE": "true",
-                        "NAME": "nextcloudnginx",
-                        "ROLES": "backend-www",
-                        "MEMORY": "128M",
-                        "NETWORK": "nextcloud-net",
-			"SELECTOR": "nextcloudnginx",
-			"DNS": [ "coredns" ],
-                        "VOLUMES": [
-                                {
-                                "SOURCE": "nextcloud",
-                                "DEST": "/var/www/html",
-                                "TYPE": "ro"
-                                },
-                                {
-                                "SOURCE": "/etc/user/data/nextcloud/config",
-                                "DEST": "/var/www/html/config",
-                                "TYPE": "rw"
-                                },
-                                {
-                                "SOURCE": "/etc/user/data/nextcloud/apps",
-                                "DEST": "/var/www/html/custom_apps",
-                                "TYPE": "rw"
-                                }
-                                ],
-                        "PORTS": [
-                                {
-                                 "SOURCE": "null",
-                                 "DEST": "80",
-                                 "TYPE": "tcp"
-                                }
-                                 ],
-                        "READYNESS": [
-                                {"tcp": ""},
-                                {"HTTP": ""},
-                                {"EXEC": "/ready.sh"}
-                                ],
-                        "EXTRA": "--restart always",
-                        "DEPEND": "null",
-                        "START_ON_BOOT": "false",
-                        "CMD": "null",
-                        "PRE_START": [ "firewall-nextcloud-dns" ],
-                        "POST_START": [ 
-				"firewall-nextcloud", 
-				"domain-nextcloud" 
-				]
-		}
-	]
+                {
+                    "SOURCE": "SYSTEM_LOG",
+                    "DEST": "/etc/system/log",
+                    "TYPE": "rw"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/nextcloud/nextcloud.json"
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/nextcloud/db && mkdir -p /etc/system/log/nextcloud/db && mkdir -p /etc/user/data/nextcloud/apps && mkdir -p /etc/user/data/nextcloud/config && mkdir -p /etc/user/data/nextcloud/data && chmod 777 -R /etc/user/data/nextcloud && chmod 0770 -R /etc/user/data/nextcloud/data && chown -R 82:82 /etc/user/data/nextcloud/data",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "alpine/mariadb",
+            "UPDATE": "true",
+            "NAME": "nextcloudmysql-db",
+            "MEMORY": "256M",
+            "NETWORK": "nextcloud-net",
+            "SELECTOR": "nextcloudmysql",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/nextcloud/db",
+                    "DEST": "/var/lib/mysql",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/system/log/nextcloud/db",
+                    "DEST": "/var/lib/mysql/mysql-bin",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "3306",
+                    "TYPE": "tcp"
+                }
+            ],
+            "READYNESS": [
+                {
+                    "tcp": "3306"
+                },
+                {
+                    "HTTP": ""
+                },
+                {
+                    "EXEC": "/ready.sh"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/nextcloud/nextcloud.json"
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "redis:latest",
+            "UPDATE": "true",
+            "NAME": "nextcloud-redis",
+            "MEMORY": "128M",
+            "NETWORK": "nextcloud-net",
+            "SELECTOR": "nextcloudredis",
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "6379",
+                    "TYPE": "tcp"
+                }
+            ],
+            "READYNESS": [
+                {
+                    "tcp": ""
+                },
+                {
+                    "HTTP": ""
+                },
+                {
+                    "EXEC": "/ready.sh"
+                }
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "nextcloud:VERSION",
+            "UPDATE": "true",
+            "NAME": "nextcloudphp-fpm",
+            "MEMORY": "1024M",
+            "NETWORK": "nextcloud-net",
+            "SELECTOR": "nextcloudphp-fpm",
+            "DNS": [
+                "coredns"
+            ],
+            "VOLUMES": [
+                {
+                    "SOURCE": "nextcloud",
+                    "DEST": "/var/www/html",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/user/data/nextcloud/config",
+                    "DEST": "/var/www/html/config",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/user/data/nextcloud/apps",
+                    "DEST": "/var/www/html/custom_apps",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/user/data/nextcloud/data",
+                    "DEST": "/var/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "9000",
+                    "TYPE": "tcp"
+                }
+            ],
+            "READYNESS": [
+                {
+                    "tcp": ""
+                },
+                {
+                    "HTTP": ""
+                },
+                {
+                    "EXEC": "/ready.sh"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/nextcloud/nextcloud.json"
+            ],
+            "EXTRA": "--user www-data --restart always",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": [
+                "firewall-nextcloud-server-dns"
+            ],
+            "POST_START": [
+                "firewall-nextcloud-server-smtp"
+            ]
+        },
+        {
+            "IMAGE": "registry.format.hu/nextcloud-nginx:1.23.1",
+            "UPDATE": "true",
+            "NAME": "nextcloudnginx",
+            "ROLES": "backend-www",
+            "MEMORY": "128M",
+            "NETWORK": "nextcloud-net",
+            "SELECTOR": "nextcloudnginx",
+            "DNS": [
+                "coredns"
+            ],
+            "VOLUMES": [
+                {
+                    "SOURCE": "nextcloud",
+                    "DEST": "/var/www/html",
+                    "TYPE": "ro"
+                },
+                {
+                    "SOURCE": "/etc/user/data/nextcloud/config",
+                    "DEST": "/var/www/html/config",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/user/data/nextcloud/apps",
+                    "DEST": "/var/www/html/custom_apps",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "80",
+                    "TYPE": "tcp"
+                }
+            ],
+            "READYNESS": [
+                {
+                    "tcp": ""
+                },
+                {
+                    "HTTP": ""
+                },
+                {
+                    "EXEC": "/ready.sh"
+                }
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": [
+                "firewall-nextcloud-dns"
+            ],
+            "POST_START": [
+                "firewall-nextcloud",
+                "domain-nextcloud"
+            ]
+        }
+    ]
 }
