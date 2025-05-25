@@ -170,7 +170,7 @@
             "ENV_FILES": [
                 "/etc/user/secret/nextcloud/nextcloud.json"
             ],
-            "EXTRA": "--user www-data --restart always",
+            "EXTRA": "--restart always",
             "DEPEND": "null",
             "START_ON_BOOT": "false",
             "CMD": "null",
