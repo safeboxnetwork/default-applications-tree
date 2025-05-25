@@ -34,7 +34,7 @@
             "DEPEND": "null",
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh -c",
-            "CMD": "mkdir -p /etc/user/data/nextcloud/db && mkdir -p /etc/system/log/nextcloud/db && mkdir -p /etc/user/data/nextcloud/apps && mkdir -p /etc/user/data/nextcloud/config && mkdir -p /etc/user/data/nextcloud/data && chmod 777 -R /etc/user/data/nextcloud && chmod 0770 -R /etc/user/data/nextcloud/data && chown -R 82:82 /etc/user/data/nextcloud/data",
+            "CMD": "mkdir -p /etc/user/data/nextcloud/db && mkdir -p /etc/system/log/nextcloud/db && mkdir -p /etc/user/data/nextcloud/apps && mkdir -p /etc/user/data/nextcloud/config && mkdir -p /etc/user/data/nextcloud/data && chmod 777 -R /etc/user/data/nextcloud && chmod 0770 -R /etc/user/data/nextcloud/data && chown -R 82:82 /etc/user/data/nextcloud/data && chown -R 82:82 /etc/user/data/nextcloud/apps && chown -R 82:82 /etc/user/data/nextcloud/config",
             "PRE_START": "null",
             "POST_START": "null"
         },
