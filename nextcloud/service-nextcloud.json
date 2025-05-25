@@ -39,7 +39,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "alpine/mariadb",
+            "IMAGE": "mariadb:11.4",
             "UPDATE": "true",
             "NAME": "nextcloudmysql-db",
             "MEMORY": "256M",
