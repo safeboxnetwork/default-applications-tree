@@ -1,7 +1,7 @@
 {
     "main": {
         "SERVICE_NAME": "nextcloud",
-        "DOMAIN": "DOMAIN"
+        "DOMAIN": "#DOMAIN"
     },
     "containers": [
         {
@@ -118,7 +118,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "nextcloud:VERSION",
+            "IMAGE": "nextcloud:#VERSION",
             "UPDATE": "true",
             "NAME": "nextcloudphp-fpm",
             "MEMORY": "1024M",
