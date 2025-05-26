@@ -1,5 +1,5 @@
 {
-    "name": "filebrowser",
+    "name": "File Browser",
     "description":"File Browser is a file management tool that lets you easily browse, upload, and organize files on your server through a simple interface.",
     "fields": [
         {
