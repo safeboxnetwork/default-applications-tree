@@ -3,7 +3,7 @@
     "description": "Home Assistant lets you automate, control, and monitor smart home devices securely from a single interface.",
     "fields": [
         {
-            "description": "Your homeassistant domain:",
+            "description": "Your Home Assistant domain:",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
