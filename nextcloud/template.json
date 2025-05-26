@@ -72,13 +72,6 @@
             "value": "",
             "required": "true",
             "generated": "random|sha256|20"
-        },
-        {
-            "description": "TESZT",
-            "key": "MARIADB_ROOT_PASSWORD",
-            "value": "teszt",
-            "info": "Please keep in mind you can't upgrade major version without skipping a version!",
-            "advanced": "true"
         }
     ]
 }
