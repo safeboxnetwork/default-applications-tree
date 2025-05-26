@@ -9,33 +9,33 @@
             "required": "true"
         },
         {
-            "description": "Transmission username",
+            "description": "Transmission username:",
             "key": "TRANSMISSION_USER",
             "value": ""
         },
         {
-            "description": "Transmission password",
+            "description": "Transmission password:",
             "key": "TRANSMISSION_PASS",
             "value": "",
             "type": "password"
         },
         {
-            "description": "Transmission timezone",
+            "description": "Transmission timezone:",
             "key": "TRANSMISSION_TZ",
             "value": "Europe/Budapest"
         },
         {
-            "description": "Whitelist IP adresses",
+            "description": "Whitelist IP adresses:",
             "key": "TRANSMISSION_WHITELIST",
             "value": ""
         },
         {
-            "description": "Additional peer port",
+            "description": "Additional peer port:",
             "key": "TRANSMISSION_PEERPORT",
             "value": ""
         },
         {
-            "description": "Host whitelist",
+            "description": "Host whitelist:",
             "key": "TRANSMISSION_HOST_WHITELIST",
             "value": "",
             "advance": "true"
