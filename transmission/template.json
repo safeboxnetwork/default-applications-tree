@@ -1,40 +1,41 @@
 {
     "name": "transmission",
+    "description": "Transmission is a torrent client that enables easy and efficient peer-to-peer file sharing.",
     "fields": [
         {
-            "description": "Please add your transmission domain:",
+            "description": "Your Transmission domain:",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Please add a username: (not required but recommended)",
+            "description": "Transmission username",
             "key": "TRANSMISSION_USER",
             "value": ""
         },
         {
-            "description": "Please add a password for user: (not required but recommended)",
+            "description": "Transmission password",
             "key": "TRANSMISSION_PASS",
             "value": "",
             "type": "password"
         },
         {
-            "description": "Please add your transmission timezone: (optional)",
+            "description": "Transmission timezone",
             "key": "TRANSMISSION_TZ",
             "value": "Europe/Budapest"
         },
         {
-            "description": "You can add whitelist ip addresses: (optional)",
+            "description": "Whitelist IP adresses",
             "key": "TRANSMISSION_WHITELIST",
             "value": ""
         },
         {
-            "description": "You can add additional peer port: (optional)",
+            "description": "Additional peer port",
             "key": "TRANSMISSION_PEERPORT",
             "value": ""
         },
         {
-            "description": "You can add host whitelist: (optional)",
+            "description": "Host whitelist",
             "key": "TRANSMISSION_HOST_WHITELIST",
             "value": "",
             "advance": "true"
