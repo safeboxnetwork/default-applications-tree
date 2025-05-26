@@ -1,19 +1,20 @@
 {
     "name": "filebrowser",
+    "description":"File Browser is a file management tool that lets you easily browse, upload, and organize files on your server through a simple interface.",
     "fields": [
         {
-            "description": "Please add your filebrowser domain:",
+            "description": "Your File Browser domain:",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Please add a username:",
+            "description": "File Browser username:",
             "key": "FILEBROWSER_USER",
             "value": ""
         },
         {
-            "description": "Please add a password for user:",
+            "description": "File Browser password:",
             "key": "FILEBROWSER_PASS",
             "value": "",
             "type": "password"
