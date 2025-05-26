@@ -1,14 +1,15 @@
 {
     "name": "homeassistant",
+    "description": "Home Assistant lets you automate, control, and monitor smart home devices securely from a single interface.",
     "fields": [
         {
-            "description": "Please add your homeassistant domain: (required)",
+            "description": "Your homeassistant domain:",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Please add your homeassistant timezone: (required)",
+            "description": "Home Assistant timezone:",
             "key": "TZ",
             "value": "Europe/Budapest",
             "required": "true"
