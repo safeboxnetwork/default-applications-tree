@@ -1,8 +1,9 @@
 {
     "name": "jellyfin",
+    "description": "Jellyfin media server lets you stream and organize your movies, TV shows, music, and photos across all your devices.",
     "fields": [
         {
-            "description": "Please add your Jellyfin domain:",
+            "description": "Your Jellyfin domain:",
             "key": "DOMAIN",
             "value": ""
         }
