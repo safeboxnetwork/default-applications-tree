@@ -1,6 +1,6 @@
 {
     "name": "guacamole",
-    "description": "Apache Guacamole is a remote desktop gateway that allows secure access to desktops and servers through a web browser without plugins or software on the client side..",
+    "description": "Apache Guacamole is a remote desktop gateway that allows secure access to desktops and servers through a web browser without plugins or software on the client side.",
     "fields": [
         {
             "description": "Your Guacamole domain:",
