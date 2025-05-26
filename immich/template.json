@@ -1,20 +1,21 @@
 {
     "name": "immich",
+    "description":"Immich is a photo and video backup solution that helps you securely store and manage your media across devices.",
     "fields": [
         {
-            "description": "Please add Immich domain:",
+            "description": "Your Immich domain:",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Please add Immich timezone:",
+            "description": "Immich timezone:",
             "key": "IMMICH_TZ",
             "value": "Europe/Budapest",
             "required": "true"
         },
         {
-            "description": "Please add Immich version:",
+            "description": "Immich version:",
             "key": "IMMICH_VERSION",
             "value": "release",
             "required": "true"
