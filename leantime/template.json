@@ -2,28 +2,28 @@
     "name": "leantime",
     "fields": [
         {
-            "description": "Please add LeanTime domain:",
+            "description": "Your LeanTime domain:",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Please add your deploy name (default is LeanTime)",
+            "description": "Deploy name:",
             "key": "LEANTIME_SITENAME",
             "value": "LeanTime"
         },
         {
-            "description": "Please add your deploy default language (default is en-US)",
+            "description": "LeanTime language:",
             "key": "LEANTIME_LANG",
-            "value": "en-US"
+            "value": "En-US"
         },
         {
-            "description": "Please add your deploy default timezone (default is Europe/Budapest)",
+            "description": "LeanTime timezone:",
             "key": "LEANTIME_TZ",
             "value": "Europe/Budapest"
         },
         {
-            "description": "Do you want to disable login form for public?",
+            "description": "Disable login for Public:",
             "key": "DISABLE_LOGIN",
             "value": "true"
         },
@@ -56,22 +56,22 @@
             "generated": "random|sha256|20"
         },
         {
-            "description": "Do you want to set up OIDC provider? (default is false)",
+            "description": "Set up OIDC provider:",
             "key": "OIDC_ENABLE",
             "value": "false"
         },
         {
-            "description": "Please add OIDC user key:",
+            "description": "OIDC user key:",
             "key": "OIDC_CLIENT_KEY",
             "value": ""
         },
         {
-            "description": "Please add OIDC client secret:",
+            "description": "OIDC client secret:",
             "key": "OIDC_CLIENT_SECRET",
             "value": ""
         },
         {
-            "description": "Do you want to set up S3 bucket server? (default is false)",
+            "description": "Set up S3 bucket server:",
             "key": "LEANTIME_USE_S3",
             "value": "false"
         },
@@ -83,7 +83,7 @@
             "generated": "random|sha256|20"
         },
         {
-            "description": "Please add session expiration time in seconds (defaults is 28800)",
+            "description": "Session expiration time (s):",
             "key": "SESSION_EXPIRATION",
             "value": "28800"
         },
@@ -95,17 +95,17 @@
             "generated": "random|sha256|20"
         },
         {
-            "description": "Please set LeanTime access mode (defaults is https)",
+            "description": "LeanTime acces mode (https):",
             "key": "SESSION_SECURITY",
             "value": "true"
         },
         {
-            "description": "Please set SMTP host for sending emails",
+            "description": "SMTP host:",
             "key": "LEANTIME_SMTP",
             "value": "smtp-mail"
         },
         {
-            "description": "Do you want to connect an S3 bucket provider?",
+            "description": "Connect S3 bucket provider:",
             "key": "LEANTIME_USE_S3",
             "value": "false"
         }
