@@ -29,9 +29,6 @@
                     "PORT": "80"
                 },
                 {
-                    "LOCATION": "#LEANTIME_LOCATION_PATH"
-                },
-                {
                     "DOMAIN": "#DOMAIN"
                 },
                 {

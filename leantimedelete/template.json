@@ -8,11 +8,6 @@
             "required": "true"
         },
         {
-            "description": "Do you use any additional location path? (optional)\n(do not miss '/' character!)",
-            "key": "LEANTIME_LOCATION_PATH",
-            "value": ""
-        },
-        {
             "description": "Please add your deploy name (default is LeanTime)",
             "key": "LEANTIME_SITENAME",
             "value": "LeanTime"
