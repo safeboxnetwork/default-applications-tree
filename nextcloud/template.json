@@ -7,7 +7,7 @@
             "title": "",
             "details": "",
             "info": "Nextcloud domain info",
-            "description": "Your Nextcloud domain:",
+            "description": "Domain:",
             "key": "NEXTCLOUD_TRUSTED_DOMAINS",
             "value": "",
             "required": "true"
@@ -15,14 +15,14 @@
         {
             "details": "",
             "info": "Nextcloud username info",
-            "description": "Nextcloud username:",
+            "description": "Username:",
             "key": "NEXTCLOUD_ADMIN_USER",
             "value": "",
             "required": "true",
             "advanced": "true"
         },
         {
-            "description": "Nextcloud password:",
+            "description": "Password:",
             "key": "NEXTCLOUD_ADMIN_PASSWORD",
             "value": "",
             "required": "true",
