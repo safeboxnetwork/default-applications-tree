@@ -1,26 +1,26 @@
 {
     "name": "transmission",
-    "description": "Transmission is a torrent client that enables easy and efficient peer-to-peer file sharing.",
+    "description": "Transmission is a free and open-source BitTorrent client known for its user-friendly interface,lightweight design, and focus on privacy. It is available for macOS, Windows, and Linux. Transmission prioritizes a clean and simple user experience.",
     "fields": [
         {
-            "description": "Your Transmission domain:",
+            "description": "Domain:",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Transmission username:",
+            "description": "Username:",
             "key": "TRANSMISSION_USER",
             "value": ""
         },
         {
-            "description": "Transmission password:",
+            "description": "Password:",
             "key": "TRANSMISSION_PASS",
             "value": "",
             "type": "password"
         },
         {
-            "description": "Transmission timezone:",
+            "description": "Timezone:",
             "key": "TRANSMISSION_TZ",
             "value": "Europe/Budapest"
         },
