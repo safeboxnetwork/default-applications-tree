@@ -2,64 +2,64 @@
     "name": "smtp",
     "fields": [
         {
-            "description": "Timezone:",
+            "description": "Timezone",
             "key": "TZ",
             "value": "Europe/Budapest",
             "required": "true"
         },
         {
-            "description": "Relay hostname:",
+            "description": "Relay hostname",
             "key": "RELAY_HOST",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Relay port:",
+            "description": "Relay port",
             "key": "RELAY_PORT",
             "value": "587",
             "required": "true"
         },
         {
-            "description": "Username:",
+            "description": "Username",
             "key": "RELAY_USER",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Password:",
+            "description": "Password",
             "key": "RELAY_PASS",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Test e-mail address:",
+            "description": "Test e-mail address",
             "key": "TEST_EMAIL",
             "value": ""
         },
         {
-            "description": "Subnet (multiple network setting available):",
+            "description": "Subnet (multiple network setting available)",
             "key": "MYNETWORKS",
             "value": "0.0.0.0/0",
             "required": "true"
         },
         {
-            "description": "Domain name:",
+            "description": "Domain",
             "key": "MYORIGIN",
             "value": ""
         },
         {
-            "description": "E-mail address:",
+            "description": "E-mail address",
             "key": "FROMADDRESS",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Max. size of message (in bytes):",
+            "description": "Max. size of message (in bytes)",
             "key": "MSG_SIZE",
             "value": "30720000"
         },
         {
-            "description": "Log:",
+            "description": "Log",
             "key": "LOG_DISABLE",
             "value": "false"
         }
