@@ -3,7 +3,7 @@
     "description": "Vaultwarden is a lightweight, unofficial, and open-source implementation of the Bitwarden password manager server, written in Rust. It provides a self-hosted alternative to the official Bitwarden service, allowing users to manage their passwords securely on their own servers.",
     "fields": [
         {
-            "description": "Admin key:",
+            "description": "Admin key",
             "key": "ADMIN_TOKEN",
             "value": "",
             "required": "true"
@@ -37,53 +37,53 @@
             "generated": "random|sha256|20"
         },
         {
-            "description": "Domain:",
+            "description": "Domain",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "SMTP server:",
+            "description": "SMTP server",
             "key": "VAULTWARDEN_SMTP",
             "value": "1:gmail,2:microsoft outlook/hotmail,3:other",
             "required": "true",
             "type": "select"
         },
         {
-            "description": "SMTP hostname:",
+            "description": "SMTP hostname",
             "key": "VAULTWARDEN_SMTP_HOST",
             "value": "smtp",
             "required": "true"
         },
         {
-            "description": "SMTP port:",
+            "description": "SMTP port",
             "key": "VAULTWARDEN_SMTP_PORT",
             "value": "25",
             "required": "true"
         },
         {
-            "description": "SMTP security:",
+            "description": "SMTP security",
             "key": "VAULTWARDEN_SMTP_SECURITY",
             "value": ""
         },
         {
-            "description": "SMTP from Mail Adress:",
+            "description": "SMTP from Mail Adress",
             "key": "VAULTWARDEN_SMTP_FROM",
             "value": "",
             "required": "true"
         },
         {
-            "description": "SMTP username:",
+            "description": "SMTP username",
             "key": "VAULTWARDEN_SMTP_USERNAME",
             "value": ""
         },
         {
-            "description": "SMTP password:",
+            "description": "SMTP password",
             "key": "VAULTWARDEN_SMTP_PASSWORD",
             "value": ""
         },
         {
-            "description": "Domains whitelist:",
+            "description": "Domains whitelist",
             "key": "SIGNUPS_DOMAINS_WHITELIST",
             "value": "",
             "required": "true"
