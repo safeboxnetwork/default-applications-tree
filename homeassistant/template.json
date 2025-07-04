@@ -1,15 +1,16 @@
 {
     "name": "homeassistant",
-    "description": "Home Assistant lets you automate, control, and monitor smart home devices securely from a single interface.",
+    "title": "Home Assistant",
+    "description": "Home Assistant is free and open-source home automation software that acts as a central hub for managing and controlling smart home devices. It allows users to connect, automate, and customize their smart home setup, offering local control and privacy features. ",
     "fields": [
         {
-            "description": "Your Home Assistant domain:",
+            "description": "Domain:",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Home Assistant timezone:",
+            "description": "Timezone:",
             "key": "TZ",
             "value": "Europe/Budapest",
             "required": "true"
