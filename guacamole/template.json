@@ -3,33 +3,33 @@
     "description": "Apache Guacamole is a remote desktop gateway that allows secure access to desktops and servers through a web browser without plugins or software on the client side.",
     "fields": [
         {
-            "description": "Your Guacamole domain:",
+            "description": "Domain",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Guacamole username:",
+            "description": "Username",
             "key": "GUACAMOLE_USERNAME",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Guacamole password:",
+            "description": "Password",
             "key": "GUACAMOLE_PASSWORD",
             "value": "",
             "required": "true",
             "type": "password"
         },
         {
-            "description": "TOTP authentication (Select true or false)",
+            "description": "TTOTP authentication (true/false)",
             "key": "GUACAMOLE_TOTP",
             "value": "false,true",
             "required": "true",
             "type": "select"
         },
         {
-            "description": "Timeout after failed login attempt(min.)(0 to disable)",
+            "description": "Timeout after failed login attempt",
             "key": "GUACAMOLE_BAN_DURATION",
             "value": "5"
         },
