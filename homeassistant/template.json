@@ -4,13 +4,13 @@
     "description": "Home Assistant is free and open-source home automation software that acts as a central hub for managing and controlling smart home devices. It allows users to connect, automate, and customize their smart home setup, offering local control and privacy features. ",
     "fields": [
         {
-            "description": "Domain:",
+            "description": "Domain",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Timezone:",
+            "description": "Timezone",
             "key": "TZ",
             "value": "Europe/Budapest",
             "required": "true"
