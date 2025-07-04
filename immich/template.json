@@ -1,21 +1,21 @@
 {
     "name": "immich",
-    "description":"Immich is a photo and video backup solution that helps you securely store and manage your media across devices.",
+    "description":"Immich is a free, open-source, self-hosted photo and video management platform designed as an alternative to Google Photos. It allows users to back up, organize, and manage their photos and videos on their own server, prioritizing privacy and control over their data.",
     "fields": [
         {
-            "description": "Your Immich domain:",
+            "description": "Domain:",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Immich timezone:",
+            "description": "Timezone:",
             "key": "IMMICH_TZ",
             "value": "Europe/Budapest",
             "required": "true"
         },
         {
-            "description": "Immich version:",
+            "description": "Version:",
             "key": "IMMICH_VERSION",
             "value": "release",
             "required": "true"
