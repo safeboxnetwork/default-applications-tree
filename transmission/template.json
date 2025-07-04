@@ -3,39 +3,39 @@
     "description": "Transmission is a free and open-source BitTorrent client known for its user-friendly interface,lightweight design, and focus on privacy. It is available for macOS, Windows, and Linux. Transmission prioritizes a clean and simple user experience.",
     "fields": [
         {
-            "description": "Domain:",
+            "description": "Domain",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Username:",
+            "description": "Username",
             "key": "TRANSMISSION_USER",
             "value": ""
         },
         {
-            "description": "Password:",
+            "description": "Password",
             "key": "TRANSMISSION_PASS",
             "value": "",
             "type": "password"
         },
         {
-            "description": "Timezone:",
+            "description": "Timezone",
             "key": "TRANSMISSION_TZ",
             "value": "Europe/Budapest"
         },
         {
-            "description": "Whitelist IP adresses:",
+            "description": "Whitelist IP adresses",
             "key": "TRANSMISSION_WHITELIST",
             "value": ""
         },
         {
-            "description": "Additional peer port:",
+            "description": "Additional peer port",
             "key": "TRANSMISSION_PEERPORT",
             "value": ""
         },
         {
-            "description": "Host whitelist:",
+            "description": "Host whitelist",
             "key": "TRANSMISSION_HOST_WHITELIST",
             "value": "",
             "advance": "true"
