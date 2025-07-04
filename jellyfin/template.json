@@ -3,7 +3,7 @@
     "description": "Jellyfin is a free and open-source media server and suite of applications that allows users to manage, organize, and stream their personal media collections. It is built by volunteers and emphasizes user control, privacy, and a lack of tracking or hidden agendas.",
     "fields": [
         {
-            "description": "Domain:",
+            "description": "Domain",
             "key": "DOMAIN",
             "value": ""
         }
