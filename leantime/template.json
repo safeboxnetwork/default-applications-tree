@@ -1,29 +1,30 @@
 {
     "name": "leantime",
+    "description": "Leantime is an open-source, strategic project management system designed for small teams and startups, particularly those with non-project managers or individuals with ADHD, dyslexia, and autism.",
     "fields": [
         {
-            "description": "Your LeanTime domain:",
+            "description": "Domain",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "Deploy name:",
+            "description": "Deploy name",
             "key": "LEANTIME_SITENAME",
             "value": "LeanTime"
         },
         {
-            "description": "LeanTime language:",
+            "description": "Language",
             "key": "LEANTIME_LANG",
             "value": "En-US"
         },
         {
-            "description": "LeanTime timezone:",
+            "description": "Timezone",
             "key": "LEANTIME_TZ",
             "value": "Europe/Budapest"
         },
         {
-            "description": "Disable login for Public:",
+            "description": "Public login",
             "key": "DISABLE_LOGIN",
             "value": "true"
         },
@@ -56,22 +57,22 @@
             "generated": "random|sha256|20"
         },
         {
-            "description": "Set up OIDC provider:",
+            "description": "OIDC provider setup",
             "key": "OIDC_ENABLE",
             "value": "false"
         },
         {
-            "description": "OIDC user key:",
+            "description": "User key",
             "key": "OIDC_CLIENT_KEY",
             "value": ""
         },
         {
-            "description": "OIDC client secret:",
+            "description": "Client secret",
             "key": "OIDC_CLIENT_SECRET",
             "value": ""
         },
         {
-            "description": "Set up S3 bucket server:",
+            "description": "S3 bucket server setup",
             "key": "LEANTIME_USE_S3",
             "value": "false"
         },
@@ -83,29 +84,22 @@
             "generated": "random|sha256|20"
         },
         {
-            "description": "Session expiration time (s):",
+            "description": "Session expiration (sec)",
             "key": "SESSION_EXPIRATION",
             "value": "28800"
         },
         {
-            "description": "Please add a strong password for sessions",
-            "key": "SESSION_PASSWORD",
-            "value": "",
-            "required": "true",
-            "generated": "random|sha256|20"
-        },
-        {
-            "description": "LeanTime acces mode (https):",
+            "description": "Access mode (https)",
             "key": "SESSION_SECURITY",
             "value": "true"
         },
         {
-            "description": "SMTP host:",
+            "description": "SMTP host",
             "key": "LEANTIME_SMTP",
             "value": "smtp-mail"
         },
         {
-            "description": "Connect S3 bucket provider:",
+            "description": "Connect S3 bucket provider",
             "key": "LEANTIME_USE_S3",
             "value": "false"
         }
