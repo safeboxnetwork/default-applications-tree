@@ -1,20 +1,20 @@
 {
     "name": "File Browser",
-    "description":"File Browser is a file management tool that lets you easily browse, upload, and organize files on your server through a simple interface.",
+    "description":"Filebrowser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files. It allows the creation of multiple users and each user can have its own directory. It can be used as a standalone app.",
     "fields": [
         {
-            "description": "Your File Browser domain:",
+            "description": "Domain",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "description": "File Browser username:",
+            "description": "Username",
             "key": "FILEBROWSER_USER",
             "value": ""
         },
         {
-            "description": "File Browser password:",
+            "description": "Password",
             "key": "FILEBROWSER_PASS",
             "value": "",
             "type": "password"
