@@ -19,30 +19,14 @@
             "description": "Username",
             "key": "NEXTCLOUD_ADMIN_USER",
             "value": "",
-            "required": "true",
-            "advanced": "true"
+            "required": "true"
         },
         {
             "description": "Password",
             "key": "NEXTCLOUD_ADMIN_PASSWORD",
             "value": "",
             "required": "true",
-            "type": "password",
-            "advanced": "true"
-        },
-        {
-            "description": "Domain for letsencrypt log",
-            "key": "DOMAIN",
-            "value": "",
-            "type": "hidden"
-        },
-        {
-            "description": "MYSQL database name",
-            "key": "MARIADB_DATABASE",
-            "value": "",
-            "required": "true",
-            "generated": "",
-            "advanced": "true"
+            "type": "password"
         },
         {
             "description": "Version",
@@ -50,6 +34,13 @@
             "value": "26.0.13-fpm-alpine",
             "info": "Please keep in mind you can't upgrade major version without skipping a version!",
             "advanced": "true"
+        },
+        {
+            "description": "MYSQL database name",
+            "key": "MARIADB_DATABASE",
+            "value": "",
+            "required": "true",
+            "generated": "time|md5|8"
         },
         {
             "description": "MYSQL username",
