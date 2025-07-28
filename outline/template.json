@@ -1,5 +1,7 @@
 {
-    "name": "outline",
+    "name": "Outline",
+    "subtitle": "Collaborative Knowledge Base",
+    "description": "Outline is an open-source, self-hosted knowledge management and wiki application designed for teams to organize documentation, internal knowledge bases, onboarding guides, and notes.",
     "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiByeD0iMiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTMwIDQxLjUyMDNWNDIuNDk2OUMzMCA0My44NzkzIDI4Ljg4MDcgNDUgMjcuNSA0NUMyNy4wNzA3IDQ1IDI2LjY0ODYgNDQuODg5MyAyNi4yNzQzIDQ0LjY3ODVMMTEuMjc0MyAzNi4yMzA1QzEwLjQ4NzIgMzUuNzg3MSAxMCAzNC45NTMxIDEwIDM0LjA0ODhWMTYuOTUxNkMxMCAxNi4wNDczIDEwLjQ4NzIgMTUuMjEzMyAxMS4yNzQzIDE0Ljc3TDI2LjI3NDMgNi4zMjE5MUMyNy40Nzc3IDUuNjQ0MTUgMjkuMDAyIDYuMDcxNDkgMjkuNjc4OSA3LjI3NjM5QzI5Ljg4OTQgNy42NTEwNiAzMCA4LjA3MzcgMzAgOC41MDM1OFY5LjQ4MDE4TDMxLjc4MTYgOC45NDUwMkMzMy4xMDQxIDguNTQ3NzggMzQuNDk3OCA5LjI5OTE4IDM0Ljg5NDYgMTAuNjIzM0MzNC45NjQ1IDEwLjg1NjcgMzUgMTEuMDk5IDM1IDExLjM0MjZWMTIuMzU4OEwzNy4xODk5IDEyLjA4NDdDMzguNTYgMTEuOTEzMiAzOS44MDk0IDEyLjg4NjMgMzkuOTgwNyAxNC4yNThDMzkuOTkzNiAxNC4zNjEgNDAgMTQuNDY0NyA0MCAxNC41Njg1VjM2LjQzMTlDNDAgMzcuODE0NCAzOC44ODA3IDM4LjkzNTEgMzcuNSAzOC45MzUxQzM3LjM5NjMgMzguOTM1MSAzNy4yOTI4IDM4LjkyODYgMzcuMTg5OSAzOC45MTU3TDM1IDM4LjY0MTdWMzkuNjU3OUMzNSA0MS4wNDAzIDMzLjg4MDcgNDIuMTYxIDMyLjUgNDIuMTYxQzMyLjI1NjcgNDIuMTYxIDMyLjAxNDcgNDIuMTI1NCAzMS43ODE2IDQyLjA1NTRMMzAgNDEuNTIwM1pNMzAgMzguOTA2OUwzMi41IDM5LjY1NzlWMTEuMzQyNkwzMCAxMi4wOTM1VjM4LjkwNjlaTTM1IDE0Ljg4MTRWMzYuMTE5MUwzNy41IDM2LjQzMTlWMTQuNTY4NUwzNSAxNC44ODE0Wk0xMi41IDE2Ljk1MTZWMzQuMDQ4OEwyNy41IDQyLjQ5NjlWOC41MDM1OEwxMi41IDE2Ljk1MTZaTTE1IDE4LjYxNjZMMTcuNSAxNy4zNjVWMzMuNjM1NEwxNSAzMi4zODM4VjE4LjYxNjZaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K",
     "fields": [
         {
@@ -45,7 +47,7 @@
             "generated": "random|sha256|20"
         },
         {
-            "description": "Please add Outline domain:",
+            "description": "Domain:",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
