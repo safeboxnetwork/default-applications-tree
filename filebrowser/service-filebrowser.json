@@ -61,7 +61,7 @@
             "DEPEND": [],
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh",
-            "CMD": "if [ ! -f /database.db ]; then /filebrowser config init && /filebrowser users add \"$FILEBROWSER_USER\" \"$FILEBROWSER_PASS\" --perm.admin && /filebrowser ; else /filebrowser ; fi",
+            "CMD": "if [ ! -f /database.db ]; then /bin/filebrowser config init && /bin/filebrowser users add \"$FILEBROWSER_USER\" \"$FILEBROWSER_PASS\" --perm.admin && /bin/filebrowser ; else /filebrowser ; fi",
             "PRE_START": "null",
             "POST_START": [
                 "firewall-filebrowser",
