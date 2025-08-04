@@ -13,12 +13,15 @@
         {
             "description": "Username",
             "key": "FILEBROWSER_USER",
-            "value": ""
+            "value": "",
+            "required": "true"
         },
         {
             "description": "Password",
             "key": "FILEBROWSER_PASS",
+            "info": "The password  minimum length is 12 characters.",
             "value": "",
+            "required": "true",
             "type": "password"
         }
     ]
