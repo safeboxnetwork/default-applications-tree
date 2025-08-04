@@ -57,11 +57,11 @@
             "ENV_FILES": [
                 "/etc/user/secret/filebrowser/filebrowser.json"
             ],
-            "EXTRA": "--restart always",
+            "EXTRA": "--restart always --workdir=/home/user",
             "DEPEND": [],
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh",
-            "CMD": "if [ ! -f /database.db ]; then /bin/filebrowser config init && /bin/filebrowser users add \"$FILEBROWSER_USER\" \"$FILEBROWSER_PASS\" --perm.admin && /bin/filebrowser ; else /bin/filebrowser ; fi",
+            "CMD": "cd /home/user ;if [ ! -f database.db ]; then /bin/filebrowser config init && /bin/filebrowser users add \"$FILEBROWSER_USER\" \"$FILEBROWSER_PASS\" --perm.admin && /bin/filebrowser ; else /bin/filebrowser ; fi",
             "PRE_START": "null",
             "POST_START": [
                 "firewall-filebrowser",
