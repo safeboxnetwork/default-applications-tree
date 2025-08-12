@@ -29,7 +29,7 @@
             "IMAGE": "tensorchord/pgvecto-rs:pg14-v0.2.0",
             "UPDATE": "true",
             "NAME": "immichpostgres-db",
-            "MEMORY": "256M",
+            "MEMORY": "512M",
             "NETWORK": "immich-net",
             "SELECTOR": "immichpostgres",
             "VOLUMES": [
@@ -81,7 +81,7 @@
             "IMAGE": "ghcr.io/immich-app/immich-server:#IMMICH_VERSION",
             "UPDATE": "true",
             "NAME": "immichapp-app",
-            "MEMORY": "1024M",
+            "MEMORY": "1536M",
             "NETWORK": "immich-net",
             "SELECTOR": "immichapp",
             "PORTS": [
@@ -136,7 +136,7 @@
             "UPDATE": "true",
             "NAME": "immichmachine-learning",
             "ROLES": "backend-www",
-            "MEMORY": "1024M",
+            "MEMORY": "1536M",
             "NETWORK": "immich-net",
             "SELECTOR": "immichmachine-learning",
             "ENVS": [
