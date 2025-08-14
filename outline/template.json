@@ -10,14 +10,14 @@
             "key": "SECRET_KEY",
             "value": "",
             "required": "true",
-            "generated": "openssl|hex|32"
+            "generated": "openssl|rand|32"
         },
         {
             "description": "Util secret key",
             "key": "UTILS_SECRET",
             "value": "",
             "required": "true",
-            "generated": "openssl|hex|32"
+            "generated": "openssl|rand|32"
         },
         {
             "description": "Postgres database name",
