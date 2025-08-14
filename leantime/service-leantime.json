@@ -115,7 +115,7 @@
             "PORTS": [
                 {
                     "SOURCE": "null",
-                    "DEST": "80",
+                    "DEST": "8080",
                     "TYPE": "tcp"
                 }
             ],
