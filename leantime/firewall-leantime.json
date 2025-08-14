@@ -58,7 +58,7 @@
                     "TYPE": "tcp"
                 },
                 {
-                    "TARGET_PORT": "80"
+                    "TARGET_PORT": "8080"
                 },
                 {
                     "COMMENT": "leantime"
