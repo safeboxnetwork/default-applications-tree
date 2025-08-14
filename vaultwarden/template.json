@@ -77,7 +77,6 @@
             "description": "SMTP from Mail Adress",
             "key": "VAULTWARDEN_SMTP_FROM",
             "value": "",
-            "required": "true",
             "advanced": "true"
         },
         {
@@ -96,7 +95,6 @@
             "description": "Domains whitelist",
             "key": "SIGNUPS_DOMAINS_WHITELIST",
             "value": "",
-            "required": "true",
             "advanced": "true"
         }
     ]

@@ -43,7 +43,7 @@
             "description": "Host whitelist",
             "key": "TRANSMISSION_HOST_WHITELIST",
             "value": "",
-            "advance": "true"
+            "advanced": "true"
         }
     ]
 }

@@ -12,12 +12,6 @@
             "required": "true"
         },
         {
-            "description": "Deploy name",
-            "key": "LEANTIME_SITENAME",
-            "value": "LeanTime",
-            "advanced": "true"
-        },
-        {
             "description": "Language",
             "key": "LEANTIME_LANG",
             "value": "En-US"
@@ -26,6 +20,12 @@
             "description": "Timezone",
             "key": "LEANTIME_TZ",
             "value": "Europe/Budapest"
+        },
+        {
+            "description": "Deploy name",
+            "key": "LEANTIME_SITENAME",
+            "value": "Leantime",
+            "advanced": "true"
         },
         {
             "description": "Public login",
