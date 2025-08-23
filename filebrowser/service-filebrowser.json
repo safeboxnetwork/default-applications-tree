@@ -21,7 +21,7 @@
             "DEPEND": "null",
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh -c",
-            "CMD": "mkdir -p /etc/user/data/jellyfin/media && mkdir -p /etc/user/data/transmission/downloads/complete",
+            "CMD": "mkdir -p /etc/user/data/jellyfin/media && chown -R 1000:1000 /etc/user/data/jellyfin/media && mkdir -p /etc/user/data/transmission/downloads/complete",
             "PRE_START": "null",
             "POST_START": "null"
         },
