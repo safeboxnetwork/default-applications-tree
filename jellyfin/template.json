@@ -9,6 +9,13 @@
             "description": "Domain",
             "key": "DOMAIN",
             "value": ""
+        },
+        {
+            "description": "Version",
+            "key": "VERSION",
+            "value": "2025081105",
+            "info": "Latest stable official version at the time of template creation.",
+            "advanced": "true"
         }
     ]
 }
