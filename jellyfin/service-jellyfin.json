@@ -29,7 +29,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "jellyfin/jellyfin:latest",
+            "IMAGE": "jellyfin/jellyfin:#VERSION",
             "UPDATE": "true",
             "NAME": "jellyfin",
             "NETWORK": "host",
