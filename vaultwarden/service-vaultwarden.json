@@ -15,44 +15,34 @@
                     "SOURCE": "USER_DATA",
                     "DEST": "/etc/user/data",
                     "TYPE": "rw"
-                },
-                {
-                    "SOURCE": "SYSTEM_LOG",
-                    "DEST": "/etc/system/log",
-                    "TYPE": "rw"
                 }
             ],
             "EXTRA": "--rm",
             "DEPEND": "null",
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh -c",
-            "CMD": "mkdir -p /etc/user/data/vaultwarden/data && mkdir -p /etc/user/data/vaultwarden/db && mkdir -p /etc/system/log/vaultwarden/db",
+            "CMD": "mkdir -p /etc/user/data/vaultwarden/data && mkdir -p /etc/user/data/vaultwarden/db",
             "PRE_START": "null",
             "POST_START": "null"
         },
         {
-            "IMAGE": "mariadb:latest",
+            "IMAGE": "postgres:15-alpine",
             "UPDATE": "true",
-            "NAME": "vaultwardenmysql-db",
+            "NAME": "vaultwardenpostgres-db",
             "MEMORY": "256M",
             "NETWORK": "vaultwarden-net",
-            "SELECTOR": "vaultwardenmysql-db",
+            "SELECTOR": "vaultwardenpostgres-db",
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/vaultwarden/db",
-                    "DEST": "/var/lib/mysql",
-                    "TYPE": "rw"
-                },
-                {
-                    "SOURCE": "/etc/system/log/vaultwarden/db",
-                    "DEST": "/var/lib/mysql/mysql-bin",
+                    "DEST": "/var/lib/postgres",
                     "TYPE": "rw"
                 }
             ],
             "PORTS": [
                 {
                     "SOURCE": "null",
-                    "DEST": "3306",
+                    "DEST": "5432",
                     "TYPE": "tcp"
                 }
             ],
