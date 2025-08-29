@@ -32,34 +32,34 @@
         {
             "description": "Version",
             "key": "VERSION",
-            "value": "26.0.13-fpm-alpine",
+            "value": "31.0.8-fpm-alpine",
             "info": "Please keep in mind you can't upgrade major version without skipping a version!",
             "advanced": "true"
         },
         {
-            "description": "MYSQL database name",
-            "key": "MARIADB_DATABASE",
+            "description": "Postgres database name",
+            "key": "POSTGRES_DB",
             "value": "",
             "required": "true",
             "generated": "time|md5|8"
         },
         {
-            "description": "MYSQL username",
-            "key": "MARIADB_USER",
+            "description": "Postgres username",
+            "key": "POSTGRES_USER",
             "value": "",
             "required": "true",
             "generated": "time|md5|8"
         },
         {
-            "description": "MYSQL password for user",
-            "key": "MARIADB_PASSWORD",
+            "description": "Postgres password for user",
+            "key": "POSTGRES_PASSWORD",
             "value": "",
             "required": "true",
             "generated": "random|md5|12"
         },
         {
-            "description": "MYSQL root user password",
-            "key": "MARIADB_ROOT_PASSWORD",
+            "description": "Postgres root user password",
+            "key": "POSTGRES_ROOT_PASSWORD",
             "value": "",
             "required": "true",
             "generated": "random|sha256|20"
