@@ -1,8 +1,7 @@
 {
     "main": {
-        "SERVICE_NAME": "dev-gitea",
-        "DOMAIN": "gitea.dev.format.hu",
-        "ZONE": "dev"
+        "SERVICE_NAME": "gitea",
+        "DOMAIN": "#DOMAIN"
     },
     "containers": [
         {
