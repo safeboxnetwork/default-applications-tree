@@ -49,7 +49,7 @@
                 }
             ],
             "ENV_FILES": [
-                "/etc/user/secret/gieta/gitea.json"
+                "/etc/user/secret/gitea/gitea.json"
             ],
             "ENVS": [
                 {
@@ -94,7 +94,7 @@
             ],
             "EXTRA": "null",
             "ENV_FILES": [
-                "/etc/user/secret/gieta/gitea.json"
+                "/etc/user/secret/gitea/gitea.json"
             ],
             "DEPEND": [],
             "START_ON_BOOT": "true",
