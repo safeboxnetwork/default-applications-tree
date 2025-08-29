@@ -41,7 +41,7 @@
         {
             "description": "Sending mail enable",
             "key": "MAIL_ENABLE",
-            "value": "false,true",
+            "value": "false",
             "info": "Enable sending email (for user registration, notifications, etc.)",
             "advanced": "true"
         },
