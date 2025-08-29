@@ -64,7 +64,7 @@
             "POST_START": []
         },
         {
-            "IMAGE": "gitea:gitea",
+            "IMAGE": "gitea/gitea:latest",
             "UPDATE": "true",
             "NAME": "giteaapp",
             "DNS": [
