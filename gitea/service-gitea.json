@@ -49,7 +49,7 @@
                 }
             ],
             "ENV_FILES": [
-                "secret-gitea.json"
+                "gitea.json"
             ],
             "ENVS": [
                 {
@@ -67,7 +67,9 @@
             "IMAGE": "gitea:gitea",
             "UPDATE": "true",
             "NAME": "giteaapp",
-            "DNS": ["coredns"],
+            "DNS": [
+                "coredns"
+            ],
             "MEMORY": "512M",
             "SELECTOR": "gitea",
             "NETWORK": "gitea-net",
@@ -92,7 +94,7 @@
             ],
             "EXTRA": "null",
             "ENV_FILES": [
-                "secret-gitea.json"
+                "gitea.json"
             ],
             "DEPEND": [],
             "START_ON_BOOT": "true",
