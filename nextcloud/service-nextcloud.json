@@ -39,7 +39,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "postgres:13-alpine",
+            "IMAGE": "postgres:15-alpine",
             "UPDATE": "true",
             "NAME": "nextcloudpostgres-db",
             "MEMORY": "256M",
