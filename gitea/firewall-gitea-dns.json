@@ -50,7 +50,7 @@
                     "CHAIN": "DOCKER-USER"
                 },
                 {
-                    "SOURCE": "gitea"
+                    "SOURCE": "gitea-app"
                 },
                 {
                     "TARGET": "coredns"

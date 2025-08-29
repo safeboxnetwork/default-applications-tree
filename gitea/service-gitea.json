@@ -71,7 +71,7 @@
                 "coredns"
             ],
             "MEMORY": "512M",
-            "SELECTOR": "gitea",
+            "SELECTOR": "gitea-app",
             "NETWORK": "gitea-net",
             "VOLUMES": [
                 {
