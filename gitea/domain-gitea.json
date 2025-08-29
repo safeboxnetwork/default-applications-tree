@@ -23,7 +23,7 @@
                     "PROXY": "smarthostloadbalancer"
                 },
                 {
-                    "TARGET": "gitea"
+                    "TARGET": "gitea-app"
                 },
                 {
                     "PORT": "3000"

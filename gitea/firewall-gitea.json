@@ -52,7 +52,7 @@
                     "SOURCE": "smarthostbackend"
                 },
                 {
-                    "TARGET": "gitea"
+                    "TARGET": "gitea-app"
                 },
                 {
                     "TYPE": "tcp"

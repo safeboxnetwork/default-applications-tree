@@ -49,7 +49,7 @@
                     "CHAIN": "DOCKER-USER"
                 },
                 {
-                    "SOURCE": "gitea"
+                    "SOURCE": "gitea-app"
                 },
                 {
                     "TARGET": "smtp"
