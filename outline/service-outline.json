@@ -108,10 +108,10 @@
                     "DATABASE_CONNECTION_POOL_MAX": ""
                 },
                 {
-                    "REDIS_URL": "redis://outlineredis-app:6379"
+                    "REDIS_URL": "redis://outlineredis-server:6379"
                 },
                 {
-                    "URL": "https://#OUTLINE_DOMAIN"
+                    "URL": "https://#DOMAIN"
                 },
                 {
                     "PORT": 3000

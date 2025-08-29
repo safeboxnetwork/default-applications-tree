@@ -52,6 +52,174 @@
             "key": "DOMAIN",
             "value": "",
             "required": "true"
+        },
+        {
+            "description": "Slack client ID",
+            "key": "SLACK_CLIENT_ID",
+            "value": "",
+            "info": "Create a new app in your Slack workspace at https://api.slack.com/apps?new_app=1 and add 'Sign in with Slack' under 'Add features and functionality'. Set the Redirect URL to 'https://<your-domain>/auth/slack.callback'.",
+            "advanced": "true"
+        },
+        {
+            "description": "Slack client secret",
+            "key": "SLACK_CLIENT_SECRET",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "Google client ID",
+            "key": "GOOGLE_CLIENT_ID",
+            "value": "",
+            "info": "Create OAuth 2.0 credentials in Google Cloud Console at https://console.cloud.google.com/apis/credentials and set the Redirect URL to 'https://<your-domain>/auth/google.callback'.",
+            "advanced": "true"
+        },
+        {
+            "description": "Google client secret",
+            "key": "GOOGLE_CLIENT_SECRET",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "Azure client ID",
+            "key": "AZURE_CLIENT_ID",
+            "value": "",
+            "info": "Register an application in Azure AD at https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade and set the Redirect URL to 'https://<your-domain>/auth/azuread.callback'.",
+            "advanced": "true"
+        },
+        {
+            "description": "Azure client secret",
+            "key": "AZURE_CLIENT_SECRET",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "Azure resource app ID",
+            "key": "AZURE_RESOURCE_APP_ID",
+            "value": "",
+            "info": "This is usually the same as the client ID, but can vary based on your Azure AD setup.",
+            "advanced": "true"
+        },
+        {
+            "description": "Discord client ID",
+            "key": "DISCORD_CLIENT_ID",
+            "value": "",
+            "info": "Create an application in Discord Developer Portal at https://discord.com/developers/applications and set the Redirect URL to 'https://<your-domain>/auth/discord.callback'.",
+            "advanced": "true"
+        },
+        {
+            "description": "Discord client secret",
+            "key": "DISCORD_CLIENT_SECRET",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "Discord server ID (optional)",
+            "key": "DISCORD_SERVER_ID",
+            "value": "",
+            "info": "(Optional) If you want to restrict login to members of a specific Discord server, provide the server ID here.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect client ID",
+            "key": "OIDC_CLIENT_ID",
+            "value": "",
+            "info": "Set up an OpenID Connect application with your provider and set the Redirect URL to 'https://<your-domain>/auth/oidc.callback'.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect client secret",
+            "key": "OIDC_CLIENT_SECRET",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect provider auth URI",
+            "key": "OIDC_AUTH_URI",
+            "value": "",
+            "info": "The authorization endpoint URL of your OpenID Connect provider.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect provider token URI",
+            "key": "OIDC_TOKEN_URI",
+            "value": "",
+            "info": "The token endpoint URL of your OpenID Connect provider.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect provider userinfo URI",
+            "key": "OIDC_USERINFO_URI",
+            "value": "",
+            "info": "The userinfo endpoint URL of your OpenID Connect provider.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect provider logout URI (optional)",
+            "key": "OIDC_LOGOUT_URI",
+            "value": "",
+            "info": "(Optional) The logout endpoint URL of your OpenID Connect provider, if supported.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect username claim",
+            "key": "OIDC_USERNAME_CLAIM",
+            "value": "preferred_username",
+            "info": "The claim in the ID token or userinfo response to use as the username. Defaults to 'preferred_username'.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect display name",
+            "key": "OIDC_DISPLAY_NAME",
+            "value": "OpenID Connect",
+            "info": "The display name for the OpenID Connect authentication option. Defaults to 'OpenID Connect'.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect scopes",
+            "key": "OIDC_SCOPES",
+            "value": "openid profile email",
+            "info": "Space-separated list of scopes to request during authentication. Defaults to 'openid profile email'.",
+            "advanced": "true"
+        },
+        {
+            "description": "SMTP host",
+            "key": "SMTP_HOST",
+            "value": "",
+            "info": "Used for sending invitation and password reset emails. Leave blank to disable email functionality.",
+            "advanced": "true"
+        },
+        {
+            "description": "SMTP port",
+            "key": "SMTP_PORT",
+            "value": "587",
+            "info": "(Optional) The port to connect to on the SMTP server. Defaults to 587.",
+            "advanced": "true"
+        },
+        {
+            "description": "SMTP service (e.g., gmail)",
+            "key": "SMTP_SERVICE",
+            "value": "",
+            "info": "Used for sending invitation and password reset emails. Leave blank to disable email functionality.",
+            "advanced": "true"
+        },
+        {
+            "description": "SMTP username (email address)",
+            "key": "SMTP_USERNAME",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "SMTP password",
+            "key": "SMTP_PASSWORD",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "From email address",
+            "key": "SMTP_FROM_EMAIL",
+            "value": "",
+            "info": "(Optional) The email address that emails will be sent from. Defaults to the SMTP username if not set.",
+            "advanced": "true"
         }
     ]
 }
