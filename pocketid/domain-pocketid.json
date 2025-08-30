@@ -1,6 +1,6 @@
 {
     "main": {
-        "SERVICE_NAME": "vaultwarden",
+        "SERVICE_NAME": "pocketid",
         "DOMAIN": "#DOMAIN"
     },
     "containers": [
