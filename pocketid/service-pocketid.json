@@ -63,7 +63,7 @@
             "POST_START": []
         },
         {
-            "IMAGE": "stonith404/pocket-id",
+            "IMAGE": "11notes/pocket-id:1",
             "UPDATE": "true",
             "NAME": "pocketidapp",
             "DNS": [
