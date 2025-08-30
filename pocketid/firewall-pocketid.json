@@ -58,7 +58,7 @@
                     "TYPE": "tcp"
                 },
                 {
-                    "TARGET_PORT": "3000"
+                    "TARGET_PORT": "1411"
                 },
                 {
                     "COMMENT": "proxy for pocketid-app"
