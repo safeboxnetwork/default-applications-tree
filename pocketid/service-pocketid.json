@@ -1,0 +1,99 @@
+{
+    "main": {
+        "SERVICE_NAME": "pocketid",
+        "DOMAIN": "#DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "pocketid-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /mkdir -p /etc/user/data/pocketid/db",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "postgres:16-alpine",
+            "NAME": "pocketidpostgres-db",
+            "UPDATE": "true",
+            "ROLES": "postgres-db patroni",
+            "MEMORY": "256M",
+            "NETWORK": "pocketid-net",
+            "SELECTOR": "pocketidpostgres-db",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/pocketid/postgresql",
+                    "DEST": "/var/lib/postgresql/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "5432",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/pocketid/pocketid.json"
+            ],
+            "ENVS": [
+                {
+                    "POSTGRES_INITDB_ARGS": "--encoding=UTF8 --locale=C"
+                }
+            ],
+            "EXTRA": "--label logging=promtail_user --label logging_jobname=containers --restart unless-stopped",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": [],
+            "POST_START": []
+        },
+        {
+            "IMAGE": "stonith404/pocket-id",
+            "UPDATE": "true",
+            "NAME": "pocketidapp",
+            "DNS": [
+                "coredns"
+            ],
+            "MEMORY": "256M",
+            "SELECTOR": "pocketid-app",
+            "NETWORK": "pocketid-net",
+            "VOLUMES": [],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "3000",
+                    "TYPE": "tcp"
+                }
+            ],
+            "EXTRA": "--label logging=promtail_user --label logging_jobname=containers --restart unless-stopped",
+            "ENV_FILES": [
+                "/etc/user/secret/pocketid/pocketid.json"
+            ],
+            "DEPEND": [],
+            "START_ON_BOOT": "true",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": [
+                "firewall-pocketid",
+                "firewall-pocketid-dns",
+                "firewall-pocketid-smtp",
+                "domain-pocketid"
+            ]
+        }
+    ]
+}
