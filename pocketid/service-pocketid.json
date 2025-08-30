@@ -35,8 +35,8 @@
             "SELECTOR": "pocketidpostgres-db",
             "VOLUMES": [
                 {
-                    "SOURCE": "/etc/user/data/pocketid/postgresql",
-                    "DEST": "/var/lib/postgresql/data",
+                    "SOURCE": "/etc/user/data/pocketid/db",
+                    "DEST": "/var/lib/postgresql",
                     "TYPE": "rw"
                 }
             ],
