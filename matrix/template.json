@@ -8,17 +8,21 @@
         {
             "description": "Add synapse/matrix server name (domain)",
             "key": "DOMAIN",
-            "value": ""
+            "value": "",
+            "required": "true"
         },
         {
             "description": "Matrix admin username",
             "key": "ADMIN_USERNAME",
-            "value": ""
+            "value": "",
+            "required": "true"
         },
         {
             "description": "Matrix admin password",
             "key": "ADMIN_PASSWORD",
-            "value": ""
+            "value": "",
+            "required": "true",
+            "type": "password"
         },
         {
             "description": "Postgres database name",
