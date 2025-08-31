@@ -38,8 +38,8 @@
             "SELECTOR": "matrixpostgres-db",
             "VOLUMES": [
                 {
-                    "SOURCE": "/etc/user/data/matrix/postgresql",
-                    "DEST": "/var/lib/postgresql/data",
+                    "SOURCE": "/etc/user/data/matrix/db",
+                    "DEST": "/var/lib/postgresql",
                     "TYPE": "rw"
                 }
             ],
@@ -68,7 +68,7 @@
         {
             "IMAGE": "matrixdotorg/synapse",
             "UPDATE": "true",
-            "NAME": "matrixserver-init",
+            "NAME": "matrixserver",
             "ROLES": "backend-www",
             "MEMORY": "512M",
             "NETWORK": "matrix-net",
@@ -85,8 +85,8 @@
             "EXTRA": "--rm",
             "DEPEND": "null",
             "START_ON_BOOT": "false",
-            "ENTRYPOINT": "sh -c",
-            "CMD": "if [ ! -f /data/homeserver.yaml ]; then generate ; fi",
+            "ENTRYPOINT": "bash -c",
+            "CMD": "if [ ! -f /data/homeserver.yaml ]; then /start.py generate ; else exit 1; fi",
             "PRE_START": [],
             "POST_START": []
         },
