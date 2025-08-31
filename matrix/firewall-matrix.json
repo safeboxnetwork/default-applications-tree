@@ -1,0 +1,75 @@
+{
+    "main": {
+        "SERVICE_NAME": "firewalls",
+        "DOMAIN": "null"
+    },
+    "containers": [
+        {
+            "IMAGE": "safebox/firewall",
+            "NAME": "firewall",
+            "MEMORY": "64M",
+            "NETWORK": "host",
+            "SCALE": "0",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/run/",
+                    "DEST": "/run/",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/user/config/services",
+                    "DEST": "/services",
+                    "TYPE": "ro"
+                },
+                {
+                    "SOURCE": "/etc/system/data/dns/hosts.local",
+                    "DEST": "/etc/dns/hosts.local",
+                    "TYPE": "ro"
+                },
+                {
+                    "SOURCE": "/var/run/docker.sock",
+                    "DEST": "/var/run/docker.sock",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [],
+            "READYNESS": [
+                {
+                    "tcp": ""
+                },
+                {
+                    "HTTP": ""
+                },
+                {
+                    "EXEC": "/ready.sh"
+                }
+            ],
+            "ENVS": [
+                {
+                    "CHAIN": "DOCKER-USER"
+                },
+                {
+                    "SOURCE": "smarthostbackend"
+                },
+                {
+                    "TARGET": "matrixserver"
+                },
+                {
+                    "TYPE": "tcp"
+                },
+                {
+                    "TARGET_PORT": "8008"
+                },
+                {
+                    "COMMENT": "matrix"
+                }
+            ],
+            "EXTRA": "--privileged --rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        }
+    ]
+}

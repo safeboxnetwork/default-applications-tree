@@ -1,0 +1,201 @@
+{
+    "main": {
+        "SERVICE_NAME": "matrix",
+        "DOMAIN": "DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "matrix-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/matrix/matrix.json"
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/matrix/db && mkdir -p /etc/user/data/matrix/synapse",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "postgres:alpine",
+            "UPDATE": "true",
+            "NAME": "matrixpostgres-db",
+            "ROLES": "postgres-db",
+            "MEMORY": "256M",
+            "NETWORK": "matrix-net",
+            "SELECTOR": "matrixpostgres-db",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/matrix/postgresql",
+                    "DEST": "/var/lib/postgresql/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "5432",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/matrix/matrix.json"
+            ],
+            "ENVS": [
+                {
+                    "POSTGRES_INITDB_ARGS": "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+                }
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": [],
+            "POST_START": []
+        },
+        {
+            "IMAGE": "matrixdotorg/synapse",
+            "UPDATE": "true",
+            "NAME": "matrixserver-init",
+            "ROLES": "backend-www",
+            "MEMORY": "512M",
+            "NETWORK": "matrix-net",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/matrix/synapse",
+                    "DEST": "/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/matrix/matrix.json"
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "if [ ! -f /data/homeserver.yaml ]; then generate ; fi",
+            "PRE_START": [],
+            "POST_START": []
+        },
+        {
+            "IMAGE": "safebox/matrix-setup:latest",
+            "UPDATE": "true",
+            "NAME": "matrix-setup",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/matrix/synapse",
+                    "DEST": "/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/matrix/matrix.json"
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "matrixdotorg/synapse",
+            "UPDATE": "true",
+            "NAME": "matrixserver",
+            "ROLES": "backend-www",
+            "MEMORY": "512M",
+            "NETWORK": "matrix-net",
+            "SELECTOR": "matrixserver",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/matrix/synapse",
+                    "DEST": "/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "8008",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/matrix/matrix.json"
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": [],
+            "POST_START": [
+                "firewall-matrix",
+                "domain-matrix"
+            ]
+        },
+        {
+            "IMAGE": "awesometechnologies/synapse-admin",
+            "UPDATE": "true",
+            "NAME": "matrixadmin",
+            "ROLES": "backend-www",
+            "MEMORY": "128M",
+            "NETWORK": "matrix-net",
+            "SELECTOR": "matrixadmin",
+            "VOLUMES": [],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "80",
+                    "TYPE": "tcp"
+                }
+            ],
+            "EXTRA": "--restart unless-stopped",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": [],
+            "POST_START": [
+                "firewall-matrix-admin",
+                "domain-matrix-admin"
+            ]
+        },
+        {
+            "IMAGE": "safebox/matrix-setup:latest",
+            "UPDATE": "true",
+            "NAME": "matrix-setup",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/matrix/synapse",
+                    "DEST": "/data",
+                    "TYPE": "ro"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/matrix/matrix.json"
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        }
+    ]
+}
