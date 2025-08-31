@@ -68,7 +68,7 @@
         {
             "IMAGE": "matrixdotorg/synapse",
             "UPDATE": "true",
-            "NAME": "matrixserver",
+            "NAME": "matrixserver-init",
             "ROLES": "backend-www",
             "MEMORY": "512M",
             "NETWORK": "matrix-net",
@@ -93,7 +93,7 @@
         {
             "IMAGE": "safebox/matrix-setup:latest",
             "UPDATE": "true",
-            "NAME": "matrix-setup",
+            "NAME": "matrixserver-setup",
             "NETWORK": "host",
             "MEMORY": "64M",
             "VOLUMES": [
@@ -116,7 +116,7 @@
         {
             "IMAGE": "matrixdotorg/synapse",
             "UPDATE": "true",
-            "NAME": "matrixserver",
+            "NAME": "matrixserver-app",
             "ROLES": "backend-www",
             "MEMORY": "512M",
             "NETWORK": "matrix-net",
@@ -147,6 +147,29 @@
                 "firewall-matrix",
                 "domain-matrix"
             ]
+        },
+        {
+            "IMAGE": "safebox/matrix-setup:latest",
+            "UPDATE": "true",
+            "NAME": "matrixserver-finalize",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/matrix/synapse",
+                    "DEST": "/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/matrix/matrix.json"
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
         },
         {
             "IMAGE": "awesometechnologies/synapse-admin",
