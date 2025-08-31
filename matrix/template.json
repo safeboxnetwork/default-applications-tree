@@ -25,6 +25,18 @@
             "type": "password"
         },
         {
+            "description": "Add matrix server admin domain",
+            "key": "DOMAIN_ADMIN",
+            "value": "",
+            "required": "true"
+        },
+        {
+            "description": "Add domain subpath for matrix admin (e.g. admin)",
+            "details": "Optional - leave blank for none but keep in mind subpath will be required if you have other services using the same domain, for example matrix domain is the same as admin domain.",
+            "key": "SUB_PATH",
+            "value": ""
+        },
+        {
             "description": "Postgres database name",
             "key": "POSTGRES_DB",
             "value": "",
