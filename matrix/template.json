@@ -6,8 +6,18 @@
     "description": "Matrix is an opensource commucation platform that provides secure messaging. It is designed to be decentralized, allowing users to communicate across different servers and platforms while maintaining control over their data.",
     "fields": [
         {
-            "description": "Domain",
+            "description": "Add synapse/matrix server name (domain)",
             "key": "DOMAIN",
+            "value": ""
+        },
+        {
+            "description": "Matrix admin username",
+            "key": "ADMIN_USERNAME",
+            "value": ""
+        },
+        {
+            "description": "Matrix admin password",
+            "key": "ADMIN_PASSWORD",
             "value": ""
         },
         {
