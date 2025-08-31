@@ -29,13 +29,13 @@
                     "PORT": "80"
                 },
                 {
-                    "DOMAIN": "#DOMAIN_ADMIN"
+                    "DOMAIN": "#DOMAINADMIN"
                 },
                 {
                     "SMARTHOST_PROXY_PATH": "/smarthost-domains"
                 },
                 {
-                    "LOCAL_PATH": "#SUB_PATH"
+                    "LOCAL_PATH": "#SUBPATH"
                 },
                 {
                     "OPERATION": "CREATE"
