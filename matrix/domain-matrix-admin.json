@@ -1,7 +1,7 @@
 {
     "main": {
         "SERVICE_NAME": "matrix",
-        "DOMAIN": "#DOMAIN"
+        "DOMAIN": "#DOMAIN_ADMIN"
     },
     "containers": [
         {
@@ -29,10 +29,13 @@
                     "PORT": "80"
                 },
                 {
-                    "DOMAIN": "#DOMAIN"
+                    "DOMAIN": "#DOMAIN_ADMIN"
                 },
                 {
                     "SMARTHOST_PROXY_PATH": "/smarthost-domains"
+                },
+                {
+                    "LOCAL_PATH": "#SUB_PATH"
                 },
                 {
                     "OPERATION": "CREATE"
