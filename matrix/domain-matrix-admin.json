@@ -35,7 +35,7 @@
                     "SMARTHOST_PROXY_PATH": "/smarthost-domains"
                 },
                 {
-                    "LOCAL_PATH": "#SUBPATH"
+                    "LOCATION": "#SUBPATH"
                 },
                 {
                     "OPERATION": "CREATE"
