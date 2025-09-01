@@ -32,7 +32,7 @@
         },
         {
             "description": "Add domain subpath for matrix admin (e.g. admin)",
-            "details": "Optional - leave blank for none but keep in mind subpath will be required if you have other services using the same domain, for example matrix domain is the same as admin domain.",
+            "details": "Optional - leave blank for none but keep in mind subpath will be required if you have other services using the same domain, for example matrix domain is the same as admin domain you should set it '/admin/' now you can access it via https://domain.tld/admin/",
             "key": "SUBPATH",
             "value": ""
         },
