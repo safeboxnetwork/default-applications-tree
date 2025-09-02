@@ -162,7 +162,7 @@
             "ENV_FILES": [
                 "/etc/user/secret/matrix/matrix.json"
             ],
-            "EXTRA": "--rm",
+            "EXTRA": "",
             "DEPEND": "null",
             "START_ON_BOOT": "false",
             "CMD": "null",
