@@ -93,7 +93,7 @@
         {
             "IMAGE": "safebox/matrix-setup:latest",
             "UPDATE": "true",
-            "NAME": "matrixserver-setup",
+            "NAME": "matrixserver-dbinit",
             "NETWORK": "host",
             "MEMORY": "64M",
             "VOLUMES": [
@@ -159,6 +159,11 @@
                     "SOURCE": "/etc/user/data/matrix/synapse",
                     "DEST": "/data",
                     "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/var/tmp/shared/input",
+                    "DEST": "/var/tmp/input",
+                    "TYPE": "rw"
                 }
             ],
             "ENV_FILES": [
@@ -196,29 +201,6 @@
                 "firewall-matrix-admin",
                 "domain-matrix-admin"
             ]
-        },
-        {
-            "IMAGE": "safebox/matrix-setup:latest",
-            "UPDATE": "true",
-            "NAME": "matrix-setup",
-            "NETWORK": "host",
-            "MEMORY": "64M",
-            "VOLUMES": [
-                {
-                    "SOURCE": "/etc/user/data/matrix/synapse",
-                    "DEST": "/data",
-                    "TYPE": "ro"
-                }
-            ],
-            "ENV_FILES": [
-                "/etc/user/secret/matrix/matrix.json"
-            ],
-            "EXTRA": "--rm",
-            "DEPEND": "null",
-            "START_ON_BOOT": "false",
-            "CMD": "null",
-            "PRE_START": "null",
-            "POST_START": "null"
         }
     ]
 }
