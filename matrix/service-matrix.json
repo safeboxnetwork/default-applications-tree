@@ -154,8 +154,8 @@
                     "TYPE": "rw"
                 },
                 {
-                    "SOURCE": "/var/tmp/shared/input",
-                    "DEST": "/var/tmp/input",
+                    "SOURCE": "SHARED",
+                    "DEST": "/var/tmp/shared",
                     "TYPE": "rw"
                 }
             ],
