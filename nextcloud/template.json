@@ -10,7 +10,7 @@
             "details": "",
             "info": "Nextcloud domain info",
             "description": "Domain",
-            "key": "NEXTCLOUD_TRUSTED_DOMAINS",
+            "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
