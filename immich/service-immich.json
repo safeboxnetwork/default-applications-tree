@@ -49,6 +49,11 @@
             "ENV_FILES": [
                 "/etc/user/secret/immich/immich.json"
             ],
+            "ENVS": [
+                {
+                    "POSTGRES_INITDB_ARGS": "--data-checksums"
+                }
+            ],
             "EXTRA": "--restart always",
             "DEPEND": "null",
             "START_ON_BOOT": "false",
