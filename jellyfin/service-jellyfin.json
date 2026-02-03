@@ -35,11 +35,6 @@
             "NETWORK": "host",
             "VOLUMES": [
                 {
-                    "SOURCE": "/etc/user/data/jellyfin/media",
-                    "DEST": "/media",
-                    "TYPE": "rw"
-                },
-                {
                     "SOURCE": "/etc/user/data/transmission/downloads/complete",
                     "DEST": "/media/torrent",
                     "TYPE": "rw"
