@@ -1,0 +1,204 @@
+{
+    "main": {
+        "SERVICE_NAME": "quackback",
+        "DOMAIN": "#DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "quackback-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/quackback/data && mkdir -p /etc/user/data/quackback/db && mkdir -p /etc/user/data/quackback/minio && mkdir -p /etc/user/data/quackback/dragonfly",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "postgres-quackback:18",
+            "UPDATE": "true",
+            "NAME": "quackbackpostgres-db",
+            "MEMORY": "256M",
+            "NETWORK": "quackback-net",
+            "SELECTOR": "quackbackpostgres-db",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/quackback/db",
+                    "DEST": "/var/lib/postgresql/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "5432",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/quackback/quackback.json"
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "postgres -c shared_preload_libraries=pg_cron -c cron.database_name=quackback -c max_connections=200",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "minio/minio:latest",
+            "UPDATE": "true",
+            "NAME": "quackbackminio-app",
+            "MEMORY": "2048M",
+            "NETWORK": "quackback-net",
+            "SELECTOR": "quackbackminio-app",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/quackback/minio",
+                    "DEST": "/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "9000",
+                    "TYPE": "tcp"
+                },
+                {
+                    "SOURCE": "null",
+                    "DEST": "9001",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/quackback/quackback.json"
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "server /data --console-address \":9001\"",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "docker.dragonflydb.io/dragonflydb/dragonfly:v1.27.1",
+            "UPDATE": "true",
+            "NAME": "quackbackredis-server",
+            "MEMORY": "128M",
+            "NETWORK": "quackback-net",
+            "SELECTOR": "quackbackredis",
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "6379",
+                    "TYPE": "tcp"
+                }
+            ],
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/quackback/dragonfly",
+                    "DEST": "/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--restart always --ulimit memlock=-1:-1",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "dragonfly --cluster_mode=emulated --lock_on_hashtags",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "minio/mc:latest",
+            "UPDATE": "true",
+            "NAME": "quackbackminio-init",
+            "NETWORK": "quackback-net",
+            "MEMORY": "256M",
+            "ENV_FILES": [
+                "/etc/user/secret/quackback/quackback.json"
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mc alias set local http://quackbackminio-app:9000 \"$MINIO_ROOT_USER\" \"$MINIO_ROOT_PASSWORD\"; mc mb local/quackback --ignore-existing; mc anonymous set download local/quackback; exit 0;",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "safebox/quackback:latest",
+            "UPDATE": "true",
+            "NAME": "quackbackapp",
+            "NETWORK": "quackback-net",
+            "SELECTOR": "quackback-app",
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "3000",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENVS": [
+                {
+                    "REDIS_URL": "redis://quackbackredis-server:6379"
+                },
+                {
+                    "BASE_URL": "https://#DOMAIN"
+                },
+                {
+                    "DISABLE_TELEMETRY": "true"
+                },
+                {
+                    "EMAIL_SMTP_HOST": "#SMTP_HOST"
+                },
+                {
+                    "EMAIL_SMTP_PORT": "#SMTP_PORT"
+                },
+                {
+                    "EMAIL_FROM": "#SMTP_FROM_EMAIL"
+                },
+                {
+                    "OPENAI_OPENAI_BASE_URL": "#OPENAI_BASE_URL"
+                },
+                {
+                    "S3_ENDPOINT": "http://quackbackminio-app:9000"
+                },
+                {
+                    "S3_BUCKET": "quackback"
+                },
+                {
+                    "S3_REGION": "europe-east-1"
+                },
+                {
+                    "S3_FORCE_PATH_STYLE": "true"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/quackback/quackback.json"
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": [],
+            "START_ON_BOOT": "true",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": [
+                "firewall-quackback",
+                "domain-quackback",
+                "firewall-quackback-dns",
+                "firewall-quackback-smtp"
+            ]
+        }
+    ]
+}
