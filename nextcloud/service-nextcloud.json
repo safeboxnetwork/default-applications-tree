@@ -48,7 +48,7 @@
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/nextcloud/db",
-                    "DEST": "/var/lib/postgres",
+                    "DEST": "/var/lib/postgresql/data",
                     "TYPE": "rw"
                 }
             ],

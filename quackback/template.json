@@ -1,0 +1,225 @@
+{
+    "name": "quuackback",
+    "title": "quuackback",
+    "subtitle": "Interactive portal communication platform",
+    "description": "Quackback is an open-source interactive portal platform designed to facilitate seamless communication and collaboration within organizations.",
+    "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLSBHZW5lcmF0b3I6IHZpc2lvbmNvcnRleCBWVHJhY2VyIDAuNi41IC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjY0MCI+CjxwYXRoIGQ9Ik0wIDAgQzAuNjEgLTAgMC42MSAtMCAzLjcgLTAuMDIgQzE2LjE3IDAgMjcuNTcgMS44MSAzOS4zOCA1LjgxIEM0MC40MSA2LjE2IDQxLjQ0IDYuNTEgNDIuNTEgNi44NyBDNTUuNzEgMTEuNSA2Ny4wNSAxNy45OSA3Ny41NiAyNy4yNSBDNzcuOTcgMjcuNTkgNzcuOTcgMjcuNTkgODAuMDQgMjkuMzMgQzk5Ljg1IDQ2LjM4IDExMy40MiA3MC45NiAxMTUuNTYgOTcuMjUgQzExNS45MiA5Ny4zOSAxMTUuOTIgOTcuMzkgMTE3LjcgOTguMDggQzEyMC42MiA5OS4yNyAxMjMuNDUgMTAwLjU4IDEyNi4zIDEwMS45NCBDMTQ1Ljg3IDExMS4xOSAxNjUuNyAxMTkuMzUgMTg2IDEyNi44OCBDMTkzLjMgMTI5LjU5IDIwMC41NCAxMzIuMzkgMjA3LjY5IDEzNS41IEMyMDguMDUgMTM1LjY1IDIwOC4wNSAxMzUuNjUgMjA5Ljg2IDEzNi40MiBDMjE0Ljc3IDEzOC42MiAyMTkuOTUgMTQxLjMgMjIyLjYyIDE0Ni4xOSBDMjIyLjUyIDE0OS42IDIyMS40NyAxNTEuNDEgMjE5LjU2IDE1NC4yNSBDMTk2LjggMTc0Ljg4IDE0NS4yMiAxNzMuMTYgMTE2LjQgMTc0LjY0IEM5Ni42IDE3NS42NiA5Ni42IDE3NS42NiA4OC41NiAxODEuMjUgQzg3LjAzIDE4NC4zMSA4Ny4zNiAxODYuODYgODcuNTYgMTkwLjI1IEM5MS41IDIwMS45MiA5OS42MiAyMTEuMDkgMTA3LjU2IDIyMC4yNSBDMTA4LjIgMjIxIDEwOC44NCAyMjEuNzQgMTA5LjUgMjIyLjUxIEMxMTEuMTcgMjI0LjQ0IDExMi44NyAyMjYuMzUgMTE0LjU2IDIyOC4yNSBDMTUxLjc5IDI3MC4wNCAxNTEuNzkgMjcwLjA0IDE1Ni4xMiAyOTIuMTIgQzE1Ni4yNyAyOTIuODIgMTU2LjQxIDI5My41MiAxNTYuNTYgMjk0LjI1IEMxNTcuMjIgMjk0LjU4IDE1Ny44OCAyOTQuOTEgMTU4LjU2IDI5NS4yNSBDMTU5LjM0IDI5Ny44MiAxNTkuOTggMzAwLjMyIDE2MC41NiAzMDIuOTQgQzE2MC42NSAzMDMuMzMgMTYwLjY1IDMwMy4zMyAxNjEuMDkgMzA1LjMgQzE2MS41OSAzMDcuNjEgMTYyLjA4IDMwOS45MyAxNjIuNTYgMzEyLjI1IEMxNjIuNzkgMzEzLjMzIDE2My4wMyAzMTQuNCAxNjMuMjcgMzE1LjUxIEMxNjkuNjcgMzUxLjMgMTYxLjA0IDM4Ny41NyAxNDAuNTYgNDE3LjI1IEMxMzguMDMgNDIwLjcxIDEzNS4zNyA0MjQuMDEgMTMyLjU2IDQyNy4yNSBDMTMxLjg4IDQyOC4wNCAxMzEuMTkgNDI4Ljg0IDEzMC40OSA0MjkuNjYgQzExNi4yOSA0NDUuNzYgMTAwLjcxIDQ1OC44IDgyLjU2IDQ3MC4yNSBDODEuOTEgNDcwLjY2IDgxLjI3IDQ3MS4wNyA4MC42IDQ3MS41IEMyOS4zIDUwMy43MyAtMzQuNjggNTEzLjkxIC05NC4zNiA1MDYuNjkgQy05OC4wOCA1MDYuMjQgLTEwMS42OSA1MDYuMTcgLTEwNS40NCA1MDYuMjUgQy0xMDUuNDQgNTA1LjU5IC0xMDUuNDQgNTA0LjkzIC0xMDUuNDQgNTA0LjI1IEMtMTA2LjA4IDUwNC4yMiAtMTA2LjczIDUwNC4yIC0xMDcuMzkgNTA0LjE3IEMtMTQ5LjIzIDUwMS42NSAtMTk0LjkgNDgyLjg5IC0yMjguNDQgNDU4LjI1IEMtMjI4Ljk4IDQ1Ny44NSAtMjI5LjUzIDQ1Ny40NSAtMjMwLjA5IDQ1Ny4wNSBDLTI0Ni4yNSA0NDUuMTYgLTI2MC45OSA0MzIuMDMgLTI3My40NCA0MTYuMjUgQy0yNzQuMjIgNDE1LjI5IC0yNzUgNDE0LjMyIC0yNzUuOCA0MTMuMzMgQy0yODYuNDEgMzk5Ljk4IC0yOTUuMzEgMzg1LjUzIC0zMDIuNTUgMzcwLjExIEMtMzAzLjM5IDM2OC4zNSAtMzA0LjI4IDM2Ni42MSAtMzA1LjE2IDM2NC44NyBDLTMxNy42NCAzMzkuODQgLTMyNC4wNCAzMTEuODggLTMyNy40NCAyODQuMjUgQy0zMjcuNTMgMjgzLjQ2IC0zMjcuNjMgMjgyLjY3IC0zMjcuNzMgMjgxLjg2IEMtMzI4LjQ1IDI3NS40NiAtMzI4LjU5IDI2OS4xMiAtMzI4LjU2IDI2Mi42OSBDLTMyOC41NyAyNjEuNzEgLTMyOC41NyAyNjAuNzMgLTMyOC41NyAyNTkuNzMgQy0zMjguNTUgMjQyLjUyIC0zMjguNTUgMjQyLjUyIC0zMjQuNDQgMjM3LjI1IEMtMzIxLjIxIDIzNS42NCAtMzE3Ljk0IDIzNS43OCAtMzE0LjQ0IDIzNi4yNSBDLTMxMS43MSAyMzcuMzIgLTMwOS4zNCAyMzguODEgLTMwNi44OCAyNDAuMzggQy0yODYuMjYgMjUyLjYyIC0yNjMuMSAyNTcuODQgLTIzOS40NCAyNjAuMjUgQy0yMzguOCAyNjAuMzIgLTIzOC44IDI2MC4zMiAtMjM1LjYgMjYwLjY1IEMtMjEzLjUzIDI2Mi40OCAtMTkxLjMyIDI2MC45NiAtMTY5LjI4IDI1OS40NSBDLTE2NS43OSAyNTkuMjIgLTE2Mi4zIDI1OC45OSAtMTU4LjgxIDI1OC43NiBDLTE1OC4xMyAyNTguNzEgLTE1Ny40NSAyNTguNjcgLTE1Ni43NCAyNTguNjIgQy0xNTAuNzggMjU4LjIzIC0xNDQuODEgMjU3Ljg1IC0xMzguODQgMjU3LjQ3IEMtMTM2Ljc5IDI1Ny4zNCAtMTM0Ljc0IDI1Ny4yIC0xMzIuNjkgMjU3LjA2IEMtMTEzLjY0IDI1NS43OSAtOTQuNTMgMjU2LjE0IC03NS40NSAyNTYuMTggQy03MC43IDI1Ni4xOSAtNjUuOTUgMjU2LjIgLTYxLjIxIDI1Ni4yIEMtNTEuOTUgMjU2LjIxIC00Mi42OSAyNTYuMjMgLTMzLjQ0IDI1Ni4yNSBDLTMzLjExIDI1NS41OSAtMzIuNzggMjU0LjkzIC0zMi40NCAyNTQuMjUgQy0zMC4zOCAyNTMuMTIgLTMwLjM4IDI1My4xMiAtMjguNDQgMjUyLjI1IEMtMjcuOTIgMjQ3LjM5IC0yNy44OSAyNDQuMzkgLTMwLjgxIDI0MC4zOCBDLTM3LjMxIDIzMi42IC00NC42OCAyMjUuOTIgLTUyLjU3IDIxOS42MSBDLTU2LjIzIDIxNi42IC01OS43IDIxMy40MiAtNjMuMTYgMjEwLjIgQy02NS45MSAyMDcuNjQgLTY4LjY5IDIwNS4xNiAtNzEuNTYgMjAyLjc1IEMtOTYuMyAxODEuMDcgLTExMS44OCAxNDkuODIgLTExNC4yNSAxMTcuMDYgQy0xMTUuNDQgOTQuNzIgLTExMC4yOCA3NC42NyAtOTkuNDQgNTUuMjUgQy05OC44OSA1NC4yNiAtOTguMzUgNTMuMjggLTk3Ljc5IDUyLjI2IEMtODMuMjUgMjcuNzYgLTU3LjIgMTAuNDcgLTMwLjA3IDMuMDQgQy0xOS45NSAwLjg0IC0xMC4zNiAtMC4wNyAwIDAgWiAiIGZpbGw9IiNGN0NDMjkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM2MS40Mzc1LDczLjc1KSIvPgo8cGF0aCBkPSJNMCAwIEMtMTUuNSAxLjY3IC0zMC40NSAyLjEzIC00NiAxIEMtNDYgMC42NyAtNDYgMC4zNCAtNDYgMCBDLTQxLjk3IC0wLjI5IC0zNy45MyAtMC41OCAtMzMuOSAtMC44NSBDLTMyLjUzIC0wLjk1IC0zMS4xNiAtMS4wNSAtMjkuOCAtMS4xNSBDLTQuNDYgLTIuOTcgLTQuNDYgLTIuOTcgMCAwIFogIiBmaWxsPSIjRjlEMjM3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMDgsMzM1KSIvPgo8cGF0aCBkPSJNMCAwIEMtMC45OSAwLjMzIC0xLjk4IDAuNjYgLTMgMSBDLTMgMS42NiAtMyAyLjMyIC0zIDMgQy01LjYgMy4yMiAtOC4yMSAzLjQzIC0xMC44MSAzLjYyIEMtMTEuNTUgMy42OSAtMTIuMjkgMy43NSAtMTMuMDUgMy44MiBDLTE4LjY2IDQuMjMgLTE4LjY2IDQuMjMgLTIyIDIgQy0xOS40NiAxLjY2IC0xNi45MiAxLjMzIC0xNC4zOCAxIEMtMTMuNjYgMC45IC0xMi45NSAwLjgxIC0xMi4yMSAwLjcxIEMtOC4xMSAwLjE4IC00LjE1IC0wLjEgMCAwIFogIiBmaWxsPSIjRjNDNDIxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNTIsNTc2KSIvPgo8cGF0aCBkPSJNMCAwIEM4LjkxIDAuNjYgMTcuODIgMS4zMiAyNyAyIEMyNyAyLjMzIDI3IDIuNjYgMjcgMyBDMjMuOTIgMy4yIDIwLjgzIDMuMzggMTcuNzUgMy41NiBDMTYuODggMy42MiAxNiAzLjY3IDE1LjExIDMuNzMgQzE0LjI2IDMuNzggMTMuNDIgMy44MyAxMi41NSAzLjg4IEMxMS43NyAzLjkzIDExIDMuOTcgMTAuMiA0LjAyIEM3Ljk3IDQgNi4xMyAzLjYzIDQgMyBDNCAyLjM0IDQgMS42OCA0IDEgQzIuNjggMC42NyAxLjM2IDAuMzQgMCAwIFogIiBmaWxsPSIjRjhENDNFIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDgsMzMzKSIvPgo8cGF0aCBkPSJNMCAwIEMwLjMgMC4wNiAwLjMgMC4wNiAxLjggMC4zNyBDOC4xOSAxLjY2IDE0LjU5IDIuODUgMjEgNCBDMjEgNC4zMyAyMSA0LjY2IDIxIDUgQzEzLjUgNi42MiA3LjMyIDQuOTggMCAzIEMwIDIuMDEgMCAxLjAyIDAgMCBaICIgZmlsbD0iI0Y5RDEzNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODUsMzI4KSIvPgo8cGF0aCBkPSJNMCAwIEM0LjI5IDAuMTYgNC4yOSAwLjE2IDI2IDEgQzI2IDEuMzMgMjYgMS42NiAyNiAyIEMxNi45OSAyLjU5IDguMDMgMy4xNCAtMSAzIEMtMC42NyAyLjAxIC0wLjM0IDEuMDIgMCAwIFogIiBmaWxsPSIjRkFENjNFIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0NzIsMjQ1KSIvPgo8cGF0aCBkPSJNMCAwIEM0IC0wLjAyIDggLTAuMDQgMTIuMDEgLTAuMDUgQzEzLjM2IC0wLjA2IDE0LjcyIC0wLjA3IDE2LjA4IC0wLjA4IEMxOC4wNSAtMC4wOSAyMC4wMSAtMC4wOSAyMS45NyAtMC4xIEMyMy4xNSAtMC4xIDI0LjMzIC0wLjExIDI1LjU0IC0wLjExIEMyOS4wOSAwIDMyLjUgMC40MyAzNiAxIEMzNiAxLjMzIDM2IDEuNjYgMzYgMiBDMzQuNTEgMi4xNyAzNC41MSAyLjE3IDI3IDMgQzI3IDIuMzQgMjcgMS42OCAyNyAxIEMxOC4wOSAxIDkuMTggMSAwIDEgQzAgMC42NyAwIDAuMzQgMCAwIFogIiBmaWxsPSIjRkFEOTQ1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNDcsNzQpIi8+CjxwYXRoIGQ9Ik0wIDAgQzIuMDEgMS42NyAyLjkxIDIuNiAzLjQ4IDUuMTkgQzMuNSA1LjU4IDMuNSA1LjU4IDMuNjIgNy41NiBDMy45MiAxMS44NCAzLjkyIDExLjg0IDUgMTQgQzQuMDYgMTYuMTIgNC4wNiAxNi4xMiAzIDE4IEMyLjQ5IDE1Ljk0IDEuOTkgMTMuODggMS41IDExLjgxIEMxLjIyIDEwLjY2IDAuOTQgOS41MiAwLjY2IDguMzMgQzAuMDkgNS40MyAtMC4xMyAyLjk0IDAgMCBaICIgZmlsbD0iI0Y4RDIzOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjQ5LDIwMCkiLz4KPHBhdGggZD0iTTAgMCBDNS4yOCAwLjMzIDEwLjU2IDAuNjYgMTYgMSBDMTYgMS4zMyAxNiAxLjY2IDE2IDIgQzEzLjIgMi4xNiAxMy4yIDIuMTYgLTEgMyBDLTAuNjcgMi4wMSAtMC4zNCAxLjAyIDAgMCBaICIgZmlsbD0iI0Y5RDIzQSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAzLDI0MykiLz4KPHBhdGggZD0iTTAgMCBDMC4zMyAwLjk5IDAuNjYgMS45OCAxIDMgQy0xLjMxIDUuMzEgLTMuNjIgNy42MiAtNiAxMCBDLTYuOTkgOS42NyAtNy45OCA5LjM0IC05IDkgQy02LjAzIDYuMDMgLTMuMDYgMy4wNiAwIDAgWiAiIGZpbGw9IiNGN0M4MUMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ4NSw1MDcpIi8+CjxwYXRoIGQ9Ik0wIDAgQzEuODEgMC41IDEuODEgMC41IDExIDMgQzcgNSA3IDUgMy44MSA0LjMxIEMyLjg4IDMuODggMS45NiAzLjQ1IDEgMyBDMC42NyAyLjAxIDAuMzQgMS4wMiAwIDAgWiAiIGZpbGw9IiNGQUQxMzIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcwLDMyMykiLz4KPHBhdGggZD0iTTAgMCBDMCAzLjQgLTAuNTIgNC4wNyAtMi41IDYuNjkgQy0yLjk2IDcuMzEgLTMuNDMgNy45MyAtMy45MSA4LjU3IEMtNC4yNyA5LjA0IC00LjYzIDkuNTIgLTUgMTAgQy01LjYxIDguMTcgLTUuNjEgOC4xNyAtNiA2IEMtNC4yMSAzLjM1IC0yLjg4IDEuNDQgMCAwIFogIiBmaWxsPSIjRkJDRjFGIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNzAsMTE5KSIvPgo8cGF0aCBkPSJNMCAwIEMwLjY2IDAuMzMgMS4zMiAwLjY2IDIgMSBDLTAuNDYgNS44IC0wLjQ2IDUuOCAtMy4xOSA2LjgxIEMtMy43OSA2Ljg3IC00LjM4IDYuOTQgLTUgNyBDLTUuMzMgNi4wMSAtNS42NiA1LjAyIC02IDQgQy00LjAyIDIuNjggLTIuMDQgMS4zNiAwIDAgWiAiIGZpbGw9IiNGOUQyMzYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwMiw4OSkiLz4KPHBhdGggZD0iTTAgMCBDMS4yNiAwLjEyIDIuNTIgMC4yNSAzLjgxIDAuMzggQzQuMTcgMC40MSA0LjE3IDAuNDEgNS45NiAwLjU5IEM4IDEgOCAxIDExIDMgQzcuNyAzIDQuNCAzIDEgMyBDMC42NyAyLjAxIDAuMzQgMS4wMiAwIDAgWiAiIGZpbGw9IiNGNkM0MUMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIzMiw1NzIpIi8+CjxwYXRoIGQ9Ik0wIDAgQzEuNjMgMC40NSAzLjI1IDAuOTEgNC44OCAxLjM4IEM1Ljc4IDEuNjMgNi42OCAxLjg5IDcuNjIgMi4xNSBDMTAgMyAxMCAzIDEyIDUgQzcuMTIgNS4zNSA0LjIzIDQuNDIgMCAyIEMwIDEuMzQgMCAwLjY4IDAgMCBaICIgZmlsbD0iI0Y5RDMzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAzLDgxKSIvPgo8cGF0aCBkPSJNMCAwIEMwLjMzIDAuNjYgMC42NiAxLjMyIDEgMiBDMC4zNiAyLjI5IC0wLjI4IDIuNTggLTAuOTQgMi44OCBDLTMgNCAtMyA0IC00IDYgQy02LjU2IDYuNjIgLTYuNTYgNi42MiAtOSA3IEMtOC4yNiA0LjYxIC03LjUzIDMuMjkgLTUuMzEgMi4wNyBDLTMuNTYgMS4zMyAtMS43OCAwLjY2IDAgMCBaICIgZmlsbD0iI0Y0QzUxRCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDIzLDU1MikiLz4KPHBhdGggZD0iTTAgMCBDMC4zMyAwIDAuNjYgMCAxIDAgQzEuMzMgMi42NCAxLjY2IDUuMjggMiA4IEMyLjk5IDguMzMgMy45OCA4LjY2IDUgOSBDNC4wMSA5LjY2IDMuMDIgMTAuMzIgMiAxMSBDMC40NCA5LjQ0IDAuNDQgOS40NCAtMSA3IEMtMC42OSAzLjI1IC0wLjY5IDMuMjUgMCAwIFogIiBmaWxsPSIjRjdEMDNCIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0NzUsMTYzKSIvPgo8cGF0aCBkPSJNMCAwIEMwLjQ5IDAuMzMgMC40OSAwLjMzIDMgMiBDMy4xOSA1LjYyIDMuMTkgNS42MiAzIDkgQzIuNjcgOS4xNyAyLjY3IDkuMTcgMSAxMCBDMC42NyA2LjcgMC4zNCAzLjQgMCAwIFogIiBmaWxsPSIjRjZEMDM1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNiwzNjgpIi8+CjxwYXRoIGQ9Ik0wIDAgQzAuODkgMC4xMyAxLjc5IDAuMjYgMi43MSAwLjM5IEMzLjYxIDAuNTEgNC41MSAwLjYzIDUuNDQgMC43NSBDNi4xMiAwLjg2IDYuODEgMC45NiA3LjUyIDEuMDcgQzcuNTIgMS40IDcuNTIgMS43MyA3LjUyIDIuMDcgQzUuMzcgMi4yNCA1LjM3IDIuMjQgLTUuNDggMy4wNyBDLTIuNDggMC4wNyAtMi40OCAwLjA3IDAgMCBaICIgZmlsbD0iI0Y5RDQ0MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTI1LjQ4MDQ2ODc1LDI0MC45MjU3ODEyNSkiLz4KPHBhdGggZD0iTTAgMCBDMy42NSAxLjI1IDQuNzggMS42NyA3IDUgQzYuNjcgNS42NiA2LjM0IDYuMzIgNiA3IEM1LjM0IDcgNC42OCA3IDQgNyBDMy4zNCA1Ljg0IDMuMzQgNS44NCAwIDAgWiAiIGZpbGw9IiNGOUQxMzQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQyNyw5MykiLz4KPHBhdGggZD0iTTAgMCBDMS4zMiAwLjY2IDIuNjQgMS4zMiA0IDIgQzIuNzEgMi43IDEuNDIgMy4zOCAwLjEyIDQuMDYgQy0wLjIzIDQuMjUgLTAuMjMgNC4yNSAtMi4wNSA1LjIyIEMtMi43IDUuNDggLTMuMzQgNS43NCAtNCA2IEMtNC42NiA1LjY3IC01LjMyIDUuMzQgLTYgNSBDLTUuMiA0LjczIC00LjM5IDQuNDYgLTMuNTYgNC4xOSBDLTIuNzIgMy44IC0xLjg3IDMuNCAtMSAzIEMtMC42NyAyLjAxIC0wLjM0IDEuMDIgMCAwIFogIiBmaWxsPSIjRjVDRTNBIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MjUsNTUxKSIvPgo8cGF0aCBkPSJNMCAwIEMwLjY2IDAuNjYgMS4zMiAxLjMyIDIgMiBDMS45NyA0LjczIDEuNDQgNy4zIDEgMTAgQy0wLjg1IDYuODggLTEuMjkgNC42MiAtMSAxIEMtMC42NyAwLjY3IC0wLjM0IDAuMzQgMCAwIFogIiBmaWxsPSIjRjhEMDNDIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzOSwzNzgpIi8+CjxwYXRoIGQ9Ik0wIDAgQzAuMzMgMCAwLjY2IDAgMSAwIEMxLjMzIDMuOTYgMS42NiA3LjkyIDIgMTIgQy0xIDkgLTEgOSAtMS4wNyA2Ljc0IEMtMC45NSA1Ljk0IC0wLjgyIDUuMTQgLTAuNjkgNC4zMSBDLTAuNTcgMy41IC0wLjQ1IDIuNyAtMC4zMiAxLjg2IEMtMC4yMiAxLjI1IC0wLjExIDAuNjMgMCAwIFogIiBmaWxsPSIjRjhEMjNBIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MjMsMzg2KSIvPgo8cGF0aCBkPSJNMCAwIEMxLjY1IDAgMy4zIDAgNSAwIEM1IDAuMzMgNSAwLjY2IDUgMSBDMy4zNSAxIDEuNyAxIDAgMSBDMCAwLjY3IDAgMC4zNCAwIDAgWiAiIGZpbGw9IiNFREM2MkUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3NCw1ODIpIi8+CjxwYXRoIGQ9Ik0wIDAgQzQgMSA0IDEgNCAxIFogIiBmaWxsPSIjRUNDNDJDIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMjMsNTgyKSIvPgo8cGF0aCBkPSJNMCAwIEMzIDEgMyAxIDMgMSBaICIgZmlsbD0iI0YyQ0IzOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTU2LDIzOSkiLz4KPHBhdGggZD0iTTAgMCBDMiAxIDIgMSAyIDEgWiAiIGZpbGw9IiNFREM0MkMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwOCw1ODMpIi8+CjxwYXRoIGQ9Ik0wIDAgQzIgMSAyIDEgMiAxIFogIiBmaWxsPSIjRUZDNTJFIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyOTIsNTgzKSIvPgo8cGF0aCBkPSJNMCAwIEMyIDEgMiAxIDIgMSBaICIgZmlsbD0iI0VEQzQyRCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzcxLDU3NSkiLz4KPHBhdGggZD0iTTAgMCBDMiAxIDIgMSAyIDEgWiAiIGZpbGw9IiNGNUQwM0IiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwMiwyNDcpIi8+CjxwYXRoIGQ9Ik0wIDAgQzIgMSAyIDEgMiAxIFogIiBmaWxsPSIjRUZDQzM5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1NDksMjAwKSIvPgo8cGF0aCBkPSJNMCAwIEMyIDEgMiAxIDIgMSBaICIgZmlsbD0iI0Y0RDAzQyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzg1LDc0KSIvPgo8L3N2Zz4K",
+    "fields": [
+        {
+            "description": "Secret key",
+            "key": "SECRET_KEY",
+            "value": "",
+            "required": "true",
+            "generated": "openssl|hex|32"
+        },
+        {
+            "description": "Util secret key",
+            "key": "UTILS_SECRET",
+            "value": "",
+            "required": "true",
+            "generated": "openssl|hex|32"
+        },
+        {
+            "description": "Postgres database name",
+            "key": "DB_NAME",
+            "value": "",
+            "required": "true",
+            "generated": "time|md5|8"
+        },
+        {
+            "description": "Postgres username",
+            "key": "DB_USER",
+            "value": "",
+            "required": "true",
+            "generated": "time|md5|8"
+        },
+        {
+            "description": "Postgres password for user",
+            "key": "DB_PASSWORD",
+            "value": "",
+            "required": "true",
+            "generated": "random|md5|12"
+        },
+        {
+            "description": "Postgres root user password",
+            "key": "DB_ROOT_PASSWORD",
+            "value": "",
+            "required": "true",
+            "generated": "random|sha256|20"
+        },
+        {
+            "description": "Domain:",
+            "key": "DOMAIN",
+            "value": "",
+            "required": "true"
+        },
+        {
+            "description": "Slack client ID",
+            "key": "SLACK_CLIENT_ID",
+            "value": "",
+            "info": "Create a new app in your Slack workspace at https://api.slack.com/apps?new_app=1 and add 'Sign in with Slack' under 'Add features and functionality'. Set the Redirect URL to 'https://<your-domain>/auth/slack.callback'.",
+            "advanced": "true"
+        },
+        {
+            "description": "Slack client secret",
+            "key": "SLACK_CLIENT_SECRET",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "Google client ID",
+            "key": "GOOGLE_CLIENT_ID",
+            "value": "",
+            "info": "Create OAuth 2.0 credentials in Google Cloud Console at https://console.cloud.google.com/apis/credentials and set the Redirect URL to 'https://<your-domain>/auth/google.callback'.",
+            "advanced": "true"
+        },
+        {
+            "description": "Google client secret",
+            "key": "GOOGLE_CLIENT_SECRET",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "Azure client ID",
+            "key": "AZURE_CLIENT_ID",
+            "value": "",
+            "info": "Register an application in Azure AD at https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade and set the Redirect URL to 'https://<your-domain>/auth/azuread.callback'.",
+            "advanced": "true"
+        },
+        {
+            "description": "Azure client secret",
+            "key": "AZURE_CLIENT_SECRET",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "Azure resource app ID",
+            "key": "AZURE_RESOURCE_APP_ID",
+            "value": "",
+            "info": "This is usually the same as the client ID, but can vary based on your Azure AD setup.",
+            "advanced": "true"
+        },
+        {
+            "description": "Discord client ID",
+            "key": "DISCORD_CLIENT_ID",
+            "value": "",
+            "info": "Create an application in Discord Developer Portal at https://discord.com/developers/applications and set the Redirect URL to 'https://<your-domain>/auth/discord.callback'.",
+            "advanced": "true"
+        },
+        {
+            "description": "Discord client secret",
+            "key": "DISCORD_CLIENT_SECRET",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "Discord server ID (optional)",
+            "key": "DISCORD_SERVER_ID",
+            "value": "",
+            "info": "(Optional) If you want to restrict login to members of a specific Discord server, provide the server ID here.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect client ID",
+            "key": "OIDC_CLIENT_ID",
+            "value": "",
+            "info": "Set up an OpenID Connect application with your provider and set the Redirect URL to 'https://<your-domain>/auth/oidc.callback'.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect client secret",
+            "key": "OIDC_CLIENT_SECRET",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect provider auth URI",
+            "key": "OIDC_AUTH_URI",
+            "value": "",
+            "info": "The authorization endpoint URL of your OpenID Connect provider.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect provider token URI",
+            "key": "OIDC_TOKEN_URI",
+            "value": "",
+            "info": "The token endpoint URL of your OpenID Connect provider.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect provider userinfo URI",
+            "key": "OIDC_USERINFO_URI",
+            "value": "",
+            "info": "The userinfo endpoint URL of your OpenID Connect provider.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect provider logout URI (optional)",
+            "key": "OIDC_LOGOUT_URI",
+            "value": "",
+            "info": "(Optional) The logout endpoint URL of your OpenID Connect provider, if supported.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect username claim",
+            "key": "OIDC_USERNAME_CLAIM",
+            "value": "preferred_username",
+            "info": "The claim in the ID token or userinfo response to use as the username. Defaults to 'preferred_username'.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect display name",
+            "key": "OIDC_DISPLAY_NAME",
+            "value": "OpenID Connect",
+            "info": "The display name for the OpenID Connect authentication option. Defaults to 'OpenID Connect'.",
+            "advanced": "true"
+        },
+        {
+            "description": "OpenID Connect scopes",
+            "key": "OIDC_SCOPES",
+            "value": "openid profile email",
+            "info": "Space-separated list of scopes to request during authentication. Defaults to 'openid profile email'.",
+            "advanced": "true"
+        },
+        {
+            "description": "SMTP host",
+            "key": "SMTP_HOST",
+            "value": "",
+            "info": "Used for sending invitation and password reset emails. Leave blank to disable email functionality.",
+            "advanced": "true"
+        },
+        {
+            "description": "SMTP port",
+            "key": "SMTP_PORT",
+            "value": "587",
+            "info": "(Optional) The port to connect to on the SMTP server. Defaults to 587.",
+            "advanced": "true"
+        },
+        {
+            "description": "SMTP service (e.g., gmail)",
+            "key": "SMTP_SERVICE",
+            "value": "",
+            "info": "Used for sending invitation and password reset emails. Leave blank to disable email functionality.",
+            "advanced": "true"
+        },
+        {
+            "description": "SMTP username (email address)",
+            "key": "SMTP_USERNAME",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "SMTP password",
+            "key": "SMTP_PASSWORD",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "description": "From email address",
+            "key": "SMTP_FROM_EMAIL",
+            "value": "",
+            "info": "(Optional) The email address that emails will be sent from. Defaults to the SMTP username if not set.",
+            "advanced": "true"
+        }
+    ]
+}

@@ -35,7 +35,7 @@
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/immich/db",
-                    "DEST": "/var/lib/postgres",
+                    "DEST": "/var/lib/postgresql/data",
                     "TYPE": "rw"
                 }
             ],
