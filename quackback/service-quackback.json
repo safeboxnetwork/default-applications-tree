@@ -26,7 +26,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "postgres-quackback:18",
+            "IMAGE": "safebox/postgres-quackback:18",
             "UPDATE": "true",
             "NAME": "quackbackpostgres-db",
             "MEMORY": "256M",
