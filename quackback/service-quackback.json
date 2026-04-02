@@ -35,7 +35,7 @@
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/quackback/db",
-                    "DEST": "/var/lib/postgresql/data",
+                    "DEST": "/var/lib/postgresql",
                     "TYPE": "rw"
                 }
             ],
@@ -96,7 +96,7 @@
             "IMAGE": "docker.dragonflydb.io/dragonflydb/dragonfly:v1.27.1",
             "UPDATE": "true",
             "NAME": "quackbackredis-server",
-            "MEMORY": "3072M",
+            "MEMORY": "4096M",
             "NETWORK": "quackback-net",
             "SELECTOR": "quackbackredis",
             "PORTS": [
