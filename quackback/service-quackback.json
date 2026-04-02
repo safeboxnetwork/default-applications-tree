@@ -96,7 +96,7 @@
             "IMAGE": "docker.dragonflydb.io/dragonflydb/dragonfly:v1.27.1",
             "UPDATE": "true",
             "NAME": "quackbackredis-server",
-            "MEMORY": "128M",
+            "MEMORY": "3072M",
             "NETWORK": "quackback-net",
             "SELECTOR": "quackbackredis",
             "PORTS": [
@@ -140,6 +140,7 @@
         {
             "IMAGE": "safebox/quackback:latest",
             "UPDATE": "true",
+            "MEMORY": "4096M",
             "NAME": "quackbackapp",
             "NETWORK": "quackback-net",
             "SELECTOR": "quackback-app",
