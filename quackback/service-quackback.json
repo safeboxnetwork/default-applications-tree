@@ -138,7 +138,7 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "safebox/quackback:latest",
+            "IMAGE": "safebox/quackback:#VERSION",
             "UPDATE": "true",
             "MEMORY": "4096M",
             "NAME": "quackbackapp",
