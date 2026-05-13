@@ -54,6 +54,13 @@
             "required": "true"
         },
         {
+            "description": "Quackback image version",
+            "key": "VERSION",
+            "value": "latest",
+            "info": "Change latest version of Quackback image to custom",
+            "advanced": "true"
+        },
+        {
             "description": "Slack client ID",
             "key": "SLACK_CLIENT_ID",
             "value": "",
