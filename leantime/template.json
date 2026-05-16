@@ -35,28 +35,28 @@
         },
         {
             "description": "MYSQL database name",
-            "key": "DB_MYSQL",
+            "key": "MARIADB_DATABASE",
             "value": "",
             "required": "true",
             "generated": "time|md5|10"
         },
         {
             "description": "MYSQL username",
-            "key": "DB_USER",
+            "key": "MARIADB_USER",
             "value": "",
             "required": "true",
             "generated": "time|md5|8"
         },
         {
             "description": "MYSQL password for user",
-            "key": "DB_PASSWORD",
+            "key": "MARIADB_PASSWORD",
             "value": "",
             "required": "true",
             "generated": "random|md5|12"
         },
         {
             "description": "MYSQL root user password",
-            "key": "DB_ROOT_PASSWORD",
+            "key": "MARIADB_ROOT_PASSWORD",
             "value": "",
             "required": "true",
             "generated": "random|sha256|20"
