@@ -177,10 +177,10 @@
                     "S3_ENDPOINT": "http://quackbackminio-app:9000"
                 },
                 {
-                    "S3_BUCKET": "quackback"
+                    "S3_BUCKET": "#S3_BUCKET"
                 },
                 {
-                    "S3_REGION": "europe-east-1"
+                    "S3_REGION": "#S3_REGION"
                 },
                 {
                     "S3_FORCE_PATH_STYLE": "true"
