@@ -48,6 +48,20 @@
             "generated": "random|sha256|20"
         },
         {
+            "description": "Minio username",
+            "key": "MINIO_ROOT_USER",
+            "value": "",
+            "required": "true",
+            "generated": "time|md5|8"
+        },
+        {
+            "description": "Minio password for user",
+            "key": "MINIO_ROOT_PASSWORD",
+            "value": "",
+            "required": "true",
+            "generated": "random|md5|12"
+        },
+        {
             "description": "Domain:",
             "key": "DOMAIN",
             "value": "",
@@ -58,6 +72,20 @@
             "key": "VERSION",
             "value": "latest",
             "info": "Change latest version of Quackback image to custom",
+            "advanced": "true"
+        },
+        {
+            "description": "Quackback S3 bucket name",
+            "key": "S3_BUCKET",
+            "value": "quackback",
+            "info": "If not set the default, the name quackback will be set",
+            "advanced": "true"
+        },
+        {
+            "description": "Quackback S3 region",
+            "key": "S3_REGION",
+            "value": "us-east-1",
+            "info": "If not set the default, the region us-east-1 will be set",
             "advanced": "true"
         },
         {
