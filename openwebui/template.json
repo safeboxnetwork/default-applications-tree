@@ -27,13 +27,6 @@
             "type": "password"
         },
         {
-            "description": "Admin email",
-            "key": "WEBUI_ADMIN_EMAIL",
-            "value": "",
-            "info": "The initial admin email for Open WebUI.",
-            "required": "true"
-        },
-        {
             "description": "OpenAI compatible API endpoint",
             "key": "OPENAI_API_BASE_URL",
             "value": "",
