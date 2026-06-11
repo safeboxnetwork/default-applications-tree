@@ -60,7 +60,7 @@
             "IMAGE": "qdrant/qdrant:latest",
             "UPDATE": "true",
             "NAME": "openwebui-qdrant",
-            "MEMORY": "256M",
+            "MEMORY": "1024M",
             "NETWORK": "openwebui-net",
             "SELECTOR": "openwebui-qdrant",
             "VOLUMES": [
@@ -93,7 +93,7 @@
             "IMAGE": "ghcr.io/open-webui/pipelines:main",
             "UPDATE": "true",
             "NAME": "openwebui-pipelines",
-            "MEMORY": "256M",
+            "MEMORY": "1024M",
             "NETWORK": "openwebui-net",
             "SELECTOR": "openwebui-pipelines",
             "VOLUMES": [
@@ -138,7 +138,7 @@
             "IMAGE": "ghcr.io/open-webui/open-webui:main",
             "UPDATE": "true",
             "NAME": "openwebuiapp",
-            "MEMORY": "512M",
+            "MEMORY": "4096M",
             "NETWORK": "openwebui-net",
             "SELECTOR": "openwebui-app",
             "VOLUMES": [
