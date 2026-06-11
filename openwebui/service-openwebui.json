@@ -1,0 +1,208 @@
+{
+    "main": {
+        "SERVICE_NAME": "openwebui",
+        "DOMAIN": "#DOMAIN"
+    },
+    "containers": [
+        {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "openwebui-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/openwebui/data && mkdir -p /etc/user/data/openwebui/db && mkdir -p /etc/user/data/openwebui/pipelines && mkdir -p /etc/user/data/openwebui/qdrant",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "postgres:16-alpine",
+            "UPDATE": "true",
+            "NAME": "openwebuipostgres-db",
+            "MEMORY": "256M",
+            "NETWORK": "openwebui-net",
+            "SELECTOR": "openwebuipostgres-db",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/openwebui/db",
+                    "DEST": "/var/lib/postgresql/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "5432",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/openwebui/openwebui.json"
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "qdrant/qdrant:latest",
+            "UPDATE": "true",
+            "NAME": "openwebui-qdrant",
+            "MEMORY": "256M",
+            "NETWORK": "openwebui-net",
+            "SELECTOR": "openwebui-qdrant",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/openwebui/qdrant",
+                    "DEST": "/qdrant/storage",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "6333",
+                    "TYPE": "tcp"
+                },
+                {
+                    "SOURCE": "null",
+                    "DEST": "6334",
+                    "TYPE": "tcp"
+                }
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "ghcr.io/open-webui/pipelines:main",
+            "UPDATE": "true",
+            "NAME": "openwebui-pipelines",
+            "MEMORY": "256M",
+            "NETWORK": "openwebui-net",
+            "SELECTOR": "openwebui-pipelines",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/openwebui/pipelines",
+                    "DEST": "/app/pipelines",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "9099",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENVS": [
+                {
+                    "OPENAI_API_BASE_URL": "#OPENAI_API_BASE_URL"
+                },
+                {
+                    "VECTOR_DB": "qdrant"
+                },
+                {
+                    "QDRANT_HOST": "openwebui-qdrant"
+                },
+                {
+                    "QDRANT_PORT": "6333"
+                },
+                {
+                    "QDRANT_URI": "http://openwebui-qdrant:6333"
+                }
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "ghcr.io/open-webui/open-webui:main",
+            "UPDATE": "true",
+            "NAME": "openwebui",
+            "MEMORY": "512M",
+            "NETWORK": "openwebui-net",
+            "SELECTOR": "openwebui-app",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/openwebui/data",
+                    "DEST": "/app/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "8080",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENVS": [
+                {
+                    "WEBUI_ADMIN_NAME": "#WEBUI_ADMIN_NAME"
+                },
+                {
+                    "WEBUI_ADMIN_PASSWORD": "#WEBUI_ADMIN_PASSWORD"
+                },
+                {
+                    "WEBUI_ADMIN_EMAIL": "#WEBUI_ADMIN_EMAIL"
+                },
+                {
+                    "OPENAI_API_BASE_URL": "http://192.168.2.2:8080/v1"
+                },
+                {
+                    "OPENAI_API_KEY": "#OPENAI_API_KEY"
+                },
+                {
+                    "VECTOR_DB": "qdrant"
+                },
+                {
+                    "QDRANT_HOST": "openwebui-qdrant"
+                },
+                {
+                    "QDRANT_PORT": "6333"
+                },
+                {
+                    "QDRANT_URI": "http://openwebui-qdrant:6333"
+                },
+                {
+                    "ENABLE_RAG_PIPELINE": "True"
+                },
+                {
+                    "RAG_PIPELINE_URL": "http://openwebui-pipelines:9099/v1"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/openwebui/openwebui.json"
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": [
+                "firewall-openwebui",
+                "domain-openwebui",
+                "firewall-openwebui-dns"
+            ]
+        }
+    ]
+}
