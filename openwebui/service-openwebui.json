@@ -137,7 +137,7 @@
         {
             "IMAGE": "ghcr.io/open-webui/open-webui:main",
             "UPDATE": "true",
-            "NAME": "openwebui",
+            "NAME": "openwebuiapp",
             "MEMORY": "512M",
             "NETWORK": "openwebui-net",
             "SELECTOR": "openwebui-app",
