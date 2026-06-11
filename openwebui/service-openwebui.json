@@ -157,19 +157,7 @@
             ],
             "ENVS": [
                 {
-                    "WEBUI_ADMIN_NAME": "#WEBUI_ADMIN_NAME"
-                },
-                {
-                    "WEBUI_ADMIN_PASSWORD": "#WEBUI_ADMIN_PASSWORD"
-                },
-                {
-                    "WEBUI_ADMIN_EMAIL": "#WEBUI_ADMIN_EMAIL"
-                },
-                {
-                    "OPENAI_API_BASE_URL": "http://192.168.2.2:8080/v1"
-                },
-                {
-                    "OPENAI_API_KEY": "#OPENAI_API_KEY"
+                    "OPENAI_API_BASE_URL": "#OPENAI_API_BASE_URL"
                 },
                 {
                     "VECTOR_DB": "qdrant"
