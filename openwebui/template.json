@@ -1,0 +1,86 @@
+{
+    "name": "openwebui",
+    "title": "Open WebUI",
+    "subtitle": "AI Chat Interface",
+    "description": "Open WebUI is a user-friendly WebUI for LLMs (formerly Ollama WebUI). It supports various LLM runners including OpenAI compatible APIs, with features like RAG, multi-modal support, and a powerful pipeline system.",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI1IDNDMTIuODUgMyAzIDEyLjg1IDMgMjVDMyAzNy4xNSAxMi44NSA0NyAyNSA0N0MzNy4xNSA0NyA0NyAzNy4xNSA0NyAyNUM0NyAxMi44NSAzNy4xNSAzIDI1IDNaTTI1IDYuM0MzNS4zNSA2LjMgNDMuNyAxNC42NSA0My43IDI1QzQzLjcgMzUuMzUgMzUuMzUgNDMuNyAyNSA0My43QzE0LjY1IDQzLjcgNi4zIDM1LjM1IDYuMyAyNUM2LjMgMTQuNjUgMTQuNjUgNi4zIDI1IDYuMzhaTTI1IDkuNUMxNi40IDkuNSA5LjUgMTYuNCA5LjUgMjVDOS41IDMzLjYgMTYuNCA0MC41IDI1IDQwLjVDMzMuNiA0MC41IDQwLjUgMzMuNiA0MC41IDI1QzQwLjUgMTYuNCAzMy42IDkuNSAyNSA5LjVaTTI1IDEyLjhDMzEuNzUgMTIuOCAzNy4yIDE4LjI1IDM3LjIgMjVDMzcuMiAzMS43NSAzMS43NSAzNy4yIDI1IDM3LjJDMTguMjUgMzcuMiAxMi44IDMxLjc1IDEyLjggMjVDMTIuOCAxOC4yNSAxOC4yNSAxMi44IDI1IDEyLjhaTTI1IDE2LjFDMTkuNTkgMTYuMSAxNS4yIDIwLjQ5IDE1LjIgMjVDMTUuMiAzMC40MSAxOS41OSAzNC44IDI1IDM0LjhDMzAuNDEgMzQuOCAzNC44IDMwLjQxIDM0LjggMjVDMzQuOCAyMC40OSAzMC40MSAxNi4xIDI1IDE2LjFaTTI1IDE5LjRDMjguMDkgMTkuNCAzMC42IDIxLjkxIDMwLjYgMjVDMzAuNiAyOC4wOSAyOC4wOSAzMC42IDI1IDMwLjZDMjEuOTEgMzAuNiAxOS40IDI4LjA5IDE5LjQgMjVDMTkuNCAyMS45MSAyMS45MSAxOS40IDI1IDE5LjRaTTI1IDIyLjdDMjMuNzMgMjIuNyAyMi43IDIzLjczIDIyLjcgMjVDMjIuNyAyNi4yNyAyMy43MyAyNy4zIDI1IDI3LjNDMjYuMjcgMjcuMyAyNy4zIDI2LjI3IDI3LjMgMjVDMjcuMyAyMy43MyAyNi4yNyAyMi43IDI1IDIyLjdaTTI1IDI2QzI0LjQ1IDI2IDI0IDI1LjU1IDI0IDI1QzI0IDI0LjQ1IDI0LjQ1IDI0IDI1IDI0QzI1LjU1IDI0IDI2IDI0LjQ1IDI2IDI1QzI2IDI1LjU1IDI1LjU1IDI2IDI1IDI2WiIgZmlsbD0iIzI5NzlGRSIvPgo8L3N2Zz4K",
+    "fields": [
+        {
+            "description": "Domain",
+            "key": "DOMAIN",
+            "value": "",
+            "required": "true"
+        },
+        {
+            "description": "Admin username",
+            "key": "WEBUI_ADMIN_NAME",
+            "value": "",
+            "info": "The initial admin username for Open WebUI.",
+            "required": "true"
+        },
+        {
+            "description": "Admin password",
+            "key": "WEBUI_ADMIN_PASSWORD",
+            "value": "",
+            "info": "The initial admin password for Open WebUI.",
+            "required": "true",
+            "type": "password"
+        },
+        {
+            "description": "Admin email",
+            "key": "WEBUI_ADMIN_EMAIL",
+            "value": "",
+            "info": "The initial admin email for Open WebUI.",
+            "required": "true"
+        },
+        {
+            "description": "OpenAI compatible API endpoint",
+            "key": "OPENAI_API_BASE_URL",
+            "value": "",
+            "info": "Optional API url for OpenAI compatible API endpoint.",
+            "advanced": "true"
+        },
+        {
+            "description": "WebUI secret key",
+            "key": "WEBUI_SECRET_KEY",
+            "value": "",
+            "required": "true",
+            "generated": "openssl|hex|32"
+        },
+        {
+            "description": "OpenAI API key",
+            "key": "OPENAI_API_KEY",
+            "value": "",
+            "info": "Optional API key for OpenAI compatible API endpoint.",
+            "advanced": "true"
+        },
+        {
+            "description": "Postgres database name",
+            "key": "POSTGRES_DB",
+            "value": "",
+            "required": "true",
+            "generated": "time|md5|8"
+        },
+        {
+            "description": "Postgres username",
+            "key": "POSTGRES_USER",
+            "value": "",
+            "required": "true",
+            "generated": "time|md5|8"
+        },
+        {
+            "description": "Postgres password for user",
+            "key": "POSTGRES_PASSWORD",
+            "value": "",
+            "required": "true",
+            "generated": "random|md5|12"
+        },
+        {
+            "description": "Postgres root user password",
+            "key": "POSTGRES_ROOT_PASSWORD",
+            "value": "",
+            "required": "true",
+            "generated": "random|sha256|20"
+        }
+    ]
+}
