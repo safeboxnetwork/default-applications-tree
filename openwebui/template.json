@@ -12,10 +12,17 @@
             "required": "true"
         },
         {
-            "description": "Admin username",
+            "description": "Admin email address",
+            "key": "WEBUI_ADMIN_EMAIL",
+            "value": "",
+            "info": "The initial admin email address for Open WebUI.",
+            "required": "true"
+        },
+        {
+            "description": "Displayed username",
             "key": "WEBUI_ADMIN_NAME",
             "value": "",
-            "info": "The initial admin username for Open WebUI.",
+            "info": "The initial displayed username for Open WebUI.",
             "required": "true"
         },
         {
