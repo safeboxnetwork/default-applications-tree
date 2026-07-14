@@ -19,6 +19,9 @@
             ],
             "EXTRA": "--rm",
             "DEPEND": "null",
+            "ENV_FILES": [
+                "/etc/user/secret/openwebui/openwebui.json"
+            ],
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh -c",
             "CMD": "mkdir -p /etc/user/data/openwebui/data && mkdir -p /etc/user/data/openwebui/db && mkdir -p /etc/user/data/openwebui/pipelines && mkdir -p /etc/user/data/openwebui/qdrant",

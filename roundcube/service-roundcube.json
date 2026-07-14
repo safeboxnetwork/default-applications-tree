@@ -1,0 +1,81 @@
+{
+    "main": {
+        "SERVICE_NAME": "roundcube",
+        "DOMAIN": "#DOMAIN"
+    },
+        "containers": [
+                    {
+            "IMAGE": "alpine:latest",
+            "UPDATE": "true",
+            "NAME": "roundcube-init",
+            "NETWORK": "host",
+            "MEMORY": "64M",
+            "VOLUMES": [
+                {
+                    "SOURCE": "USER_DATA",
+                    "DEST": "/etc/user/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "EXTRA": "--rm",
+            "DEPEND": "null",
+            "START_ON_BOOT": "false",
+            "ENTRYPOINT": "sh -c",
+            "CMD": "mkdir -p /etc/user/data/roundcube/data && mkdir -p /etc/user/data/roundcube/db",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        { 
+                "IMAGE": "postgres:15-alpine",
+                "UPDATE": "true",
+                "NAME": "roundcubepostgres-db",
+                "MEMORY": "256M",
+                "NETWORK": "roundcube",
+                "SELECTOR": "roundcubepostgres-db",
+                "VOLUMES": [
+                        {
+                        "SOURCE": "/etc/user/data/roundcube/db",
+                        "DEST": "/var/lib/postgresql/data",
+                        "TYPE": "rw"
+                        }
+                        ],
+                "PORTS": [
+                        {
+                            "SOURCE": "null",
+                            "DEST": "5432",
+                            "TYPE": "tcp"
+                        }
+                            ],
+                "EXTRA": "null",
+                "DEPEND": "null",
+                "START_ON_BOOT": "false",
+                "CMD": "null",
+                "PRE_START": [],
+                "POST_START": []
+        },
+        { 
+                "IMAGE": "roundcube/roundcubemail",
+                "UPDATE": "true",
+                "NAME": "roundcubeapp",
+                "ROLES": "backend-www",
+                "MEMORY": "256M",
+                "NETWORK": "roundcube",
+                "SELECTOR": "roundcubeapp",
+                "VOLUMES": "null",
+                "PORTS": [
+                        {
+                            "SOURCE": "null",
+                            "DEST": "80",
+                            "TYPE": "tcp"
+                        }
+                        ],
+                "ENV_FILES": [ "/etc/user/secret/roundcube/roundcube.json" ],
+                "EXTRA": "null",
+                "DEPEND": "null",
+                "START_ON_BOOT": "false",
+                "CMD": "null",
+                "PRE_START": [ ],
+                "POST_START": [ "firewall-roundcube", "firewall-roundcube-dns", "firewall-roundcube-smtp","domain-roundcube" ]
+        }
+    ]
+}
