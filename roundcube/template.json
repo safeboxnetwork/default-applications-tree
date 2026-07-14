@@ -6,54 +6,40 @@
     "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjkuMTQgMTQxLjggNTczLjY1IDU3My42NSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Ci5zdDB7ZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojNDA0RjU0O30KLnN0MXtmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiNFNUU1RTU7fQouc3Qye2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6I0NDQ0NDQzt9Ci5zdDN7ZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojMzdCRUZGO30KPC9zdHlsZT4KPHBvbHlnb24gY2xhc3M9InN0MyIgcG9pbnRzPSI1ODIuNzksNTQ5Ljc3IDI5NS45NiwzODQuMSAyOTUuOTYsMjA3LjI3IDU4Mi43OSwzNzIuOTUgIi8+Cjxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iOS4xNCw1NDkuNzcgMjk1Ljk2LDM4NC4xIDI5NS45NiwyMDcuMjcgOS4xNCwzNzIuOTUgIi8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0yOTUuOTYsMTQxLjhjMTA5LjU2LDAsMTk4LjQxLDg4Ljg1LDE5OC40MSwxOTguNDFjMCwxMDkuNTYtODguODUsMTk4LjQxLTE5OC40MSwxOTguNDEgYy0xMDkuNTYsMC0xOTguNDEtODguODUtMTk4LjQxLTE5OC40MUM5Ny41NSwyMzAuNjUsMTg2LjQsMTQxLjgsMjk1Ljk2LDE0MS44Ii8+CjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0yOTUuOTYsMTQxLjhjMTA5LjYsMCwxOTguNDgsODguODUsMTk4LjQ4LDE5OC40MWMwLDEwOS41Ni04OC44OCwxOTguNDEtMTk4LjQ4LDE5OC40MQljLTYyLjkxLTQyLjM0LTg4Ljk0LTEyNy42NC04OC45NC0xOTguM1MyMzMuMDUsMTg0LjIyLDI5NS45NiwxNDEuOCIvPgo8cG9seWdvbiBjbGFzcz0ic3QzIiBwb2ludHM9IjU4Mi43OSwzNzIuOTUgMjk1Ljk2LDUzOC42MiAyOTUuOTYsNzE1LjQ1IDU4Mi43OSw1NDkuNzcgIi8+Cjxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iOS4xNCwzNzIuOTUgMjk1Ljk2LDUzOC42MiAyOTUuOTYsNzE1LjQ1IDkuMTQsNTQ5Ljc3ICIvPgo8L3N2Zz4K",
     "fields": [
         {
-            "title": "Domain",
-            "details": "The domain name where Roundcube webmail will be accessible.",
             "description": "Domain",
             "key": "DOMAIN",
             "value": "",
             "required": "true"
         },
         {
-            "title": "IMAP Host",
-            "details": "The hostname of your IMAP email server for receiving emails",
             "description": "IMAP host",
             "key": "DEFAULT_HOST",
             "value": "",
             "required": "true"
         },
         {
-            "title": "IMAP Port",
-            "details": "The port number used to connect to your IMAP server",
             "description": "IMAP port",
             "key": "DEFAULT_PORT",
             "value": "993"
         },
         {
-            "title": "SMTP Server",
-            "details": "The hostname of your SMTP email server for sending emails",
             "description": "SMTP server",
             "key": "SMTP_SERVER",
             "value": "",
             "required": "true"
         },
         {
-            "title": "SMTP Port",
-            "details": "The port number used to connect to your SMTP server",
             "description": "SMTP port",
             "key": "SMTP_PORT",
             "value": "465"
         },
         {
-            "title": "SMTP Username",
-            "details": "The username used to authenticate with the SMTP server",
             "description": "SMTP username",
             "key": "SMTP_USER",
             "value": "",
             "advanced": "true"
         },
         {
-            "title": "SMTP Password",
-            "details": "The password used to authenticate with the SMTP server",
             "description": "SMTP password",
             "key": "SMTP_PASSWORD",
             "value": "",
@@ -61,31 +47,27 @@
             "type": "password"
         },
         {
-            "title": "Skip Host Validation",
-            "details": "Set to true to disable SSL certificate validation",
+            "info": "Set to true to disable SSL certificate validation",
             "description": "Skip host validation",
             "key": "SKIP_HOST_VALIDATION",
             "value": "false",
             "advanced": "true"
         },
         {
-            "title": "Plugins",
-            "details": "Comma-separated list of Roundcube plugins to enable",
+            "info": "Comma-separated list of Roundcube plugins to enable",
             "description": "Plugins",
             "key": "PLUGINS",
             "value": "calendar,password",
             "advanced": "true"
         },
         {
-            "title": "Upload Max Filesize",
-            "details": "Maximum allowed file size for email attachments",
+            "info": "Maximum allowed file size for email attachments",
             "description": "Upload max filesize",
             "key": "UPLOAD_MAX_FILESIZE",
             "value": "50M",
             "advanced": "true"
         },
         {
-            "title": "Postgres Database Name",
             "description": "Postgres database name",
             "key": "POSTGRES_DB",
             "value": "",
@@ -93,7 +75,6 @@
             "generated": "time|md5|8"
         },
         {
-            "title": "Postgres Username",
             "description": "Postgres username",
             "key": "POSTGRES_USER",
             "value": "",
@@ -101,7 +82,6 @@
             "generated": "time|md5|8"
         },
         {
-            "title": "Postgres User Password",
             "description": "Postgres password for user",
             "key": "POSTGRES_PASSWORD",
             "value": "",
@@ -109,7 +89,6 @@
             "generated": "random|md5|12"
         },
         {
-            "title": "Postgres Root Password",
             "description": "Postgres root user password",
             "key": "POSTGRES_ROOT_PASSWORD",
             "value": "",
