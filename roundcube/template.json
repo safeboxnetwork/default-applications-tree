@@ -1,0 +1,124 @@
+{
+    "name": "Roundcube",
+    "title": "Roundcube",
+    "subtitle": "Webmail",
+    "description": "Roundcube is a free and open-source webmail client with a rich set of features for managing email communications. It provides a modern, responsive interface for accessing email via IMAP and supports SMTP for sending messages. Roundcube includes calendar, contacts, and plugin extensibility.",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA3OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQ4LjIzNjUgNDIuMTY2MUwzMi41NTA0IDM0LjYyNTlDMzEuMDA1MyAzMy44ODQzIDMwLjMzNzggMzIuMDA1NCAzMS4wOTE4IDMwLjQ0NzlMMzguNjMyIDE0Ljc2MTlDMzkuMzczNyAxMy4yMTY3IDQxLjI1MjUgMTIuNTQ5MyA0Mi44MSAxMy4zMDMzQzQ0LjkzNjEgMTQuMzI5MiA0Ni4xNTk4IDE0LjkxMDIgNDYuMTU5OCAxNC45MTAyTDQ2LjE0NzUgMS40MTIwMkw0OC4yMTE3IDEuMzk5NjZMNDguMjI0MSAxNS44NzQ0QzQ4LjIyNDEgMTUuODc0NCA1NS4zMTkzIDE4Ljg2NTcgNTguNDk2MSAyMC44MzExQzU4Ljk1MzQgMjEuMTE1NCA1OS43NTY5IDIxLjY3MTcgNjAuMDkwNiAyMi42MTExQzYwLjM1MDIgMjMuMzY1MSA2MC4zMzc5IDI0LjIzMDQgNTkuOTY3IDI0Ljk5NjhMNTIuNDI2OCA0MC42ODI4QzUxLjY2MDUgNDIuMjUyNyA0OS43ODE2IDQyLjkyMDIgNDguMjM2NSA0Mi4xNjYxWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTc2LjI3MTEgMC44MzEyNzZDNzUuNzY0MyAwLjMyNDQ3NyA3NS4wODQ1IDAuMzM2ODM4IDc1LjA4NDUgMC4zMzY4MzhDNzUuMDg0NSAwLjMzNjgzOCA2MC41OTc0IDEuMTUyNjYgNTMuMDk0MyAxLjMyNTcyQzUxLjQ1MDMgMS4zNjI4IDQ5LjgxODYgMS4zOTk4OCA0OC4xOTkzIDEuNDEyMjRDNDguMTk5MyA2LjI0NTM4IDQ4LjE5OTMgMTEuMDc4NSA0OC4xOTkzIDE1Ljg5OTNDNDcuNTE5NSAxNS41Nzc5IDQ2LjgyNzMgMTUuMjQ0MiA0Ni4xNDc0IDE0LjkyMjhDNDYuMTQ3NCAxMC40MjM0IDQ2LjEzNTEgMS40MjQ2IDQ2LjEzNTEgMS40MjQ2QzQyLjU1MDQgMS40NzQwNSAzNS4xMDkxIDEuMTUyNjYgMzUuMTA5MSAxLjE1MjY2QzM1LjEwOTEgMS4xNTI2NiAxNy42MzA3IDAuMjc1MDMyIDE1LjcyNzEgMC4xMDE5NzhDMTQuNTE1NyAwLjAyNzgxMjIgMTIuOTQ1OSAtMC4xNTc2MDIgMTAuOTA2MyAwLjI4NzM5M0M5LjgzMDg5IDAuNTA5ODkgNi43NjUzNyAxLjIwMjExIDQuMjU2MDkgMy42MTI1Qy0xLjMwNjM1IDguNTY5MjQgMC4xMTUxNjUgMTYuNDU1NSAwLjI4ODIxOCAxNy42NDIyQzAuNDk4MzU1IDE5LjA4ODQgMS4xNDExMyAyMy4xMDU3IDQuMjA2NjUgMjYuNjAzOUM5Ljg2Nzk3IDMzLjUzODQgMjIuMDU1OSAzMy4zNzc3IDIyLjA1NTkgMzMuMzc3N0MyMi4wNTU5IDMzLjM3NzcgMjMuNTUxNiAzNi45NSAyNS44MzgzIDQwLjIzODFDMjguOTI4NiA0NC4zMjk1IDMyLjEwNTQgNDcuNTE4NyAzNS4xOTU2IDQ3LjkwMTlDNDIuOTgzIDQ3LjkwMTkgNTguNTQ1NSA0Ny44ODk1IDU4LjU0NTUgNDcuODg5NUM1OC41NDU1IDQ3Ljg4OTUgNjAuMDI4OCA0Ny45MDE5IDYyLjA0MzYgNDYuNjE2M0M2My43NzQyIDQ1LjU2NTYgNjUuMzE5MyA0My43MjM4IDY1LjMxOTMgNDMuNzIzOEM2NS4zMTkzIDQzLjcyMzggNjYuOTEzOSA0Mi4wMTggNjkuMTM4OCAzOC4xMjQzQzY5LjgxODcgMzYuOTI1MyA3MC4zODczIDM1Ljc2MzQgNzAuODgxNyAzNC42NjMzQzcwLjg4MTcgMzQuNjYzMyA3Ny43MDUgMjAuMTg4NiA3Ny43MDUgNi4wOTcwNUM3Ny41NjkgMS44MzI1MSA3Ni41MTgzIDEuMDc4NSA3Ni4yNzExIDAuODMxMjc2Wk0xNC44MjQ3IDI2LjA2QzExLjYyMzIgMjUuMDA5MyAxMC4yNjM1IDIzLjc0ODUgMTAuMjYzNSAyMy43NDg1QzEwLjI2MzUgMjMuNzQ4NSA3LjkwMjU4IDIyLjA5MjEgNi43MTU5MiAxOC44Mjg5QzQuNjc2MzYgMTMuMzY1MyA2LjU0Mjg3IDEwLjAyNzggNi41NDI4NyAxMC4wMjc4QzYuNTQyODcgMTAuMDI3OCA3LjU4MTE5IDcuMjQ2NjIgMTEuMzAxOCA2LjMxOTU1QzEzLjAwNzcgNS44NjIxOSAxNS4xMzM3IDUuOTM2MzYgMTUuMTMzNyA1LjkzNjM2QzE1LjEzMzcgNS45MzYzNiAxNi4wMTE0IDEzLjI3ODggMTcuMDc0NCAxNy41ODA0QzE3Ljk2NDQgMjEuMTg5OCAyMC4xMzk5IDI3LjE4NDkgMjAuMTM5OSAyNy4xODQ5QzIwLjEzOTkgMjcuMTg0OSAxNi45MTM3IDI2LjgwMTcgMTQuODI0NyAyNi4wNlpNNTEuOTQ0NyAzOS4zNjA0QzUxLjk0NDcgMzkuMzYwNCA1MS4xOTA3IDQxLjE1MjggNDkuNTIyIDQxLjI2NEM0OC44MDUgNDEuMzEzNSA0OC4yNDg4IDQxLjExNTcgNDguMjQ4OCA0MS4xMTU3QzQ4LjI0ODggNDEuMTE1NyA0OC4yMTE3IDQxLjEwMzMgNDcuNTkzNyA0MC44NTYxTDMzLjYzODEgMzQuMDU3NkMzMy42MzgxIDM0LjA1NzYgMzIuMjkwOCAzMy4zNTMgMzIuMDU1OSAzMi4xMjkzQzMxLjc4NCAzMS4xMjggMzIuMzg5NyAyOS44OTE5IDMyLjM4OTcgMjkuODkxOUwzOS4xMDE3IDE2LjA2QzM5LjEwMTcgMTYuMDYgMzkuNjk1IDE0Ljg2MSA0MC42MDk3IDE0LjQ1MzFDNDAuNjgzOSAxNC40MTYgNDAuODk0IDE0LjMyOTUgNDEuMTY2IDE0LjI2NzdDNDIuMTY3MiAxNC4wMDgxIDQzLjM5MDkgMTQuNjEzOCA0My4zOTA5IDE0LjYxMzhMNTcuMDc0NSAyMS4yNTE2QzU3LjA3NDUgMjEuMjUxNiA1OC42MzIgMjEuOTU2MiA1OC45NjU3IDIzLjI1NDFDNTkuMjAwNiAyNC4xNjg4IDU4LjkwMzkgMjQuOTg0NiA1OC43NDMyIDI1LjM4MDJDNTcuOTY0NSAyNy4yODM4IDUxLjk0NDcgMzkuMzYwNCA1MS45NDQ3IDM5LjM2MDRaIiBmaWxsPSIjNjA5OTI2Ii8+CjxwYXRoIGQ9Ik0zOS42OTUgMjkuMjk4OEMzOC42ODE0IDI5LjMxMTIgMzcuNzkxNCAzMC4wMTU3IDM3LjU1NjUgMzEuMDA0NkMzNy4zMjE3IDMxLjk5MzUgMzcuODAzNyAzMy4wMTk1IDM4LjY4MTQgMzMuNDc2OEMzOS42MzMyIDMzLjk3MTMgNDAuODQ0NSAzMy42OTkzIDQxLjQ4NzMgMzIuODA5M0M0Mi4xMTc3IDMxLjkzMTcgNDIuMDE4OCAzMC43MjAzIDQxLjI2NDggMjkuOTUzOUw0NC4yMzE0IDIzLjg4NDdDNDQuNDE2OSAyMy44OTcxIDQ0LjY4ODggMjMuOTA5NCA0NC45OTc4IDIzLjgyMjlDNDUuNTA0NiAyMy43MTE2IDQ1Ljg3NTQgMjMuMzc3OSA0NS44NzU0IDIzLjM3NzlDNDYuMzk0NiAyMy42MDA0IDQ2LjkzODUgMjMuODQ3NiA0Ny41MDcxIDI0LjEzMTlDNDguMTAwNCAyNC40Mjg2IDQ4LjY1NjcgMjQuNzM3NiA0OS4xNjM1IDI1LjAzNDNDNDkuMjc0NyAyNS4wOTYxIDQ5LjM4NiAyNS4xNzAyIDQ5LjUwOTYgMjUuMjY5MUM0OS43MDczIDI1LjQyOTggNDkuOTI5OCAyNS42NTIzIDUwLjA5MDUgMjUuOTQ5QzUwLjMyNTQgMjYuNjI4OCA0OS44NTU3IDI3Ljc5MDggNDkuODU1NyAyNy43OTA4QzQ5LjU3MTQgMjguNzMwMiA0Ny41ODEzIDMyLjgwOTMgNDcuNTgxMyAzMi44MDkzQzQ2LjU4IDMyLjc4NDYgNDUuNjkgMzMuNDI3NCA0NS4zOTM0IDM0LjM1NDRDNDUuMDcyIDM1LjM1NTcgNDUuNTI5MyAzNi40OTI5IDQ2LjQ5MzUgMzYuOTg3M0M0Ny40NTc2IDM3LjQ4MTggNDguNjQ0MyAzNy4xOTc1IDQ5LjI3NDcgMzYuMzMyMkM0OS44OTI4IDM1LjQ5MTcgNDkuODQzMyAzNC4zMTc0IDQ5LjEzODcgMzMuNTM4NkM0OS4zNzM2IDMzLjA4MTMgNDkuNTk2MSAzMi42MjM5IDQ5LjgzMSAzMi4xNDE4QzUwLjQ0OSAzMC44NTYzIDUxLjQ5OTcgMjguMzg0MSA1MS40OTk3IDI4LjM4NDFDNTEuNjEwOSAyOC4xNzQgNTIuMjA0MyAyNy4xMTA5IDUxLjgzMzQgMjUuNzUxMkM1MS41MjQ0IDI0LjM0MjEgNTAuMjc2IDIzLjY4NjkgNTAuMjc2IDIzLjY4NjlDNDguNzY3OSAyMi43MTA0IDQ2LjY2NjYgMjEuODA4MSA0Ni42NjY2IDIxLjgwODFDNDYuNjY2NiAyMS44MDgxIDQ2LjY2NjUgMjEuMzAxMyA0Ni41MzA2IDIwLjkzMDRDNDYuMzk0NiAyMC41NDcyIDQ2LjE4NDUgMjAuMyA0Ni4wNDg1IDIwLjE1MTdDNDYuNjI5NSAxOC45NTI3IDQ3LjIxMDQgMTcuNzY2IDQ3Ljc5MTQgMTYuNTY3QzQ3LjI4NDYgMTYuMzE5OCA0Ni43OTAyIDE2LjA3MjYgNDYuMjgzNCAxNS44MTNDNDUuNjkgMTcuMDI0NCA0NS4wODQzIDE4LjI0ODEgNDQuNDkxIDE5LjQ1OTVDNDMuNjYyOCAxOS40NDcxIDQyLjg5NjUgMTkuODkyMSA0Mi41MDA5IDIwLjYyMTRDNDIuMDgwNiAyMS40MDAxIDQyLjE2NzIgMjIuMzY0MyA0Mi43MzU4IDIzLjA2ODlDNDEuNzIyMiAyNS4xNDU1IDQwLjcwODYgMjcuMjIyMiAzOS42OTUgMjkuMjk4OFoiIGZpbGw9IiM2MDk5MjYiLz4KPC9zdmc+Cg==",
+    "fields": [
+        {
+            "title": "Domain",
+            "details": "The domain name where Roundcube webmail will be accessible. For example: mail.example.com",
+            "description": "Domain",
+            "key": "DOMAIN",
+            "value": "",
+            "required": "true"
+        },
+        {
+            "title": "IMAP Host",
+            "details": "The hostname of your IMAP email server for receiving emails. For example: imap.example.com or mail.example.com",
+            "description": "IMAP host",
+            "key": "DEFAULT_HOST",
+            "value": "",
+            "required": "true"
+        },
+        {
+            "title": "IMAP Port",
+            "details": "The port number used to connect to your IMAP server. Default is 993 for IMAP SSL/TLS connections.",
+            "description": "IMAP port",
+            "key": "DEFAULT_PORT",
+            "value": "993"
+        },
+        {
+            "title": "SMTP Server",
+            "details": "The hostname of your SMTP email server for sending emails. For example: smtp.example.com or mail.example.com",
+            "description": "SMTP server",
+            "key": "SMTP_SERVER",
+            "value": "",
+            "required": "true"
+        },
+        {
+            "title": "SMTP Port",
+            "details": "The port number used to connect to your SMTP server. Default is 465 for SMTP SSL/TLS connections, or 587 for STARTTLS.",
+            "description": "SMTP port",
+            "key": "SMTP_PORT",
+            "value": "465"
+        },
+        {
+            "title": "SMTP Username",
+            "details": "The username used to authenticate with the SMTP server. Often this is your full email address.",
+            "description": "SMTP username",
+            "key": "SMTP_USER",
+            "value": "",
+            "advanced": "true"
+        },
+        {
+            "title": "SMTP Password",
+            "details": "The password used to authenticate with the SMTP server for sending outgoing email.",
+            "description": "SMTP password",
+            "key": "SMTP_PASSWORD",
+            "value": "",
+            "advanced": "true",
+            "type": "password"
+        },
+        {
+            "title": "Skip Host Validation",
+            "details": "Set to true to disable SSL certificate validation when connecting to IMAP/SMTP servers. Recommended to keep as false for security.",
+            "description": "Skip host validation",
+            "key": "SKIP_HOST_VALIDATION",
+            "value": "false",
+            "advanced": "true"
+        },
+        {
+            "title": "Plugins",
+            "details": "Comma-separated list of Roundcube plugins to enable. Default includes calendar and password change plugins.",
+            "description": "Plugins",
+            "key": "PLUGINS",
+            "value": "calendar,password",
+            "advanced": "true"
+        },
+        {
+            "title": "Upload Max Filesize",
+            "details": "Maximum allowed file size for email attachments. Use format like 5M, 10M, 25M, or 1G for larger limits.",
+            "description": "Upload max filesize",
+            "key": "UPLOAD_MAX_FILESIZE",
+            "value": "50M",
+            "advanced": "true"
+        },
+        {
+            "title": "Postgres Database Name",
+            "details": "The name of the PostgreSQL database that Roundcube will use to store contacts, preferences, and other data. This value is auto-generated.",
+            "description": "Postgres database name",
+            "key": "POSTGRES_DB",
+            "value": "",
+            "required": "true",
+            "generated": "time|md5|8"
+        },
+        {
+            "title": "Postgres Username",
+            "details": "The username for connecting to the PostgreSQL database. This value is auto-generated for security.",
+            "description": "Postgres username",
+            "key": "POSTGRES_USER",
+            "value": "",
+            "required": "true",
+            "generated": "time|md5|8"
+        },
+        {
+            "title": "Postgres User Password",
+            "details": "The password for the PostgreSQL database user. This value is auto-generated and should be kept secure.",
+            "description": "Postgres password for user",
+            "key": "POSTGRES_PASSWORD",
+            "value": "",
+            "required": "true",
+            "generated": "random|md5|12"
+        },
+        {
+            "title": "Postgres Root Password",
+            "details": "The root/admin password for the PostgreSQL database. This value is auto-generated and should be kept secure.",
+            "description": "Postgres root user password",
+            "key": "POSTGRES_ROOT_PASSWORD",
+            "value": "",
+            "required": "true",
+            "generated": "random|sha256|20"
+        }
+    ]
+}
