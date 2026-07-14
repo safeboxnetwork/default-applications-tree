@@ -29,7 +29,7 @@
                 "IMAGE": "postgres:15-alpine",
                 "UPDATE": "true",
                 "NAME": "roundcubepostgres-db",
-                "MEMORY": "128M",
+                "MEMORY": "256M",
                 "NETWORK": "roundcube",
                 "SELECTOR": "roundcubepostgres-db",
                 "VOLUMES": [
