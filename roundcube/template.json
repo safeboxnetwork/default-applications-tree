@@ -7,7 +7,7 @@
     "fields": [
         {
             "title": "Domain",
-            "details": "The domain name where Roundcube webmail will be accessible. For example: mail.example.com",
+            "details": "The domain name where Roundcube webmail will be accessible.",
             "description": "Domain",
             "key": "DOMAIN",
             "value": "",
@@ -15,7 +15,7 @@
         },
         {
             "title": "IMAP Host",
-            "details": "The hostname of your IMAP email server for receiving emails. For example: imap.example.com or mail.example.com",
+            "details": "The hostname of your IMAP email server for receiving emails",
             "description": "IMAP host",
             "key": "DEFAULT_HOST",
             "value": "",
@@ -23,14 +23,14 @@
         },
         {
             "title": "IMAP Port",
-            "details": "The port number used to connect to your IMAP server. Default is 993 for IMAP SSL/TLS connections.",
+            "details": "The port number used to connect to your IMAP server",
             "description": "IMAP port",
             "key": "DEFAULT_PORT",
             "value": "993"
         },
         {
             "title": "SMTP Server",
-            "details": "The hostname of your SMTP email server for sending emails. For example: smtp.example.com or mail.example.com",
+            "details": "The hostname of your SMTP email server for sending emails",
             "description": "SMTP server",
             "key": "SMTP_SERVER",
             "value": "",
@@ -38,14 +38,14 @@
         },
         {
             "title": "SMTP Port",
-            "details": "The port number used to connect to your SMTP server. Default is 465 for SMTP SSL/TLS connections, or 587 for STARTTLS.",
+            "details": "The port number used to connect to your SMTP server",
             "description": "SMTP port",
             "key": "SMTP_PORT",
             "value": "465"
         },
         {
             "title": "SMTP Username",
-            "details": "The username used to authenticate with the SMTP server. Often this is your full email address.",
+            "details": "The username used to authenticate with the SMTP server",
             "description": "SMTP username",
             "key": "SMTP_USER",
             "value": "",
@@ -53,7 +53,7 @@
         },
         {
             "title": "SMTP Password",
-            "details": "The password used to authenticate with the SMTP server for sending outgoing email.",
+            "details": "The password used to authenticate with the SMTP server",
             "description": "SMTP password",
             "key": "SMTP_PASSWORD",
             "value": "",
@@ -62,7 +62,7 @@
         },
         {
             "title": "Skip Host Validation",
-            "details": "Set to true to disable SSL certificate validation when connecting to IMAP/SMTP servers. Recommended to keep as false for security.",
+            "details": "Set to true to disable SSL certificate validation",
             "description": "Skip host validation",
             "key": "SKIP_HOST_VALIDATION",
             "value": "false",
@@ -70,7 +70,7 @@
         },
         {
             "title": "Plugins",
-            "details": "Comma-separated list of Roundcube plugins to enable. Default includes calendar and password change plugins.",
+            "details": "Comma-separated list of Roundcube plugins to enable",
             "description": "Plugins",
             "key": "PLUGINS",
             "value": "calendar,password",
@@ -78,7 +78,7 @@
         },
         {
             "title": "Upload Max Filesize",
-            "details": "Maximum allowed file size for email attachments. Use format like 5M, 10M, 25M, or 1G for larger limits.",
+            "details": "Maximum allowed file size for email attachments",
             "description": "Upload max filesize",
             "key": "UPLOAD_MAX_FILESIZE",
             "value": "50M",
@@ -86,7 +86,6 @@
         },
         {
             "title": "Postgres Database Name",
-            "details": "The name of the PostgreSQL database that Roundcube will use to store contacts, preferences, and other data. This value is auto-generated.",
             "description": "Postgres database name",
             "key": "POSTGRES_DB",
             "value": "",
@@ -95,7 +94,6 @@
         },
         {
             "title": "Postgres Username",
-            "details": "The username for connecting to the PostgreSQL database. This value is auto-generated for security.",
             "description": "Postgres username",
             "key": "POSTGRES_USER",
             "value": "",
@@ -104,7 +102,6 @@
         },
         {
             "title": "Postgres User Password",
-            "details": "The password for the PostgreSQL database user. This value is auto-generated and should be kept secure.",
             "description": "Postgres password for user",
             "key": "POSTGRES_PASSWORD",
             "value": "",
@@ -113,7 +110,6 @@
         },
         {
             "title": "Postgres Root Password",
-            "details": "The root/admin password for the PostgreSQL database. This value is auto-generated and should be kept secure.",
             "description": "Postgres root user password",
             "key": "POSTGRES_ROOT_PASSWORD",
             "value": "",
