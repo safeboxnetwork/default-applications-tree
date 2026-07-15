@@ -70,6 +70,13 @@
             "generated": "random|md5|24"
         },
         {
+            "description": "Crawl4AI secret key",
+            "key": "CRAWL4AI_SECRET",
+            "value": "",
+            "required": "true",
+            "generated": "openssl|hex|32"
+        },
+        {
             "description": "Postgres database name",
             "key": "POSTGRES_DB",
             "value": "",
