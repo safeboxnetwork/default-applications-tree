@@ -24,7 +24,7 @@
             ],
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh -c",
-            "CMD": "mkdir -p /etc/user/data/openwebui/data && mkdir -p /etc/user/data/openwebui/db && mkdir -p /etc/user/data/openwebui/pipelines && mkdir -p /etc/user/data/openwebui/qdrant",
+            "CMD": "mkdir -p /etc/user/data/openwebui/data && mkdir -p /etc/user/data/openwebui/db && mkdir -p /etc/user/data/openwebui/pipelines && mkdir -p /etc/user/data/openwebui/qdrant && mkdir -p /etc/user/data/openwebui/searxng && mkdir -p /etc/user/data/openwebui/crawl4ai",
             "PRE_START": "null",
             "POST_START": "null"
         },
@@ -62,10 +62,10 @@
         {
             "IMAGE": "qdrant/qdrant:latest",
             "UPDATE": "true",
-            "NAME": "openwebui-qdrant",
+            "NAME": "openwebuiqdrant-app",
             "MEMORY": "1024M",
             "NETWORK": "openwebui-net",
-            "SELECTOR": "openwebui-qdrant",
+            "SELECTOR": "openwebuiqdrant-app",
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/openwebui/qdrant",
@@ -95,10 +95,10 @@
         {
             "IMAGE": "ghcr.io/open-webui/pipelines:main",
             "UPDATE": "true",
-            "NAME": "openwebui-pipelines",
+            "NAME": "openwebuipipelines-app",
             "MEMORY": "1024M",
             "NETWORK": "openwebui-net",
-            "SELECTOR": "openwebui-pipelines",
+            "SELECTOR": "openwebuipipelines-app",
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/openwebui/pipelines",
@@ -121,14 +121,76 @@
                     "VECTOR_DB": "qdrant"
                 },
                 {
-                    "QDRANT_HOST": "openwebui-qdrant"
+                    "QDRANT_HOST": "openwebuiqdrant-app"
                 },
                 {
                     "QDRANT_PORT": "6333"
                 },
                 {
-                    "QDRANT_URI": "http://openwebui-qdrant:6333"
+                    "QDRANT_URI": "http://openwebuiqdrant-app:6333"
                 }
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "searxng/searxng:latest",
+            "UPDATE": "true",
+            "NAME": "openwebuisearxng-app",
+            "MEMORY": "512M",
+            "NETWORK": "openwebui-net",
+            "SELECTOR": "openwebuisearxng-app",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/openwebui/searxng",
+                    "DEST": "/etc/searxng",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "8080",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/openwebui/openwebui.json"
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "unclecode/crawl4ai:latest",
+            "UPDATE": "true",
+            "NAME": "openwebuicrawl4ai-app",
+            "MEMORY": "1024M",
+            "NETWORK": "openwebui-net",
+            "SELECTOR": "openwebuicrawl4ai-app",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/openwebui/crawl4ai",
+                    "DEST": "/app/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "11235",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/openwebui/openwebui.json"
             ],
             "EXTRA": "--restart always",
             "DEPEND": [],
@@ -166,19 +228,25 @@
                     "VECTOR_DB": "qdrant"
                 },
                 {
-                    "QDRANT_HOST": "openwebui-qdrant"
+                    "QDRANT_HOST": "openwebuiqdrant-app"
                 },
                 {
                     "QDRANT_PORT": "6333"
                 },
                 {
-                    "QDRANT_URI": "http://openwebui-qdrant:6333"
+                    "QDRANT_URI": "http://openwebuiqdrant-app:6333"
                 },
                 {
                     "ENABLE_RAG_PIPELINE": "True"
                 },
                 {
-                    "RAG_PIPELINE_URL": "http://openwebui-pipelines:9099/v1"
+                    "RAG_PIPELINE_URL": "http://openwebuipipelines-app:9099/v1"
+                },
+                {
+                    "WEB_SEARCH_ENGINE": "http://openwebuisearxng-app:8080/search?q=<query>"
+                },
+                {
+                    "EXTERNAL_WEB_LOADER_URL": "http://openwebuicrawl4ai-app:11235"
                 }
             ],
             "ENV_FILES": [

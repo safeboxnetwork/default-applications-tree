@@ -56,6 +56,20 @@
             "type": "password"
         },
         {
+            "description": "SearXNG secret key",
+            "key": "SEARXNG_SECRET",
+            "value": "",
+            "required": "true",
+            "generated": "openssl|hex|32"
+        },
+        {
+            "description": "Crawl4AI API token",
+            "key": "CRAWL4AI_API_TOKEN",
+            "value": "",
+            "required": "true",
+            "generated": "random|md5|24"
+        },
+        {
             "description": "Postgres database name",
             "key": "POSTGRES_DB",
             "value": "",
