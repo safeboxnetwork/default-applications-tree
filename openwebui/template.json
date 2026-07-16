@@ -103,6 +103,41 @@
             "value": "",
             "required": "true",
             "generated": "random|sha256|20"
-        }
+        },
+        {
+            "description": "Enable web search",
+            "key": "ENABLE_WEB_SEARCH",
+            "value": "true",
+            "info": "Optional web search enabling, keep it empty if you don't want it",
+            "advanced": "true"
+        },
+        {
+            "description": "Web search engine",
+            "key": "WEB_SEARCH_ENGINE",
+            "value": "searxng",
+            "info": "Optional web search engine Searxng, keep it empty if you don't want it or define any other if you have",
+            "advanced": "true"
+        },
+        {
+            "description": "External web search engine",
+            "key": "WEB_LOADER_ENGINE",
+            "value": "external",
+            "info": "If optional web search engine defined, keep it as is, otherwise keep it empty",
+            "advanced": "true"
+        },
+        {
+            "description": "Web",
+            "key": "SEARXNG_QUERY_URL",
+            "value": "http://openwebuisearxng-app:8080/search?q=<query>",
+            "info": "Optional web search engine Searxng, keep it empty if you don't want it",
+            "advanced": "true"
+        },
+        {
+            "description": "External web search engine",
+            "key": "EXTERNAL_WEB_LOADER_URL",
+            "value": "http://openwebuicrawl4ai-app:11235",
+            "info": "Optional crawl4ai application url, keep it as is, otherwise keep it empty",
+            "advanced": "true"
+        }    
     ]
 }

@@ -130,6 +130,9 @@
                     "QDRANT_URI": "http://openwebuiqdrant-app:6333"
                 }
             ],
+            "ENV_FILES": [
+                "/etc/user/secret/openwebui/openwebui.json"
+            ],
             "EXTRA": "--restart always",
             "DEPEND": [],
             "START_ON_BOOT": "false",
@@ -222,31 +225,31 @@
             ],
             "ENVS": [
                 {
+                    "ENABLE_PERSISTENT_CONFIG": "false"
+                },
+                {
                     "OPENAI_API_BASE_URL": "#OPENAI_API_BASE_URL"
                 },
                 {
                     "VECTOR_DB": "qdrant"
                 },
                 {
-                    "QDRANT_HOST": "openwebuiqdrant-app"
-                },
-                {
-                    "QDRANT_PORT": "6333"
-                },
-                {
                     "QDRANT_URI": "http://openwebuiqdrant-app:6333"
                 },
                 {
-                    "ENABLE_RAG_PIPELINE": "True"
+                    "ENABLE_WEB_SEARCH": "#ENABLE_WEB_SEARCH"
                 },
                 {
-                    "RAG_PIPELINE_URL": "http://openwebuipipelines-app:9099/v1"
+                    "WEB_SEARCH_ENGINE": "#WEB_SEARCH_ENGINE"
                 },
                 {
-                    "WEB_SEARCH_ENGINE": "http://openwebuisearxng-app:8080/search?q=<query>"
+                    "WEB_LOADER_ENGINE": "#WEB_LOADER_ENGINE"
                 },
                 {
-                    "EXTERNAL_WEB_LOADER_URL": "http://openwebuicrawl4ai-app:11235"
+                    "SEARXNG_QUERY_URL": "#SEARXNG_QUERY_URL"
+                },
+                {
+                    "EXTERNAL_WEB_LOADER_URL": "#EXTERNAL_WEB_LOADER_URL"
                 }
             ],
             "ENV_FILES": [
