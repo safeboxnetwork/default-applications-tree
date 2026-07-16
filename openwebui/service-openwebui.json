@@ -24,7 +24,7 @@
             ],
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh -c",
-            "CMD": "mkdir -p /etc/user/data/openwebui/data && mkdir -p /etc/user/data/openwebui/db && mkdir -p /etc/user/data/openwebui/pipelines && mkdir -p /etc/user/data/openwebui/qdrant && mkdir -p /etc/user/data/openwebui/searxng && mkdir -p /etc/user/data/openwebui/crawl4ai && printf 'use_default_settings: true\\nserver:\\n  bind_address: \"0.0.0.0\"\\n  port: 8080\\n  limiter: false\\n  public_instance: false\\nui:\\n  static_use_hash: true\\nredis:\\n  url: false\\noutgoing:\\n  useragent: \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"\\n' > /etc/user/data/openwebui/searxng/settings.yml && printf '[botdetection.ip_limit]\\nlink_token = true\\n' > /etc/user/data/openwebui/searxng/limiter.toml",
+            "CMD": "mkdir -p /etc/user/data/openwebui/data && mkdir -p /etc/user/data/openwebui/db && mkdir -p /etc/user/data/openwebui/pipelines && mkdir -p /etc/user/data/openwebui/qdrant && mkdir -p /etc/user/data/openwebui/searxng && mkdir -p /etc/user/data/openwebui/crawl4ai && printf \"use_default_settings: true\\nserver:\\n  bind_address: 0.0.0.0\\n  port: 8080\\n  limiter: false\\n  public_instance: false\\nui:\\n  static_use_hash: true\\nredis:\\n  url: false\\noutgoing:\\n  useragent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\\n\" > /etc/user/data/openwebui/searxng/settings.yml && printf \"[botdetection.ip_limit]\\nlink_token = true\\n\" > /etc/user/data/openwebui/searxng/limiter.toml",
             "PRE_START": "null",
             "POST_START": "null"
         },
