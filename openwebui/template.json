@@ -157,7 +157,7 @@
         {
             "description": "External web search engine",
             "key": "EXTERNAL_WEB_LOADER_URL",
-            "value": "http://openwebuicrawl4ai-app:11235",
+            "value": "http://openwebuicrawl4ai-app:11235/crawl",
             "info": "Optional crawl4ai application url, keep it as is, otherwise keep it empty",
             "advanced": "true"
         }    
