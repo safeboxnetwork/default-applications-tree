@@ -56,6 +56,21 @@
             "type": "password"
         },
         {
+            "description": "Hugging Face token",
+            "key": "HF_TOKEN",
+            "value": "",
+            "info": "Optional Hugging Face API token for TTS and model access features.",
+            "advanced": "true",
+            "type": "password"
+        },
+        {
+            "description": "Disable Hugging Face requests",
+            "key": "DISABLE_HUGGINGFACE",
+            "value": "1",
+            "info": "Set to 1 to disable all outgoing requests to huggingface.co at startup. Set to 0 or leave empty to allow Hugging Face access.",
+            "advanced": "true"
+        },
+        {
             "description": "Pipelines API key",
             "key": "PIPELINES_API_KEY",
             "value": "",
