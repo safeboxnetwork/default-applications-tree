@@ -225,7 +225,7 @@
             ],
             "ENVS": [
                 {
-                    "ENABLE_PERSISTENT_CONFIG": "true"
+                    "ENABLE_PERSISTENT_CONFIG": "false"
                 },
                 {
                     "HF_HUB_OFFLINE": "#DISABLE_HUGGINGFACE"
