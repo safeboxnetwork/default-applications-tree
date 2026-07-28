@@ -71,13 +71,6 @@
             "advanced": "true"
         },
         {
-            "description": "Pipelines API key",
-            "key": "PIPELINES_API_KEY",
-            "value": "",
-            "required": "true",
-            "generated": "openssl|hex|32"
-        },
-        {
             "description": "SearXNG secret key",
             "key": "SEARXNG_SECRET",
             "value": "",

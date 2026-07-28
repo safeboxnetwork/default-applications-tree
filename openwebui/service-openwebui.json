@@ -24,7 +24,7 @@
             ],
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh -c",
-            "CMD": "mkdir -p /etc/user/data/openwebui/data && mkdir -p /etc/user/data/openwebui/db && mkdir -p /etc/user/data/openwebui/pipelines && mkdir -p /etc/user/data/openwebui/qdrant && mkdir -p /etc/user/data/openwebui/searxng && mkdir -p /etc/user/data/openwebui/crawl4ai && printf %s c2VydmVyOgogIGJpbmRfYWRkcmVzczogMC4wLjAuMAogIHBvcnQ6IDgwODAKICBsaW1pdGVyOiBmYWxzZQogIHB1YmxpY19pbnN0YW5jZTogZmFsc2UKc2VhcmNoOgogIGZvcm1hdHM6CiAgICAtIGh0bWwKICAgIC0ganNvbgp1aToKICBzdGF0aWNfdXNlX2hhc2g6IHRydWUKcmVkaXM6CiAgdXJsOiBmYWxzZQpvdXRnb2luZzoKICB1c2VyYWdlbnQ6IE1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzEuMC4wLjAgU2FmYXJpLzUzNy4zNgp1c2VfZGVmYXVsdF9zZXR0aW5nczoKICBlbmdpbmVzOgogICAgcmVtb3ZlOgogICAgICAtIGFobWlhCiAgICAgIC0gdG9yY2gKICAgICAgLSB3aWtpZGF0YQpib3RkZXRlY3Rpb246CiAgaXBfbGlzdHM6CiAgICBwYXNzX2lwOgogICAgICAtIDAuMC4wLjAvMAogICAgICAtIDo6LzA= | base64 -d > /etc/user/data/openwebui/searxng/settings.yml && printf %s W2JvdGRldGVjdGlvbi5pcF9saW1pdF0KbGlua190b2tlbiA9IGZhbHNlCg== | base64 -d > /etc/user/data/openwebui/searxng/limiter.toml",
+            "CMD": "mkdir -p /etc/user/data/openwebui/data && mkdir -p /etc/user/data/openwebui/db && mkdir -p /etc/user/data/openwebui/qdrant && mkdir -p /etc/user/data/openwebui/searxng && mkdir -p /etc/user/data/openwebui/crawl4ai && printf %s c2VydmVyOgogIGJpbmRfYWRkcmVzczogMC4wLjAuMAogIHBvcnQ6IDgwODAKICBsaW1pdGVyOiBmYWxzZQogIHB1YmxpY19pbnN0YW5jZTogZmFsc2UKc2VhcmNoOgogIGZvcm1hdHM6CiAgICAtIGh0bWwKICAgIC0ganNvbgp1aToKICBzdGF0aWNfdXNlX2hhc2g6IHRydWUKcmVkaXM6CiAgdXJsOiBmYWxzZQpvdXRnb2luZzoKICB1c2VyYWdlbnQ6IE1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzEuMC4wLjAgU2FmYXJpLzUzNy4zNgp1c2VfZGVmYXVsdF9zZXR0aW5nczoKICBlbmdpbmVzOgogICAgcmVtb3ZlOgogICAgICAtIGFobWlhCiAgICAgIC0gdG9yY2gKICAgICAgLSB3aWtpZGF0YQpib3RkZXRlY3Rpb246CiAgaXBfbGlzdHM6CiAgICBwYXNzX2lwOgogICAgICAtIDAuMC4wLjAvMAogICAgICAtIDo6LzA= | base64 -d > /etc/user/data/openwebui/searxng/settings.yml && printf %s W2JvdGRldGVjdGlvbi5pcF9saW1pdF0KbGlua190b2tlbiA9IGZhbHNlCg== | base64 -d > /etc/user/data/openwebui/searxng/limiter.toml",
             "PRE_START": "null",
             "POST_START": "null"
         },
@@ -87,54 +87,6 @@
             ],
             "EXTRA": "--restart always",
             "DEPEND": "null",
-            "START_ON_BOOT": "false",
-            "CMD": "null",
-            "PRE_START": "null",
-            "POST_START": "null"
-        },
-        {
-            "IMAGE": "ghcr.io/open-webui/pipelines:main",
-            "UPDATE": "true",
-            "NAME": "openwebuipipelines-app",
-            "MEMORY": "1024M",
-            "NETWORK": "openwebui-net",
-            "SELECTOR": "openwebuipipelines-app",
-            "VOLUMES": [
-                {
-                    "SOURCE": "/etc/user/data/openwebui/pipelines",
-                    "DEST": "/app/pipelines",
-                    "TYPE": "rw"
-                }
-            ],
-            "PORTS": [
-                {
-                    "SOURCE": "null",
-                    "DEST": "9099",
-                    "TYPE": "tcp"
-                }
-            ],
-            "ENVS": [
-                {
-                    "OPENAI_API_BASE_URL": "#OPENAI_API_BASE_URL"
-                },
-                {
-                    "VECTOR_DB": "qdrant"
-                },
-                {
-                    "QDRANT_HOST": "openwebuiqdrant-app"
-                },
-                {
-                    "QDRANT_PORT": "6333"
-                },
-                {
-                    "QDRANT_URI": "http://openwebuiqdrant-app:6333"
-                }
-            ],
-            "ENV_FILES": [
-                "/etc/user/secret/openwebui/openwebui.json"
-            ],
-            "EXTRA": "--restart always",
-            "DEPEND": [],
             "START_ON_BOOT": "false",
             "CMD": "null",
             "PRE_START": "null",
