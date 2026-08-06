@@ -144,7 +144,7 @@
             "description": "Web",
             "key": "SEARXNG_QUERY_URL",
             "value": "http://openwebuisearxng-proxy:8080/search",
-            "info": "Optional web search engine Searxng, keep it empty if you don't want it. The reverse proxy sets X-Real-IP / X-Forwarded-For so SearXNG can resolve the real client IP.",
+            "info": "Optional web search engine Searxng, keep it empty if you don't want it",
             "advanced": "true"
         },
         {
