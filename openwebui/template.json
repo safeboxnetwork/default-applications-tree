@@ -143,7 +143,7 @@
         {
             "description": "Web",
             "key": "SEARXNG_QUERY_URL",
-            "value": "http://openwebuisearxng-proxy:8080/search",
+            "value": "http://openwebuiproxy-app:8080/search",
             "info": "Optional web search engine Searxng, keep it empty if you don't want it",
             "advanced": "true"
         },
