@@ -37,7 +37,12 @@
                 {
                     "SOURCE": "/etc/user/data/transmission/downloads/complete",
                     "DEST": "/media/torrent",
-                    "TYPE": "rw"
+                    "TYPE": "ro"
+                },
+                {
+                    "SOURCE": "/etc/user/data/filebrowser",
+                    "DEST": "/media/filebrowser",
+                    "TYPE": "ro"
                 },
                 {
                     "SOURCE": "/etc/user/data/jellyfin/config",
