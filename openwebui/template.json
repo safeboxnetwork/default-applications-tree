@@ -56,6 +56,42 @@
             "type": "password"
         },
         {
+            "description": "Hugging Face token",
+            "key": "HF_TOKEN",
+            "value": "",
+            "info": "Optional Hugging Face API token for TTS and model access features.",
+            "advanced": "true",
+            "type": "password"
+        },
+        {
+            "description": "Disable Hugging Face requests",
+            "key": "DISABLE_HUGGINGFACE",
+            "value": "1",
+            "info": "Set to 1 to disable all outgoing requests to huggingface.co at startup. Set to 0 or leave empty to allow Hugging Face access.",
+            "advanced": "true"
+        },
+        {
+            "description": "SearXNG secret key",
+            "key": "SEARXNG_SECRET",
+            "value": "",
+            "required": "true",
+            "generated": "openssl|hex|32"
+        },
+        {
+            "description": "Crawl4AI API token",
+            "key": "CRAWL4AI_API_TOKEN",
+            "value": "",
+            "required": "true",
+            "generated": "random|md5|24"
+        },
+        {
+            "description": "Crawl4AI secret key",
+            "key": "CRAWL4AI_SECRET",
+            "value": "",
+            "required": "true",
+            "generated": "openssl|hex|32"
+        },
+        {
             "description": "Postgres database name",
             "key": "POSTGRES_DB",
             "value": "",
@@ -82,6 +118,41 @@
             "value": "",
             "required": "true",
             "generated": "random|sha256|20"
-        }
+        },
+        {
+            "description": "Enable web search",
+            "key": "ENABLE_WEB_SEARCH",
+            "value": "true",
+            "info": "Optional web search enabling, keep it empty if you don't want it",
+            "advanced": "true"
+        },
+        {
+            "description": "Web search engine",
+            "key": "WEB_SEARCH_ENGINE",
+            "value": "searxng",
+            "info": "Optional web search engine Searxng, keep it empty if you don't want it or define any other if you have",
+            "advanced": "true"
+        },
+        {
+            "description": "External web search engine",
+            "key": "WEB_LOADER_ENGINE",
+            "value": "external",
+            "info": "If optional web search engine defined, keep it as is, otherwise keep it empty",
+            "advanced": "true"
+        },
+        {
+            "description": "Web",
+            "key": "SEARXNG_QUERY_URL",
+            "value": "http://openwebuiproxy-app:8080/search",
+            "info": "Optional web search engine Searxng, keep it empty if you don't want it",
+            "advanced": "true"
+        },
+        {
+            "description": "External web search engine",
+            "key": "EXTERNAL_WEB_LOADER_URL",
+            "value": "http://openwebuicrawl4ai-app:11235/crawl",
+            "info": "Optional crawl4ai application url, keep it as is, otherwise keep it empty",
+            "advanced": "true"
+        }    
     ]
 }

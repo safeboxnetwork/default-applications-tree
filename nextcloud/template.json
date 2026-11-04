@@ -30,7 +30,7 @@
         {
             "description": "Version",
             "key": "VERSION",
-            "value": "31.0.8-fpm-alpine",
+            "value": "35.0.2-fpm-alpine",
             "info": "Please keep in mind you can't upgrade major version without skipping a version!",
             "advanced": "true"
         },

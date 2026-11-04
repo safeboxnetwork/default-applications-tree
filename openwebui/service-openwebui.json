@@ -15,6 +15,11 @@
                     "SOURCE": "USER_DATA",
                     "DEST": "/etc/user/data",
                     "TYPE": "rw"
+                },
+                                {
+                    "SOURCE": "SYSTEM_DATA",
+                    "DEST": "/etc/system/data",
+                    "TYPE": "rw"
                 }
             ],
             "EXTRA": "--rm",
@@ -24,7 +29,7 @@
             ],
             "START_ON_BOOT": "false",
             "ENTRYPOINT": "sh -c",
-            "CMD": "mkdir -p /etc/user/data/openwebui/data && mkdir -p /etc/user/data/openwebui/db && mkdir -p /etc/user/data/openwebui/pipelines && mkdir -p /etc/user/data/openwebui/qdrant",
+            "CMD": "mkdir -p /etc/system/data/openwebui/data/cache && mkdir -p /etc/user/data/openwebui/data/uploads && mkdir -p /etc/user/data/openwebui/db && mkdir -p /etc/user/data/openwebui/qdrant && mkdir -p /etc/user/data/openwebui/searxng && mkdir -p /etc/user/data/openwebui/crawl4ai && printf %s c2VydmVyOgogIGJpbmRfYWRkcmVzczogMC4wLjAuMAogIHBvcnQ6IDgwODAKICBsaW1pdGVyOiBmYWxzZQogIHB1YmxpY19pbnN0YW5jZTogZmFsc2UKc2VhcmNoOgogIGZvcm1hdHM6CiAgICAtIGh0bWwKICAgIC0ganNvbgp1aToKICBzdGF0aWNfdXNlX2hhc2g6IHRydWUKdmFsa2V5OgogIHVybDogZmFsc2UKb3V0Z29pbmc6CiAgdXNlcmFnZW50OiBNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTMxLjAuMC4wIFNhZmFyaS81MzcuMzYKdXNlX2RlZmF1bHRfc2V0dGluZ3M6CiAgZW5naW5lczoKICAgIHJlbW92ZToKICAgICAgLSBhaG1pYQogICAgICAtIHRvcmNoCiAgICAgIC0gd2lraWRhdGEK | base64 -d > /etc/user/data/openwebui/searxng/settings.yml && printf %s W2JvdGRldGVjdGlvbl0KCiMgVGhlIHByZWZpeCBkZWZpbmVzIHRoZSBudW1iZXIgb2YgbGVhZGluZyBiaXRzIGluIGFuIGFkZHJlc3MgdGhhdCBhcmUgY29tcGFyZWQKIyB0byBkZXRlcm1pbmUgd2hldGhlciBvciBub3QgYW4gYWRkcmVzcyBpcyBwYXJ0IG9mIGEgKGNsaWVudCkgbmV0d29yay4KaXB2NF9wcmVmaXggPSAzMgppcHY2X3ByZWZpeCA9IDQ4CgojIE5ldHdvcmtzIG9mIHRoZSByZXZlcnNlIHByb3hpZXMgLyBsb2FkIGJhbGFuY2VycyAvIGludGVybmFsIERvY2tlciBnYXRld2F5cyBpbgojIGZyb250IG9mIHRoaXMgaW5zdGFuY2UuIFJlcXVlc3RzIGZyb20gdGhlc2UgbmV0d29ya3MgbWF5IGNhcnJ5CiMgWC1Gb3J3YXJkZWQtRm9yIC8gWC1SZWFsLUlQLCBhbmQgdGhlIHJlYWwgY2xpZW50IElQIGlzIGV4dHJhY3RlZCBmcm9tIHRoZW0uCiMgSW50ZXJuYWwgRG9ja2VyIG5ldHdvcmtzIGFyZSBpbmNsdWRlZCBzbyBhIGZ1dHVyZSByZXZlcnNlIHByb3h5IG9uIHRoaXMgaG9zdAojIGlzIGhhbmRsZWQgY29ycmVjdGx5Lgp0cnVzdGVkX3Byb3hpZXMgPSBbCiAgIjEyNy4wLjAuMC84IiwKICAiOjoxIiwKICAiMTAuMC4wLjAvOCIsCiAgIjE3Mi4xNi4wLjAvMTIiLAogICIxOTIuMTY4LjAuMC8xNiIsCiAgImZkMDA6Oi84IiwKXQoKW2JvdGRldGVjdGlvbi5pcF9saW1pdF0KCmZpbHRlcl9saW5rX2xvY2FsID0gZmFsc2UKbGlua190b2tlbiA9IGZhbHNlCgpbYm90ZGV0ZWN0aW9uLmlwX2xpc3RzXQoKIyBJbnRlcm5hbCAvIGxvY2FsIG5ldHdvcmtzIGFyZSB0cnVzdGVkIGFuZCBuZXZlciByYXRlLWxpbWl0ZWQgb3IgYmxvY2tlZC4KcGFzc19pcCA9IFsKICAiMTI3LjAuMC4wLzgiLAogICI6OjEiLAogICIxMC4wLjAuMC84IiwKICAiMTcyLjE2LjAuMC8xMiIsCiAgIjE5Mi4xNjguMC4wLzE2IiwKICAiZmQwMDo6LzgiLApdCgpwYXNzX3NlYXJ4bmdfb3JnID0gdHJ1ZQo= | base64 -d > /etc/user/data/openwebui/searxng/limiter.toml && mkdir -p /etc/user/data/openwebui/searxng-proxy && printf %s IyBSZXZlcnNlIHByb3h5IGluIGZyb250IG9mIFNlYXJYTkcuCiMgU2V0cyBYLVJlYWwtSVAgLyBYLUZvcndhcmRlZC1Gb3Igc28gU2VhclhORyBQcm94eUZpeCBsb2dzIG5vIGVycm9yLgp1cHN0cmVhbSBzZWFyeG5nIHsKICAgIHNlcnZlciBvcGVud2VidWlzZWFyeG5nLWFwcDo4MDgwOwogICAga2VlcGFsaXZlIDMyOwp9CgpzZXJ2ZXIgewogICAgbGlzdGVuIDgwODA7CiAgICBzZXJ2ZXJfbmFtZSBfOwoKICAgIGxvY2F0aW9uIC8gewogICAgICAgIHByb3h5X3Bhc3MgaHR0cDovL3NlYXJ4bmc7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBIb3N0ICRob3N0OwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1SZWFsLUlQICRyZW1vdGVfYWRkcjsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtRm9yd2FyZGVkLUZvciAkcHJveHlfYWRkX3hfZm9yd2FyZGVkX2ZvcjsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtRm9yd2FyZGVkLVByb3RvICRzY2hlbWU7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Ib3N0ICRob3N0OwogICAgICAgIHByb3h5X2h0dHBfdmVyc2lvbiAxLjE7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBDb25uZWN0aW9uICIiOwogICAgICAgIHByb3h5X3JlZGlyZWN0IG9mZjsKICAgICAgICBjbGllbnRfbWF4X2JvZHlfc2l6ZSAxMG07CiAgICB9Cn0K | base64 -d > /etc/user/data/openwebui/searxng-proxy/searxng-upstream.conf",
             "PRE_START": "null",
             "POST_START": "null"
         },
@@ -62,10 +67,10 @@
         {
             "IMAGE": "qdrant/qdrant:latest",
             "UPDATE": "true",
-            "NAME": "openwebui-qdrant",
+            "NAME": "openwebuiqdrant-app",
             "MEMORY": "1024M",
             "NETWORK": "openwebui-net",
-            "SELECTOR": "openwebui-qdrant",
+            "SELECTOR": "openwebuiqdrant-app",
             "VOLUMES": [
                 {
                     "SOURCE": "/etc/user/data/openwebui/qdrant",
@@ -93,42 +98,79 @@
             "POST_START": "null"
         },
         {
-            "IMAGE": "ghcr.io/open-webui/pipelines:main",
+            "IMAGE": "searxng/searxng:latest",
             "UPDATE": "true",
-            "NAME": "openwebui-pipelines",
-            "MEMORY": "1024M",
+            "NAME": "openwebuisearxng-app",
+            "MEMORY": "512M",
             "NETWORK": "openwebui-net",
-            "SELECTOR": "openwebui-pipelines",
+            "SELECTOR": "openwebuisearxng-app",
             "VOLUMES": [
                 {
-                    "SOURCE": "/etc/user/data/openwebui/pipelines",
-                    "DEST": "/app/pipelines",
+                    "SOURCE": "/etc/user/data/openwebui/searxng",
+                    "DEST": "/etc/searxng",
                     "TYPE": "rw"
                 }
             ],
             "PORTS": [
                 {
                     "SOURCE": "null",
-                    "DEST": "9099",
+                    "DEST": "8080",
                     "TYPE": "tcp"
                 }
             ],
-            "ENVS": [
+            "ENV_FILES": [
+                "/etc/user/secret/openwebui/openwebui.json"
+            ],
+            "EXTRA": "--restart always",
+            "DEPEND": [],
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "nginx:alpine",
+            "UPDATE": "true",
+            "NAME": "openwebuiproxy-app",
+            "MEMORY": "64M",
+            "NETWORK": "openwebui-net",
+            "SELECTOR": "openwebuisearxng-proxy",
+            "VOLUMES": [
                 {
-                    "OPENAI_API_BASE_URL": "#OPENAI_API_BASE_URL"
-                },
-                {
-                    "VECTOR_DB": "qdrant"
-                },
-                {
-                    "QDRANT_HOST": "openwebui-qdrant"
-                },
-                {
-                    "QDRANT_PORT": "6333"
-                },
-                {
-                    "QDRANT_URI": "http://openwebui-qdrant:6333"
+                    "SOURCE": "/etc/user/data/openwebui/searxng-proxy",
+                    "DEST": "/etc/nginx/conf.d",
+                    "TYPE": "ro"
                 }
+            ],
+            "EXTRA": "--restart always",
+            "START_ON_BOOT": "false",
+            "CMD": "null",
+            "PRE_START": "null",
+            "POST_START": "null"
+        },
+        {
+            "IMAGE": "unclecode/crawl4ai:latest",
+            "UPDATE": "true",
+            "NAME": "openwebuicrawl4ai-app",
+            "MEMORY": "1024M",
+            "NETWORK": "openwebui-net",
+            "SELECTOR": "openwebuicrawl4ai-app",
+            "VOLUMES": [
+                {
+                    "SOURCE": "/etc/user/data/openwebui/crawl4ai",
+                    "DEST": "/app/data",
+                    "TYPE": "rw"
+                }
+            ],
+            "PORTS": [
+                {
+                    "SOURCE": "null",
+                    "DEST": "11235",
+                    "TYPE": "tcp"
+                }
+            ],
+            "ENV_FILES": [
+                "/etc/user/secret/openwebui/openwebui.json"
             ],
             "EXTRA": "--restart always",
             "DEPEND": [],
@@ -146,8 +188,13 @@
             "SELECTOR": "openwebui-app",
             "VOLUMES": [
                 {
-                    "SOURCE": "/etc/user/data/openwebui/data",
-                    "DEST": "/app/data",
+                    "SOURCE": "/etc/user/data/openwebui/data/uploads",
+                    "DEST": "/app/backend/data/uploads",
+                    "TYPE": "rw"
+                },
+                {
+                    "SOURCE": "/etc/system/data/openwebui/data/cache",
+                    "DEST": "/app/backend/data/cache",
                     "TYPE": "rw"
                 }
             ],
@@ -160,25 +207,37 @@
             ],
             "ENVS": [
                 {
+                    "ENABLE_PERSISTENT_CONFIG": "false"
+                },
+                {
+                    "ENABLE_SIGNUP": "false"
+                },
+                {
+                    "HF_HUB_OFFLINE": "#DISABLE_HUGGINGFACE"
+                },
+                {
                     "OPENAI_API_BASE_URL": "#OPENAI_API_BASE_URL"
                 },
                 {
                     "VECTOR_DB": "qdrant"
                 },
                 {
-                    "QDRANT_HOST": "openwebui-qdrant"
+                    "QDRANT_URI": "http://openwebuiqdrant-app:6333"
                 },
                 {
-                    "QDRANT_PORT": "6333"
+                    "ENABLE_WEB_SEARCH": "#ENABLE_WEB_SEARCH"
                 },
                 {
-                    "QDRANT_URI": "http://openwebui-qdrant:6333"
+                    "WEB_SEARCH_ENGINE": "#WEB_SEARCH_ENGINE"
                 },
                 {
-                    "ENABLE_RAG_PIPELINE": "True"
+                    "WEB_LOADER_ENGINE": "#WEB_LOADER_ENGINE"
                 },
                 {
-                    "RAG_PIPELINE_URL": "http://openwebui-pipelines:9099/v1"
+                    "SEARXNG_QUERY_URL": "#SEARXNG_QUERY_URL"
+                },
+                {
+                    "EXTERNAL_WEB_LOADER_URL": "#EXTERNAL_WEB_LOADER_URL"
                 }
             ],
             "ENV_FILES": [
