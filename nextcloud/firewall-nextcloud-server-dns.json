@@ -50,7 +50,7 @@
                     "CHAIN": "DOCKER-USER"
                 },
                 {
-                    "SOURCE": "nextcloudphpfpm"
+                    "SOURCE": "nextcloudphp-fpm"
                 },
                 {
                     "TARGET": "coredns"

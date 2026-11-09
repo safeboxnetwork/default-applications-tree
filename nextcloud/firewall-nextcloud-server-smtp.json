@@ -40,7 +40,7 @@
 	],
       "ENVS": [
       { "CHAIN": "DOCKER-USER" },
-      { "SOURCE": "nextcloudphpfpm" },
+      { "SOURCE": "nextcloudphp-fpm" },
       { "TARGET": "smtp" },
       { "TYPE": "tcp" },
       { "TARGET_PORT": "25" },
