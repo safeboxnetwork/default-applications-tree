@@ -35,6 +35,13 @@
             "advanced": "true"
         },
         {
+            "description": "PHP memory limit",
+            "key": "PHP_MEMORY_LIMIT",
+            "value": "1024M",
+            "info": "Please use the default settings as the miinimum value for avoiding poor performance",
+            "advanced": "true"
+        },
+        {
             "description": "Postgres database name",
             "key": "POSTGRES_DB",
             "value": "",
