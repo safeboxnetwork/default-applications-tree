@@ -157,7 +157,8 @@
             "EXTRA": "--restart always",
             "DEPEND": "null",
             "START_ON_BOOT": "false",
-            "CMD": "null",
+	        "ENTRYPOINT": "sh",
+            "CMD": "printf \"[www]\\npm = dynamic\\npm.max_children = 16\\npm.start_servers = 4\\npm.min_spare_servers = 2\\npm.max_spare_servers = 8\\npm.max_requests = 500\n\" > /usr/local/etc/php-fpm.d/zz-custom.conf && exec /entrypoint.sh php-fpm",
             "PRE_START": [
                 "firewall-nextcloud-server-dns"
             ],
