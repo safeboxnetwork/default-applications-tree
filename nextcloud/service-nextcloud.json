@@ -151,6 +151,12 @@
                     "EXEC": "/ready.sh"
                 }
             ],
+			"ENVS": [
+				{
+					"NAME": "PHP_MEMORY_LIMIT",
+					"VALUE": "#PHP_MEMORY_LIMIT"
+				}
+			],
             "ENV_FILES": [
                 "/etc/user/secret/nextcloud/nextcloud.json"
             ],
